@@ -5,7 +5,7 @@ import Typed from 'typed.js'
 const Text = () => {
     useEffect(() => {
         const options = {
-            strings: ["Hello There"],
+            strings: ["Hello There👋", "This Is Vinay"],
             typeSpeed: 150,
             backSpeed: 100,
             backDelay: 1000,
