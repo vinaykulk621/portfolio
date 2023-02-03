@@ -13,7 +13,7 @@ const ThreeD = () => {
       1000
     )
   );
-  const rendererRef = useRef(new THREE.WebGLRenderer());
+  const rendererRef = useRef(new THREE.WebGLRenderer({ antialias: true }));
   // const guiRef = useRef();
 
   useEffect(() => {
@@ -29,11 +29,13 @@ const ThreeD = () => {
     // cameraFolder.add(camera.position, "y", -10, 10).step(0.1);
     // cameraFolder.add(camera.position, "z", -10, 10).step(0.1);
     // cameraFolder.open();
+
     renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
 
     document.body.appendChild(renderer.domElement);
 
-    const geometry = new THREE.SphereGeometry(2, 32, 32);
+    const geometry = new THREE.SphereGeometry(2, 250, 250);
     const texture = new THREE.TextureLoader().load(
       "https://unpkg.com/three-globe@2.24.13/example/img/earth-night.jpg"
     );
@@ -47,20 +49,21 @@ const ThreeD = () => {
     camera.position.x = 10;
     camera.position.z = 9;
 
-    renderer.setClearColor(0x000b1a, 1);
+    renderer.setClearColor(0x000000, 0.99);
 
     // random stars
+    // const stars = [];
     function addStars() {
       const geometry = new THREE.SphereGeometry(0.3);
       const material = new THREE.MeshBasicMaterial({ color: 0xffffff });
-      const sphere = new THREE.Mesh(geometry, material);
+      const star = new THREE.Mesh(geometry, material);
       const [x, y, z] = Array(3)
         .fill()
         .map(() => THREE.MathUtils.randFloatSpread(700));
-      sphere.position.set(x, y, z);
-      scene.add(sphere);
+      star.position.set(x, y, z);
+      // stars.push(star);
+      scene.add(star);
     }
-    // filling the screen with the stars
     Array(800).fill().forEach(addStars);
 
     const animate = () => {
@@ -70,10 +73,20 @@ const ThreeD = () => {
       sphere.rotation.x += 0.001;
       sphere.rotation.z += 0.001;
 
+      // Changing the position of the sphere as we scroll
+      sphere.position.y = - window.pageYOffset / 100;
+      sphere.position.z = window.pageYOffset / 100;
+
       //  Rotating the camera around the sphere
       camera.lookAt(sphere.position);
       camera.position.x = 5 * Math.sin(Date.now() * 0.0001);
       camera.position.z = 5 * Math.cos(Date.now() * 0.0001);
+
+      // stars.map((e) => {
+      //   e.lookAt(sphere.position);
+      //   e.position.x = 5 * Math.sin(Date.now() * 0.0001);
+      //   e.position.z = 5 * Math.cos(Date.now() * 0.0001);
+      // });
 
       renderer.render(scene, camera);
     };
