@@ -3,7 +3,6 @@ import ThreeD from './threeD'
 import Text from './Text';
 
 const inter = Inter({ subsets: ['latin'], weight: ['400', '300'], variable: '--font-Inter' })
-
 export default function Home() {
   return (
     <>
