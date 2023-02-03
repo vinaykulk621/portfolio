@@ -33,7 +33,7 @@ const ThreeD = () => {
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
 
-    document.body.appendChild(renderer.domElement);
+    document.body.before(renderer.domElement);
 
     const geometry = new THREE.SphereGeometry(2, 250, 250);
     const texture = new THREE.TextureLoader().load(
@@ -43,6 +43,7 @@ const ThreeD = () => {
     const sphere = new THREE.Mesh(geometry, material);
 
     sphere.position.set(2, 0, 0);
+    sphere.renderOrder = -1;
 
     // SPHERE Position
     scene.add(sphere);
@@ -93,12 +94,9 @@ const ThreeD = () => {
 
     animate();
 
-    return () => {
-      document.body.removeChild(renderer.domElement);
-    };
   }, []);
 
-  return <div />;
+  return <></>;
 };
 
 export default ThreeD;

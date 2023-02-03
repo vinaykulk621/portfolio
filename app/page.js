@@ -6,9 +6,9 @@ const inter = Inter({ subsets: ['latin'], weight: ['400', '300'], variable: '--f
 export default function Home() {
   return (
     <>
-      <div className='absolute top-0 h-screen'>
-        <p className={`font-sans ${inter.variable} absolute top-8 text-9xl text-white`}>Hello There</p>
+      <div className="absolute top-0">
         <ThreeD />
+        <p className={`font-sans ${inter.variable} absolute top-8 text-9xl text-white m-auto`}>Hello There</p>
       </div>
     </>
   )
