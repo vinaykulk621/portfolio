@@ -2,6 +2,8 @@
 import React, { useRef, useEffect } from "react";
 import * as THREE from "three";
 import { ShaderMaterial } from "three";
+// import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+
 // import { GUI } from "dat.gui";
 
 const ThreeD = () => {
@@ -102,7 +104,7 @@ const ThreeD = () => {
 
     scene.add(sphere);
     scene.add(atmosphere);
-    camera.position.x = 10;
+    // camera.position.x = 10;
     camera.position.z = 9;
     sphere.position.set(0, 0, 0);
 
@@ -122,14 +124,17 @@ const ThreeD = () => {
     }
     Array(800).fill().forEach(addStars);
 
+    // const controls = new OrbitControls(camera, renderer.domElement);
+
+
 
 
     const animate = () => {
       requestAnimationFrame(animate);
 
       // SPHERE Rotation
-      sphere.rotation.x += 0.001;
-      sphere.rotation.z += 0.001;
+      sphere.rotation.x += 0.0001;
+      sphere.rotation.z += 0.0001;
 
       // Changing the position of the sphere as we scroll
       sphere.position.y = - window.pageYOffset / 100;
@@ -139,9 +144,31 @@ const ThreeD = () => {
 
       //  Rotating the camera around the sphere
       camera.lookAt(sphere.position);
+
+
+      // INFINITY and little closer
+      // camera.position.x = 5 * Math.tan(Date.now() * 0.0001);
+      // camera.position.z = 5 * Math.tanh(Date.now() * 0.0001);
+
+      // alternate direction spin
+      // camera.position.x = 5 * Math.cos(Date.now() * 0.0001);
+      // camera.position.z = 5 * Math.tanh(Date.now() * 0.0001);
+      
+
+      // INFINITY and in the core Very FAST⚠️⚠️
+      // camera.position.x = 5 * Math.tan(Date.now() * 0.0001);
+      // camera.position.z = 5 * Math.sin(Date.now() * 0.0001);
+
+      // Anticlockwise spin
       camera.position.x = 5 * Math.sin(Date.now() * 0.0001);
       camera.position.z = 5 * Math.cos(Date.now() * 0.0001);
 
+      // Anticlockwise spin
+      // camera.position.x = 5 * Math.cos(Date.now() * 0.0001);
+      // camera.position.z = 5 * Math.sinh(Date.now() * 0.0001);
+
+
+      // controls.update()
       renderer.render(scene, camera);
     };
 
