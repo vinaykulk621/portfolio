@@ -137,10 +137,10 @@ const ThreeD = () => {
       sphere.rotation.z += 0.0001;
 
       // Changing the position of the sphere as we scroll
-      sphere.position.y = - window.pageYOffset / 100;
-      sphere.position.z = window.pageYOffset / 100;
-      atmosphere.position.y = - window.pageYOffset / 100;
-      atmosphere.position.z = window.pageYOffset / 100;
+      sphere.position.y = - window.pageYOffset / 100 * 0.5;
+      sphere.position.z = window.pageYOffset / 100 * 0.5;
+      atmosphere.position.y = - window.pageYOffset / 100 * 0.5;
+      atmosphere.position.z = window.pageYOffset / 100 * 0.5;
 
       //  Rotating the camera around the sphere
       camera.lookAt(sphere.position);
@@ -153,7 +153,7 @@ const ThreeD = () => {
       // alternate direction spin
       // camera.position.x = 5 * Math.cos(Date.now() * 0.0001);
       // camera.position.z = 5 * Math.tanh(Date.now() * 0.0001);
-      
+
 
       // INFINITY and in the core Very FAST⚠️⚠️
       // camera.position.x = 5 * Math.tan(Date.now() * 0.0001);

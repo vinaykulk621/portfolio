@@ -1,7 +1,10 @@
 "use client"
+import { Inter } from '@next/font/google'
 import React, { useEffect } from 'react'
 import Typed from 'typed.js'
 
+
+const inter = Inter({ subsets: ['latin'], weight: ['400', '300'], variable: '--font-Inter' })
 const Text = () => {
     useEffect(() => {
         const options = {
@@ -20,7 +23,7 @@ const Text = () => {
     }, [])
 
     return (
-        <p className="element"></p>
+        <p className={`element font-sans ${inter.variable} text-8xl`}></p>
     )
 }
 
