@@ -41,21 +41,22 @@ const ThreeD = () => {
       gl_FragColor = vec4(0.3,0.6,1.0,1.0)*intensity;
     }
   `;
-
-
-  const sceneRef = useRef(new THREE.Scene());
-  const cameraRef = useRef(
-    new THREE.PerspectiveCamera(
-      75,
-      window.innerWidth / window.innerHeight,
-      0.1,
-      1000
-    )
-  );
-  const rendererRef = useRef(new THREE.WebGLRenderer({ antialias: true }));
+  let sceneRef;
+  let cameraRef;
+  let rendererRef
+  if (typeof window !== 'undefined') {
+    sceneRef = useRef(new THREE.Scene());
+    cameraRef = useRef(
+      new THREE.PerspectiveCamera(
+        75,
+        window.innerWidth / window.innerHeight,
+        0.1,
+        1000
+      )
+    );
+    rendererRef = useRef(new THREE.WebGLRenderer({ antialias: true }));
+  }
   // const guiRef = useRef();
-
-
 
 
   useEffect(() => {
