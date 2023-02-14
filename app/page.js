@@ -1,4 +1,4 @@
-import ThreeD from './threeD'
+import ThreeD from './ThreeD'
 import Text from './Text';
 
 export default function Home() {
