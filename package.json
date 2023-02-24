@@ -2,6 +2,13 @@
   "name": "portoflio",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Vinay Kulkarni",
+    "email": "Kulkarnivinay621@gmail.com"
+  },
+  "repository": {
+    "url": "https://github.com/vinaykulk621/portoflio"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
