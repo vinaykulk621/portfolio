@@ -105,17 +105,29 @@ const ThreeD = () => {
 
     scene.add(sphere);
     scene.add(atmosphere);
-    // camera.position.x = 10;
-    camera.position.z = 9;
-    sphere.position.set(0, 0, 0);
+    sphere.position.x = 2
+    atmosphere.position.x = 2
+    camera.position.z = 10;
 
     renderer.setClearColor(0x000000, 1);
 
+
     function addStars() {
+      const starColors = [
+        "#ffffff", // white
+        "#ffff00", // yellow
+        // "#ffcc00", // orange
+        // "#ff6600", // red-orange
+        // "#ff0000", // red
+        // "#9900cc", // purple
+        "#0000ff", // blue
+        // "#00ffff", // cyan
+        // "#00ff00", // green
+      ];
       const star = new THREE.Mesh(
         new THREE.SphereGeometry(0.3),
         new THREE.MeshBasicMaterial({
-          color: 0xffffff
+          color: new THREE.Color().set(starColors[Math.floor(Math.random() * starColors.length)])
         }))
       const [x, y, z] = Array(3)
         .fill()
@@ -127,9 +139,6 @@ const ThreeD = () => {
 
     // const controls = new OrbitControls(camera, renderer.domElement);
 
-
-
-
     const animate = () => {
       requestAnimationFrame(animate);
 
@@ -138,14 +147,13 @@ const ThreeD = () => {
       sphere.rotation.z += 0.0001;
 
       // Changing the position of the sphere as we scroll
-      sphere.position.y = - window.pageYOffset / 100 * 0.5;
-      sphere.position.z = window.pageYOffset / 100 * 0.5;
-      atmosphere.position.y = - window.pageYOffset / 100 * 0.5;
-      atmosphere.position.z = window.pageYOffset / 100 * 0.5;
+      sphere.position.y = - window.pageYOffset / 100 * 0.7;
+      sphere.position.z = window.pageYOffset / 100 * 0.7;
+      atmosphere.position.y = - window.pageYOffset / 100 * 0.7;
+      atmosphere.position.z = window.pageYOffset / 100 * 0.7;
 
       //  Rotating the camera around the sphere
       camera.lookAt(sphere.position);
-
 
       // INFINITY and little closer
       // camera.position.x = 5 * Math.tan(Date.now() * 0.0001);
@@ -167,7 +175,6 @@ const ThreeD = () => {
       // Anticlockwise spin
       // camera.position.x = 5 * Math.cos(Date.now() * 0.0001);
       // camera.position.z = 5 * Math.sinh(Date.now() * 0.0001);
-
 
       // controls.update()
       renderer.render(scene, camera);

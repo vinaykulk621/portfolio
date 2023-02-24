@@ -10,8 +10,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        "simple-black": "#0c0c0c",
+        "simple-black-2": "#171717",
+        "simple-blue": "#0a2725",
+      },
       fontFamily: {
-        sans: ['var(--font-Inter)']
+        sans: ['var(--font-Inter)'],
+        alerta: ['var(--font-Alerta)']
       }
     },
   },
