@@ -1,6 +1,6 @@
 "use client"
-import { Inter } from '@next/font/google'
-import { Allerta_Stencil } from '@next/font/google'
+import { Inter } from "next/font/google"
+import { Allerta_Stencil } from "next/font/google"
 import React, { useEffect } from 'react'
 import Typed from 'typed.js'
 
