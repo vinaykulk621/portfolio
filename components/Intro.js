@@ -34,7 +34,7 @@ export function Intro({}) {
         </div>
         <Image
           className="overflow-hidden rounded-full"
-          src="/walking_man.svg"
+          src="/walking-man/walking_man.svg"
           alt="Picture of the author"
           width={250}
           height={250}

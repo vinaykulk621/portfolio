@@ -81,9 +81,8 @@ const ThreeD = () => {
         fragmentShader: fragmentShader,
         uniforms: {
           globeTexture: {
-            value: new THREE.TextureLoader().load(
-              "https://unpkg.com/three-globe@2.24.13/example/img/earth-night.jpg"
-            ),
+            // I wasn't even using the picture of earth that i downloaded 🤦‍♂️🤦‍♂️🤦‍♂️
+            value: new THREE.TextureLoader().load("/globe/earth-night.jpg"),
           },
         },
       })
