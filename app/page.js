@@ -10,8 +10,8 @@ const allerta = Allerta_Stencil({
 export default function Home() {
   return (
     <>
-      <div className="overflow-x-hidden">
-        <div className="bg-gradient-to-b from-black to-gray-900">
+      <div>
+        <div>
           <ThreeD />
           <div className="absolute top-3/4">
             <p
@@ -20,8 +20,15 @@ export default function Home() {
               Hello There
             </p>
           </div>
-          <div className="h-screen">
-            <Intro />
+        </div>
+      </div>
+      <div>
+        <div className="h-screen bg-gradient-to-b from-black to-gray-900">
+          <Intro />
+        </div>
+        <div>
+          <div className="h-screen bg-gradient-to-b from-gray-900 to-slate-800 font-spotify">
+            <h1 className="p-4 text-6xl text-orange-400">Projects</h1>
           </div>
         </div>
       </div>

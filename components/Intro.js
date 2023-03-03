@@ -1,13 +1,14 @@
 import Image from "next/image"
+import Link from "next/link"
 
 export function Intro({}) {
   return (
     <>
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center space-y-3">
         <p className="font-spotify text-6xl text-white">
           Vinay's <span className="text-gray-400 hover:text-gray-300">web</span>
         </p>
-        <div className="h-10 w-1/2 border-t border-x-cyan-50"></div>
+        <div className="h-14 w-1/2 border-t border-gray-400"></div>
         <div className="flex flex-row items-center gap-10">
           <Image
             className="overflow-hidden rounded-full"
@@ -16,29 +17,28 @@ export function Intro({}) {
             width={250}
             height={250}
           />
-          <div className="flex flex-col font-spotify">
-            <h1 className="text-2xl text-white">Hey, This is Vinay Kulkarni</h1>
-            <h1 className="">I'm currently studying CSE at BMSCE</h1>
-            <h1 className="text-2xl text-white">
-              get in touch
-              <a href="mailto:kulkarnivinay621@gmail.com">
+          <div className="flex flex-col space-y-1 font-spotify text-2xl text-white">
+            <h1>
+              Hey, This is <span className="text-link">Vinay Kulkarni</span>
+            </h1>
+            <h1>studying CSE at BMSCE.</h1>
+            <h1>
+              Reach me at{" "}
+              <a href="mailto:kulkarnivinay621@gmail.com" className="text-link">
                 kulkarnivinay621@gmail.com
               </a>
             </h1>
-            <h1 className="text-2xl text-white">stalk me</h1>
+            <h1 className="text-link">stalk_me()</h1>
             <div className="flex flex-row space-x-5">
-              <h1 className="text-2xl text-white">Projects</h1>
-              <h1 className="text-2xl text-white">Blog</h1>
+              <p> Check out my</p>
+              <h1 className="text-link">Projects</h1>
+              <p>and</p>
+              <Link href={"/blog"} className="text-link">
+                Blog
+              </Link>
             </div>
           </div>
         </div>
-        <Image
-          className="overflow-hidden rounded-full"
-          src="/walking-man/walking_man.svg"
-          alt="Picture of the author"
-          width={250}
-          height={250}
-        />
       </div>
     </>
   )

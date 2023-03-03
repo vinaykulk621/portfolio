@@ -7,6 +7,7 @@ module.exports = {
         "simple-black": "#0c0c0c",
         "simple-black-2": "#171717",
         "simple-blue": "#0a2725",
+        "link": "#ff9a00",
       },
       fontFamily: {
         sans: ["var(--font-Inter)"],
