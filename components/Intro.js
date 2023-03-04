@@ -10,32 +10,38 @@ export function Intro({}) {
         </p>
         <div className="h-14 w-1/2 border-t border-gray-400"></div>
         <div className="flex flex-row items-center gap-10">
-          <Image
-            className="overflow-hidden rounded-full"
-            src="/me.svg"
-            alt="Picture of the author"
-            width={250}
-            height={250}
-          />
+          <div className="rounded-full border-2 border-green-500 p-1">
+            <Image
+              className="overflow-hidden rounded-full"
+              src="/me.svg"
+              alt="Picture of the Creator"
+              width={250}
+              height={250}
+            />
+          </div>
           <div className="flex flex-col space-y-1 font-spotify text-2xl text-white">
             <h1>
               Hey, This is <span className="text-link">Vinay Kulkarni</span>
             </h1>
-            <h1>studying CSE at BMSCE.</h1>
+            <h1>Studying CSE at BMSCE.</h1>
             <h1>
-              Reach me at{" "}
+              Reach me out at{" "}
               <a href="mailto:kulkarnivinay621@gmail.com" className="text-link">
                 kulkarnivinay621@gmail.com
               </a>
             </h1>
             <h1 className="text-link">stalk_me()</h1>
             <div className="flex flex-row space-x-5">
-              <p> Check out my</p>
-              <h1 className="text-link">Projects</h1>
-              <p>and</p>
-              <Link href={"/blog"} className="text-link">
-                Blog
-              </Link>
+              <p>
+                Check out my{" "}
+                <Link href={"/projects"}>
+                  <span className="text-link">Projects</span>
+                </Link>{" "}
+                and{" "}
+                <Link href={"/blog"}>
+                  <span className="text-link">Blog</span>
+                </Link>
+              </p>
             </div>
           </div>
         </div>

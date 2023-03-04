@@ -28,7 +28,9 @@ export default function Home() {
         </div>
         <div>
           <div className="h-screen bg-gradient-to-b from-gray-900 to-slate-800 font-spotify">
-            <h1 className="p-4 text-6xl text-orange-400">Projects</h1>
+            <h1 className="p-4 text-6xl text-orange-400" id="projects">
+              Projects
+            </h1>
           </div>
         </div>
       </div>
