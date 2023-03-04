@@ -10,15 +10,13 @@ export function Intro({}) {
         </p>
         <div className="h-14 w-1/2 border-t border-gray-400"></div>
         <div className="flex flex-row items-center gap-10">
-          <div className="rounded-full border-2 border-green-500 p-1">
-            <Image
-              className="overflow-hidden rounded-full"
-              src="/me.svg"
-              alt="Picture of the Creator"
-              width={250}
-              height={250}
-            />
-          </div>
+          <Image
+            className="overflow-hidden rounded-full"
+            src="/me.svg"
+            alt="Picture of the Creator"
+            width={250}
+            height={250}
+          />
           <div className="flex flex-col space-y-1 font-spotify text-2xl text-white">
             <h1>
               Hey, This is <span className="text-link">Vinay Kulkarni</span>
