@@ -40,21 +40,21 @@ const ThreeD = () => {
       gl_FragColor = vec4(0.3,0.6,1.0,1.0)*intensity;
     }
   `
-  let sceneRef
-  let cameraRef
-  let rendererRef
-  if (typeof window !== "undefined") {
-    sceneRef = useRef(new THREE.Scene())
-    cameraRef = useRef(
-      new THREE.PerspectiveCamera(
-        75,
-        window.innerWidth / window.innerHeight,
-        0.1,
-        1000
-      )
+  const sceneRef = useRef(null)
+  const cameraRef = useRef(null)
+  const rendererRef = useRef(null)
+
+  useEffect(() => {
+    sceneRef.current = new THREE.Scene()
+    cameraRef.current = new THREE.PerspectiveCamera(
+      75,
+      window.innerWidth / window.innerHeight,
+      0.1,
+      1000
     )
-    rendererRef = useRef(new THREE.WebGLRenderer({ antialias: true }))
-  }
+    rendererRef.current = new THREE.WebGLRenderer({ antialias: true })
+  }, [])
+
   // const guiRef = useRef();
 
   useEffect(() => {

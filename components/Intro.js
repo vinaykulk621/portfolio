@@ -37,8 +37,8 @@ export function Intro({}) {
             <div className="flex flex-row items-center pt-2">
               <h1>Reach me at </h1>
               <div className="m-3 flex space-x-6">
-                <div class="has-tooltip">
-                  <span class="tooltip -mt-8 rounded bg-black p-1 text-xl text-white">
+                <div className="has-tooltip">
+                  <span className="tooltip -mt-8 rounded bg-black p-1 text-xl text-white">
                     kulkarnivinay621@gmail.com{" "}
                   </span>
                   <a
