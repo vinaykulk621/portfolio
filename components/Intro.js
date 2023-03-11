@@ -6,7 +6,7 @@ export function Intro({}) {
     <>
       <div className="flex flex-col items-center justify-center space-y-3">
         <p className="font-spotify text-6xl text-white">
-          Vinay's <span className="text-gray-400 hover:text-white">web</span>
+          Vinay&apos;s <span className="text-gray-400 hover:text-white">web</span>
         </p>
         <div className="h-14 w-1/2 border-t border-gray-400"></div>
         <div className="flex flex-row items-center gap-10">
