@@ -6,7 +6,8 @@ export function Intro({}) {
     <>
       <div className="flex flex-col items-center justify-center space-y-3">
         <p className="font-spotify text-6xl text-white">
-          Vinay&apos;s <span className="text-gray-400 hover:text-white">web</span>
+          Vinay&apos;s{" "}
+          <span className="text-gray-400 hover:text-white">web</span>
         </p>
         <div className="h-14 w-1/2 border-t border-gray-400"></div>
         <div className="flex flex-row items-center gap-10">
@@ -27,9 +28,12 @@ export function Intro({}) {
                 <Link href={"/projects"}>
                   <span className="text-link">Projects</span>
                 </Link>{" "}
-                and{" "}
                 <Link href={"/blog"}>
-                  <span className="text-link">Blog</span>
+                  <span className="text-link">Blogs</span>
+                </Link>{" "}
+                and{" "}
+                <Link href={"/clicks"}>
+                  <span className="text-link">Clicks</span>
                 </Link>
                 .
               </p>
@@ -58,7 +62,6 @@ export function Intro({}) {
                     </svg>
                   </a>
                 </div>
-
                 <a
                   className="text-sm text-gray-500 transition hover:text-gray-600"
                   target="_blank"
