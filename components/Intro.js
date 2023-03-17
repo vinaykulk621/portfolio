@@ -28,25 +28,31 @@ export function Intro({}) {
             <h1>
               Hey, This is <span className="text-link">Vinay Kulkarni</span>
             </h1>
-            <div className="flex flex-row space-x-5">
-              <p>
-                Check out my{" "}
-                <Link href={"/projects"}>
-                  <span className="text-link">Projects</span>
-                </Link>{" "}
-                <Link href={"/blog"}>
-                  <span className="text-link">Blogs</span>
-                </Link>{" "}
-                and{" "}
-                <Link href={"/clicks"}>
-                  <span className="text-link">Clicks</span>
-                </Link>
-                .
-              </p>
-            </div>
-            <div className="flex flex-row items-center pt-2">
-              <h1>Reach me at </h1>
-              <div className="m-3 flex space-x-6">
+            <p>
+              Check out my{" "}
+              <Link
+                href={"/projects"}
+                className="text-link hover:text-orange-400/80"
+              >
+                Projects
+              </Link>{" "}
+              <Link
+                href={"/blog"}
+                className="text-link hover:text-orange-400/80"
+              >
+                Blogs
+              </Link>{" "}
+              and{" "}
+              <Link
+                href={"/clicks"}
+                className="text-link hover:text-orange-400/80"
+              >
+                Clicks
+              </Link>
+            </p>
+            <div className="flex items-center space-x-4">
+              <p>Reach me at </p>
+              <div className="flex space-x-6">
                 <EmailSVG />
                 <GithubSVG />
                 <LinkedinSVG />
