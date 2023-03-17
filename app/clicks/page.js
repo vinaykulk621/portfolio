@@ -4,7 +4,7 @@ export default function Home(params) {
   return (
     <div className="h-full w-full bg-gradient-to-b from-black to-gray-900">
       <div className="m-auto grid max-w-6xl grid-cols-2 gap-4 space-x-3 space-y-3 p-4 xs:grid-cols-4">
-        <p className="center col-span-2 align-top font-spotify text-9xl text-white">
+        <p className="col-span-2 self-center font-spotify text-9xl text-white">
           CLICKS
         </p>
         <div className="grid">

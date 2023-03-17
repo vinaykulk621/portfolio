@@ -2,9 +2,6 @@
 import React, { useRef, useEffect } from "react"
 import * as THREE from "three"
 import { ShaderMaterial } from "three"
-// import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-
-// import { GUI } from "dat.gui";
 
 const vertexShader = `
   varying vec2 vertexUV;
@@ -55,19 +52,10 @@ const ThreeD = () => {
     rendererRef.current = new THREE.WebGLRenderer({ antialias: true })
   }, [])
 
-  // const guiRef = useRef();
-
   useEffect(() => {
     const scene = sceneRef.current
     const camera = cameraRef.current
     const renderer = rendererRef.current
-
-    // guiRef.current = new GUI();
-    // const cameraFolder = guiRef.current.addFolder("Camera");
-    // cameraFolder.add(camera.position, "x", -10, 10).step(0.1);
-    // cameraFolder.add(camera.position, "y", -10, 10).step(0.1);
-    // cameraFolder.add(camera.position, "z", -10, 10).step(0.1);
-    // cameraFolder.open();
 
     renderer.setSize(window.innerWidth, window.innerHeight)
     renderer.setPixelRatio(window.devicePixelRatio)
@@ -135,8 +123,6 @@ const ThreeD = () => {
     }
     Array(800).fill().forEach(addStars)
 
-    // const controls = new OrbitControls(camera, renderer.domElement);
-
     const animate = () => {
       requestAnimationFrame(animate)
 
@@ -153,6 +139,10 @@ const ThreeD = () => {
       //  Rotating the camera around the sphere
       camera.lookAt(sphere.position)
 
+      // Anticlockwise spin
+      camera.position.x = 5 * Math.sin(Date.now() * 0.0001)
+      camera.position.z = 5 * Math.cos(Date.now() * 0.0001)
+
       // INFINITY and little closer
       // camera.position.x = 5 * Math.tan(Date.now() * 0.0001);
       // camera.position.z = 5 * Math.tanh(Date.now() * 0.0001);
@@ -164,10 +154,6 @@ const ThreeD = () => {
       // INFINITY and in the core Very FAST⚠️⚠️
       // camera.position.x = 5 * Math.tan(Date.now() * 0.0001);
       // camera.position.z = 5 * Math.sin(Date.now() * 0.0001);
-
-      // Anticlockwise spin
-      camera.position.x = 5 * Math.sin(Date.now() * 0.0001)
-      camera.position.z = 5 * Math.cos(Date.now() * 0.0001)
 
       // Anticlockwise spin
       // camera.position.x = 5 * Math.cos(Date.now() * 0.0001);
@@ -184,17 +170,3 @@ const ThreeD = () => {
 }
 
 export default ThreeD
-
-// Diferent textures For the Sphere
-// const texture = new THREE.TextureLoader().load(
-//   "https://unpkg.com/three-globe@2.24.13/example/img/earth-topology.png"
-// );
-// const texture = new THREE.TextureLoader().load(
-//   "https://unpkg.com/three-globe@2.24.13/example/img/earth-dark.jpg"
-// );
-// const texture = new THREE.TextureLoader().load(
-//   "https://unpkg.com/three-globe@2.24.13/example/img/earth-water.png"
-// );
-// const texture = new THREE.TextureLoader().load(
-//   "https://unpkg.com/three-globe@2.24.13/example/img/earth-blue-marble.jpg"
-// );

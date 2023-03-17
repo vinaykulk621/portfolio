@@ -7,10 +7,11 @@ const allerta = Allerta_Stencil({
   weight: ["400"],
   variable: "--font-Alerta",
 })
+
 export default function Home() {
   return (
     <>
-      {/* <ThreeD /> */}
+      <ThreeD />
       <div className="absolute top-3/4">
         <p className={`font-alerta ${allerta.variable} text-7xl text-gray-200`}>
           Hello There
