@@ -9,3 +9,7 @@
 .has-tooltip:hover .tooltip {
   @apply visible z-50;
 }
+
+.link-color {
+  @apply text-link-col hover:text-orange-400/80;
+}

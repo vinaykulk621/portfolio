@@ -10,7 +10,7 @@ export function BackButton({}) {
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="white"
-          className="h-7 w-7"
+          className="h-6 w-6"
         >
           <path
             stroke-linecap="round"

@@ -1,4 +1,3 @@
-import React from "react"
 export function LinkedinSVG({}) {
   return (
     <a
@@ -7,7 +6,6 @@ export function LinkedinSVG({}) {
       rel="noopener noreferrer"
       href="https://www.linkedin.com/in/vinay-kulkarni-725184245/"
     >
-      <span className="sr-only">linkedin</span>
       <svg
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"

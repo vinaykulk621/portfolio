@@ -1,4 +1,3 @@
-import React from "react"
 export function TwitterSVG({}) {
   return (
     <a
@@ -7,7 +6,6 @@ export function TwitterSVG({}) {
       rel="noopener noreferrer"
       href="https://twitter.com/kuylycljhyvvy"
     >
-      <span className="sr-only">twitter</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
