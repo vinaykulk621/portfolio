@@ -9,27 +9,75 @@ export default function Home(params) {
         </p>
         <div className="grid">
           <Image
+            className="rounded-lg"
             src={"/clicks/hike-clear-sky-1.jpg"}
             width={600}
             height={600}
           />
-          <Image src={"/clicks/sea.jpg"} width={600} height={600} />
+          <Image
+            className="rounded-lg"
+            src={"/clicks/sea.jpg"}
+            width={600}
+            height={600}
+          />
         </div>
-        <Image src={"/clicks/hike-filter-shoes.JPG"} width={600} height={600} />
-        <Image src={"/clicks/jublie-bulding.jpg"} width={600} height={600} />
-        <Image src={"/clicks/plane-glider.jpg"} width={600} height={600} />
         <Image
+          className="rounded-lg"
+          src={"/clicks/hike-filter-shoes.JPG"}
+          width={600}
+          height={600}
+        />
+        <Image
+          className="rounded-lg"
+          src={"/clicks/jublie-bulding.jpg"}
+          width={600}
+          height={600}
+        />
+        <Image
+          className="rounded-lg"
+          src={"/clicks/plane-glider.jpg"}
+          width={600}
+          height={600}
+        />
+        <Image
+          className="rounded-lg"
           src={"/clicks/sea-beach-closeup.jpg"}
           width="6000"
           height="3600"
         />
-        <Image src={"/clicks/forest.jpg"} width={600} height={600} />
-        <Image src={"/clicks/stadium-left-side.jpg"} width={600} height={600} />
-        <Image src={"/clicks/hike-1.jpg"} width={600} height={600} />
-        <Image src={"/clicks/fog.jpg"} width={600} height={600} />
+        <Image
+          className="rounded-lg"
+          src={"/clicks/forest.jpg"}
+          width={600}
+          height={600}
+        />
+        <Image
+          className="rounded-lg"
+          src={"/clicks/stadium-left-side.jpg"}
+          width={600}
+          height={600}
+        />
+        <Image
+          className="rounded-lg"
+          src={"/clicks/hike-1.jpg"}
+          width={600}
+          height={600}
+        />
+        <Image
+          className="rounded-lg"
+          src={"/clicks/fog.jpg"}
+          width={600}
+          height={600}
+        />
         <div className="grid gap-2">
-          <Image src={"/clicks/table-bottle.jpg"} width={600} height={600} />
           <Image
+            className="rounded-lg"
+            src={"/clicks/table-bottle.jpg"}
+            width={600}
+            height={600}
+          />
+          <Image
+            className="rounded-lg"
             src={"/clicks/stadium-center-darker-sky.jpg"}
             width={600}
             height={600}
