@@ -9,7 +9,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head />
-      <body className="flex h-screen w-screen flex-col items-center justify-center bg-black font-spotify">
+      <body>
         <BackButton />
         {children}
       </body>

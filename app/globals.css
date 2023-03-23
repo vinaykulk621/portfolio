@@ -13,3 +13,7 @@
 .link-color {
   @apply text-link-col hover:text-orange-400/80;
 }
+
+.bg-pallet {
+  @apply mt-3 flex items-center gap-3 rounded-md p-3 dark:bg-[#ffffff0a]/5 dark:backdrop-blur-2xl;
+}

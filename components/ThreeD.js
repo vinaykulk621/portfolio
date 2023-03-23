@@ -58,7 +58,6 @@ const ThreeD = () => {
     const renderer = rendererRef.current
 
     renderer.setSize(window.innerWidth, window.innerHeight)
-    renderer.setPixelRatio(window.devicePixelRatio)
 
     document.body.after(renderer.domElement)
 
@@ -85,7 +84,7 @@ const ThreeD = () => {
       })
     )
 
-    atmosphere.scale.set(1.1, 1.1, 1.1)
+    atmosphere.scale.set(1.12, 1.12, 1.12)
 
     scene.add(sphere)
     scene.add(atmosphere)
@@ -99,13 +98,9 @@ const ThreeD = () => {
       const starColors = [
         "#ffffff", // white
         "#ffff00", // yellow
-        // "#ffcc00", // orange
-        // "#ff6600", // red-orange
-        // "#ff0000", // red
-        // "#9900cc", // purple
+        "#ff0000", // red
+        "#9900cc", // purple
         "#0000ff", // blue
-        // "#00ffff", // cyan
-        // "#00ff00", // green
       ]
       const star = new THREE.Mesh(
         new THREE.SphereGeometry(0.3),
@@ -142,22 +137,6 @@ const ThreeD = () => {
       // Anticlockwise spin
       camera.position.x = 5 * Math.sin(Date.now() * 0.0001)
       camera.position.z = 5 * Math.cos(Date.now() * 0.0001)
-
-      // INFINITY and little closer
-      // camera.position.x = 5 * Math.tan(Date.now() * 0.0001);
-      // camera.position.z = 5 * Math.tanh(Date.now() * 0.0001);
-
-      // alternate direction spin
-      // camera.position.x = 5 * Math.cos(Date.now() * 0.0001);
-      // camera.position.z = 5 * Math.tanh(Date.now() * 0.0001);
-
-      // INFINITY and in the core Very FAST⚠️⚠️
-      // camera.position.x = 5 * Math.tan(Date.now() * 0.0001);
-      // camera.position.z = 5 * Math.sin(Date.now() * 0.0001);
-
-      // Anticlockwise spin
-      // camera.position.x = 5 * Math.cos(Date.now() * 0.0001);
-      // camera.position.z = 5 * Math.sinh(Date.now() * 0.0001);
 
       // controls.update()
       renderer.render(scene, camera)
