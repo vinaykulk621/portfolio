@@ -34,7 +34,7 @@ export function Intro({}) {
                 Projects
               </Link>
               <Link href={"/blog"} className="link-color">
-                Blogs
+                Blog
               </Link>
               <Link href={"/clicks"} className="link-color">
                 Clicks
