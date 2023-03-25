@@ -2,8 +2,8 @@ import "./globals.css"
 import { Analytics } from "@vercel/analytics/react"
 
 export const metadata = {
-  title: "Vinay | Portoflio",
-  description: "Portoflio website",
+  title: "Vinay | Portofolio",
+  description: "Portofolio website",
 }
 
 export default function RootLayout({ children }) {

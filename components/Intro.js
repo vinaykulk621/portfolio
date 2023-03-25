@@ -9,7 +9,7 @@ import Link from "next/link"
 export function Intro({}) {
   return (
     <>
-      <div className="flex flex-col items-center justify-center space-y-3 pt-20  font-spotify text-5xl">
+      <div className="flex flex-col items-center justify-center space-y-3 pt-20 text-5xl">
         <Link href={"/"}>
           <p className="group text-4xl text-white xs:text-5xl md:text-6xl">
             Vinay&apos;s{" "}
@@ -25,7 +25,7 @@ export function Intro({}) {
             width={230}
             height={230}
           />
-          <div className="flex flex-col items-center space-y-1 font-spotify text-2xl text-white md:items-stretch">
+          <div className="flex flex-col items-center space-y-1 text-2xl text-white md:items-stretch">
             <div>
               Hey, This is <span className="text-link-col">Vinay Kulkarni</span>
             </div>
