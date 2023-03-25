@@ -1,3 +1,5 @@
+import { BackButton } from "../../components/svgs/BackButton"
+
 export const metadata = {
   title: "Clicks",
   description: "Portofolio website",
@@ -7,7 +9,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head />
-      <body>{children}</body>
+      <body>
+        <BackButton />
+        {children}
+      </body>
     </html>
   )
 }

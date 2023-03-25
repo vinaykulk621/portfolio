@@ -27,12 +27,13 @@ export function Intro({}) {
           />
           <div className="flex flex-col items-center space-y-1 text-2xl text-white md:items-stretch">
             <div>
-              Hey, This is <span className="text-link-col">Vinay Kulkarni</span>
+              Hey, This is{" "}
+              <span className="cursor-pointer text-link-col">
+                Vinay Kulkarni
+              </span>
             </div>
-            <div className="space-x-4">
-              <Link href={"/projects"} className="link-color">
-                Projects
-              </Link>
+            <div className="space-x-2">
+              Check Out{" "}
               <Link href={"/blog"} className="link-color">
                 Blog
               </Link>

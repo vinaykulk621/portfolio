@@ -5,7 +5,7 @@ import ThreeD from "../components/ThreeD"
 export default function Home() {
   return (
     <>
-      {/* <ThreeD /> */}
+      <ThreeD />
       <div className="bg-gradient-to-b from-simple-black-2 to-simple-black font-spotify">
         <div className="h-screen">
           <Intro />
@@ -15,7 +15,7 @@ export default function Home() {
         </div>
         <p className="relative bottom-[20%] w-screen text-center text-lg text-gray-400">
           Check out this{" "}
-          <span className="text-red-500 hover:text-red-400">COOL BALL</span>{" "}
+          <span className="text-gray-500 hover:text-gray-400">COOL BALL</span>{" "}
           down here that i made
         </p>
       </div>
