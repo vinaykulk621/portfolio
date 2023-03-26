@@ -3,12 +3,12 @@ import Link from "next/link"
 export function BackButton({}) {
   return (
     <Link href={"/"}>
-      <div className="absolute top-2 left-2 flex flex-row items-center space-x-2 rounded-xl bg-gray-900 px-4 py-2 text-center font-spotify hover:bg-gray-800">
+      <div className="absolute top-2 left-2 rounded-xl bg-gray-900 px-4 py-2 text-center font-spotify hover:bg-gray-800">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          stroke-width="1.5"
+          strokeWidth="1.5"
           stroke="white"
           className="h-6 w-6"
         >

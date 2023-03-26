@@ -44,7 +44,7 @@ export function Intro({}) {
             <div className="flex items-center space-x-6">
               <EmailSVG />
               <LinkedinSVG />
-              <GithubSVG />
+              <GithubSVG url={"vinaykulk621"} />
               <TwitterSVG />
               <VoltFM />
             </div>

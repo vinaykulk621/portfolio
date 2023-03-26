@@ -1,10 +1,10 @@
-export function GithubSVG({}) {
+export function GithubSVG({ url }) {
   return (
     <a
       className="text-sm text-gray-500 transition hover:text-gray-600"
       target="_blank"
       rel="noopener noreferrer"
-      href="https://github.com/vinaykulk621"
+      href={`https://github.com/${url}`}
     >
       <span className="sr-only">github</span>
       <svg
