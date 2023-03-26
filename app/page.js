@@ -22,6 +22,7 @@ export default function Home() {
               "Built Using Three.js in next js And tailwindscss"
             }
             projectName="CuBoido"
+            Preview={"fog.jpg"}
           />
         </div>
         <p className="relative bottom-[20%] h-screen text-center text-lg text-gray-400">
