@@ -7,7 +7,7 @@ import ThreeD from "../components/ThreeD"
 export default function Home() {
   return (
     <>
-      <ThreeD />
+      {/* <ThreeD /> */}
       <div className="t bg-gradient-to-b from-simple-black-2 to-simple-black font-spotify">
         <div className="h-screen">
           <Intro />

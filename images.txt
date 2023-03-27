@@ -1,0 +1,115 @@
+
+// <Image
+//   alt="fog.jpg"
+//   className="rounded-lg"
+//   src={"/clicks/fog.jpg"}
+//   width={600}
+//   height={600}
+// />
+// <Image
+//   alt="table-bottle.jpg"
+//   className="rounded-lg"
+//   src={"/clicks/table-bottle.jpg"}
+//   width={600}
+//   height={600}
+// />
+// <Image
+//   alt="stadium-center-darker-sky.jpg"
+//   className="rounded-lg"
+//   src={"/clicks/stadium-center-darker-sky.jpg"}
+//   width={600}
+//   height={600}
+// />
+// <Image
+//   alt="hike-clear-sky-1.jpg"
+//   className="rounded-lg"
+//   src={"/clicks/hike-clear-sky-1.jpg"}
+//   width={600}
+//   height={600}
+// />
+// <Image
+//   alt="sea"
+//   className="rounded-lg"
+//   src={"/clicks/sea.jpg"}
+//   width={600}
+//   height={600}
+// />
+
+//         <Image
+//           alt="hike-filter-shoes.JPG"
+//           className="rounded-lg"
+//           src={"/clicks/hike-filter-shoes.JPG"}
+//           width={600}
+//           height={600}
+//         />
+//         <Image
+//           alt="jublie-bulding.jpg"
+//           className="rounded-lg"
+//           src={"/clicks/jublie-bulding.jpg"}
+//           width={600}
+//           height={600}
+//         />
+//         <Image
+//           alt="plane-glider.jpg"
+//           className="rounded-lg"
+//           src={"/clicks/plane-glider.jpg"}
+//           width={600}
+//           height={600}
+//         />
+//         <Image
+//           alt="sea-beach-closeup.jpg"
+//           className="rounded-lg"
+//           src={"/clicks/sea-beach-closeup.jpg"}
+//           width="6000"
+//           height="3600"
+//         />
+//         <Image
+//           alt="forest.jpg"
+//           className="rounded-lg"
+//           src={"/clicks/forest.jpg"}
+//           width={600}
+//           height={600}
+//         />
+//         <Image
+//           alt="stadium-left-side.jpg"
+//           className="rounded-lg"
+//           src={"/clicks/stadium-left-side.jpg"}
+//           width={600}
+//           height={600}
+//         />
+//         <Image
+//           alt="hike-1.jpg"
+//           className="rounded-lg"
+//           src={"/clicks/hike-1.jpg"}
+//           width={600}
+//           height={600}
+//         />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export const metadata = {
+  title: "Clicks",
+  description: "Portofolio website",
+}
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  )
+}
+
