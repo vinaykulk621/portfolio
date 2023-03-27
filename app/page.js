@@ -1,3 +1,4 @@
+import { AboutMe } from "../components/AboutMe"
 import { Projects } from "../components/Projects"
 import { Intro } from "../components/Intro"
 import { TechStack } from "../components/TechStack"
@@ -11,8 +12,9 @@ export default function Home() {
         <div className="h-screen">
           <Intro />
         </div>
-        <div className="h-screen">
+        <div className="flex h-screen flex-col items-center justify-center space-y-10 p-4 lg:flex-row lg:space-x-10">
           <TechStack />
+          <AboutMe />
         </div>
         <Projects />
         <p className="relative bottom-[20%] text-center text-lg text-gray-400">

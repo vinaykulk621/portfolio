@@ -19,5 +19,5 @@
 }
 
 .svg_container {
-  @apply m-5 mb-0 flex flex-row flex-wrap items-center justify-center space-x-5;
+  @apply mb-0 flex flex-row flex-wrap items-center justify-center space-x-5;
 }
