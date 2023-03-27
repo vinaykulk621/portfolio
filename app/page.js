@@ -1,5 +1,5 @@
 import { AboutMe } from "../components/AboutMe"
-import { Projects } from "../components/Projects"
+import { Projects } from "../components/Projects/Projects"
 import { Intro } from "../components/Intro"
 import { TechStack } from "../components/TechStack"
 import ThreeD from "../components/ThreeD"

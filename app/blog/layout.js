@@ -1,4 +1,4 @@
-import { BackButton } from "../../components/svgs/BackButton"
+import { BackButton } from "../../components/SVG"
 
 export const metadata = {
   title: "Blog",

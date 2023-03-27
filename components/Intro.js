@@ -1,8 +1,4 @@
-import { VoltFM } from "./svgs/VoltFM"
-import { TwitterSVG } from "./svgs/twitterSVG"
-import { LinkedinSVG } from "./svgs/linkedinSVG"
-import { GithubSVG } from "./svgs/githubSVG"
-import { EmailSVG } from "./svgs/emailSVG"
+import { VoltFM, TwitterSVG, LinkedinSVG, GithubSVG, EmailSVG } from "./SVG"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -24,6 +20,7 @@ export function Intro({}) {
             alt="Picture of the Creator"
             width={230}
             height={230}
+            priority
           />
           <div className="flex flex-col items-center space-y-1 text-2xl text-white md:items-stretch">
             <div>

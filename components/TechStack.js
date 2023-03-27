@@ -1,14 +1,15 @@
-import { MongoSVG } from "./svgs/MongoSVG"
-import { PythonSVG } from "./svgs/PythonSVG"
-import { CSVG } from "./svgs/CSVG"
-import { CSSSVG } from "./svgs/CSSSVG"
-import { HTMLSVG } from "./svgs/HTMLSVG"
-import { TailwindSVG } from "./svgs/TailwindSVG"
-import { JavascriptSVG } from "./svgs/JavascriptSVG"
-import { NodeSVG } from "./svgs/NodeSVG"
-import { NextJsSVG } from "./svgs/Next-jsSVG"
-import { Threejs } from "./svgs/Threejs"
-
+import {
+  CSSSVG,
+  HTMLSVG,
+  CSVG,
+  JavascriptSVG,
+  MongoSVG,
+  NextJsSVG,
+  NodeSVG,
+  PythonSVG,
+  TailwindSVG,
+  Threejs,
+} from "./SVG"
 export function TechStack({}) {
   return (
     <div className="flex flex-shrink-0 flex-col items-center space-y-6 lg:items-start">
