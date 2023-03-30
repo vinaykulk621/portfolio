@@ -9,6 +9,7 @@ import {
   PythonSVG,
   TailwindSVG,
   Threejs,
+  Bash,
 } from './SVG'
 export function TechStack({}) {
   return (
@@ -32,6 +33,7 @@ export function TechStack({}) {
         <div className="svg_container">
           <CSVG />
           <PythonSVG />
+          <Bash />
         </div>
       </div>
     </div>
