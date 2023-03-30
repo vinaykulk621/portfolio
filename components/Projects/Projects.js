@@ -9,7 +9,7 @@ export function Projects({}) {
           DemoUrl={'https://cuboido.vercel.app/'}
           github_repo_name="vinaykulk621/Cuboido"
           projectName="Cuboido"
-          projectDescription="3D interactive CUBE Built Using Three.js, Next.js and Tailwind CSS"
+          projectDescription="3D interactive CUBE Built Using Three.js, Next.js and Tailwind CSS."
           Preview={'cuboido.png'}
           alt="Cuboido Project at https://github.com/vinaykulk621/cuboido"
         />
@@ -17,7 +17,7 @@ export function Projects({}) {
           DemoUrl={'https://globes.vercel.app/'}
           github_repo_name="vinaykulk621/globes"
           projectName="Globes"
-          projectDescription="Collection of Cool Globes Made Using Three.js, Next.js and Tailwind CSS"
+          projectDescription="Collection of Cool 3D Globes Made Using Three.js, Next.js and Tailwind CSS."
           Preview={'globes.png'}
           alt="Globes Project at https://github.com/vinaykulk621/globes"
         />
@@ -25,7 +25,7 @@ export function Projects({}) {
           DemoUrl={'https://vinaykulk621.github.io/typewriter/'}
           github_repo_name="vinaykulk621/typewriter"
           projectName="Typewriter"
-          projectDescription="A JavaScript Application built for practicing typing"
+          projectDescription="A JavaScript application designed to facilitate typing practice on a pool of more than 3000 words."
           Preview={'typewriter.png'}
           alt="Typewriter Project at https://github.com/vinaykulk621/typewriter"
         />
@@ -33,7 +33,7 @@ export function Projects({}) {
           DemoUrl={'https://github.com/vinaykulk621/Spotify-landingPage'}
           github_repo_name="vinaykulk621/Spotify-landingPag"
           projectName="Spotify"
-          projectDescription="Spotify Landing Page Clone"
+          projectDescription="Spotify Landing Page Clone With Neat and Responsive UI."
           Preview={'spotify.png'}
           alt="Spotify Project at https://github.com/vinaykulk621/Spotify-landingPage"
         />
