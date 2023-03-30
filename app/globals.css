@@ -15,9 +15,9 @@
 }
 
 .bg-pallet {
-  @apply mt-3 flex items-center gap-3 rounded-md p-3 dark:bg-[#ffffff0a]/5 dark:backdrop-blur-2xl;
+  @apply mt-3 flex items-center gap-3 rounded-md p-2 dark:bg-[#ffffff0a]/5 xs:p-3;
 }
 
 .svg_container {
-  @apply mb-0 flex flex-row flex-wrap items-center justify-center space-x-5;
+  @apply mb-0 flex flex-row flex-wrap items-center justify-center space-x-2 xs:space-x-5;
 }

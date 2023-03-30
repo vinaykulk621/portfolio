@@ -10,6 +10,7 @@ import {
   TailwindSVG,
   Threejs,
   Bash,
+  MySQL,
 } from './SVG'
 export function TechStack({}) {
   return (
@@ -19,21 +20,24 @@ export function TechStack({}) {
       </div>
       <div className="flex flex-col items-center justify-center space-y-2 lg:items-start">
         <div className="svg_container">
-          <HTMLSVG />
-          <CSSSVG />
-          <JavascriptSVG />
-          <NodeSVG />
-        </div>
-        <div className="svg_container">
-          <MongoSVG />
-          <NextJsSVG />
-          <TailwindSVG />
-          <Threejs />
-        </div>
-        <div className="svg_container">
           <CSVG />
           <PythonSVG />
           <Bash />
+        </div>
+        <div className="svg_container">
+          <HTMLSVG />
+          <CSSSVG />
+          <JavascriptSVG />
+        </div>
+        <div className="svg_container">
+          <NodeSVG />
+          <MongoSVG />
+          <MySQL />
+        </div>
+        <div className="svg_container">
+          <NextJsSVG />
+          <TailwindSVG />
+          <Threejs />
         </div>
       </div>
     </div>
