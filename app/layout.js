@@ -1,18 +1,18 @@
-import "./globals.css"
-import { Analytics } from "@vercel/analytics/react"
+import './globals.css'
+import { Analytics } from '@vercel/analytics/react'
 
 export const metadata = {
-  title: "Vinay | Portofolio",
-  description: "Portofolio website",
+  title: 'Vinay | Portofolio',
+  description: 'Portofolio website',
   robots: {
     index: true,
     follow: true,
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   },
 }

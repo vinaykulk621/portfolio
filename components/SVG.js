@@ -1,9 +1,9 @@
-import Link from "next/link"
+import Link from 'next/link'
 
 export function BackButton({}) {
   return (
-    <Link href={"/"}>
-      <div className="absolute top-2 left-2 rounded-xl bg-gray-900 px-4 py-2 text-center font-spotify hover:bg-gray-800">
+    <Link href={'/'}>
+      <div className="absolute left-2 top-2 rounded-xl bg-gray-900 px-4 py-2 text-center font-spotify hover:bg-gray-800">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -89,7 +89,7 @@ export function EmailSVG({}) {
   return (
     <div className="has-tooltip">
       <span className="tooltip mt-7 rounded bg-black p-1 text-xl text-white">
-        kulkarnivinay621@gmail.com{" "}
+        kulkarnivinay621@gmail.com{' '}
       </span>
       <a
         className="text-sm text-gray-500 transition hover:text-gray-600"
@@ -301,7 +301,7 @@ export function TailwindSVG({}) {
           className="h-5 w-5"
         >
           <path
-            style={{ fillRule: "evenodd", clipRule: "evenodd" }}
+            style={{ fillRule: 'evenodd', clipRule: 'evenodd' }}
             d="M6.333 9.933C7.088 6.911 8.978 5.4 12 5.4c4.533 0 5.1 3.4 7.367 3.967 1.511.377 2.833-.189 3.966-1.7-.755 3.022-2.644 4.533-5.666 4.533-4.534 0-5.1-3.4-7.367-3.967-1.511-.378-2.833.189-3.967 1.7zm-5.666 6.8C1.422 13.711 3.31 12.2 6.333 12.2c4.534 0 5.1 3.4 7.367 3.967 1.51.377 2.833-.19 3.967-1.7C16.91 17.489 15.022 19 12 19c-4.533 0-5.1-3.4-7.367-3.967-1.511-.378-2.833.189-3.966 1.7z"
             fill="url(#prefix__paint0_linear)"
           ></path>
@@ -314,8 +314,8 @@ export function TailwindSVG({}) {
               y2="31.089"
               gradientUnits="userSpaceOnUse"
             >
-              <stop style={{ stopColor: "#2383AE" }}></stop>
-              <stop style={{ stopColor: "#6DD7B9", offset: 1 }}></stop>
+              <stop style={{ stopColor: '#2383AE' }}></stop>
+              <stop style={{ stopColor: '#6DD7B9', offset: 1 }}></stop>
             </linearGradient>
           </defs>
         </svg>

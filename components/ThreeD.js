@@ -1,7 +1,7 @@
-"use client"
-import React, { useRef, useEffect } from "react"
-import * as THREE from "three"
-import { ShaderMaterial } from "three"
+'use client'
+import React, { useRef, useEffect } from 'react'
+import * as THREE from 'three'
+import { ShaderMaterial } from 'three'
 
 const vertexShader = `
   varying vec2 vertexUV;
@@ -69,7 +69,7 @@ const ThreeD = () => {
         uniforms: {
           globeTexture: {
             // I wasn't even using the picture of earth that i downloaded 🤦‍♂️🤦‍♂️🤦‍♂️
-            value: new THREE.TextureLoader().load("/globe/earth-night.jpg"),
+            value: new THREE.TextureLoader().load('/globe/earth-night.jpg'),
           },
         },
       })
@@ -96,11 +96,11 @@ const ThreeD = () => {
 
     function addStars() {
       const starColors = [
-        "#ffffff", // white
-        "#ffff00", // yellow
-        "#ff0000", // red
-        "#9900cc", // purple
-        "#0000ff", // blue
+        '#ffffff', // white
+        '#ffff00', // yellow
+        '#ff0000', // red
+        '#9900cc', // purple
+        '#0000ff', // blue
       ]
       const star = new THREE.Mesh(
         new THREE.SphereGeometry(0.3),

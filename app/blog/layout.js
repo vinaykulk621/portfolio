@@ -1,8 +1,8 @@
-import { BackButton } from "../../components/SVG"
+import { BackButton } from '../../components/SVG'
 
 export const metadata = {
-  title: "Blog",
-  description: "Portofolio website",
+  title: 'Blog',
+  description: 'Portofolio website',
 }
 
 export default function RootLayout({ children }) {

@@ -1,8 +1,8 @@
-import { AboutMe } from "../components/AboutMe"
-import { Projects } from "../components/Projects/Projects"
-import { Intro } from "../components/Intro"
-import { TechStack } from "../components/TechStack"
-import ThreeD from "../components/ThreeD"
+import { AboutMe } from '../components/AboutMe'
+import { Projects } from '../components/Projects/Projects'
+import { Intro } from '../components/Intro'
+import { TechStack } from '../components/TechStack'
+import ThreeD from '../components/ThreeD'
 
 export default function Home() {
   return (
@@ -19,8 +19,8 @@ export default function Home() {
           </div>
           <Projects />
           <p className="relative bottom-[20%] text-center text-lg text-gray-400">
-            Check out this{" "}
-            <span className="text-gray-500 hover:text-gray-400">COOL BALL</span>{" "}
+            Check out this{' '}
+            <span className="text-gray-500 hover:text-gray-400">COOL BALL</span>{' '}
             down here that i made
           </p>
         </div>

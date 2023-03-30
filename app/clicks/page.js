@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from 'next/image'
 
 export default function Home(params) {
   return (
@@ -12,14 +12,14 @@ export default function Home(params) {
             <Image
               alt="table-bottle.jpg"
               className="rounded-lg"
-              src={"/clicks/table-bottle.jpg"}
+              src={'/clicks/table-bottle.jpg'}
               width={600}
               height={600}
             />
             <Image
               alt="stadium-center-darker-sky.jpg"
               className="rounded-lg"
-              src={"/clicks/stadium-center-darker-sky.jpg"}
+              src={'/clicks/stadium-center-darker-sky.jpg'}
               width={600}
               height={600}
             />
@@ -28,14 +28,14 @@ export default function Home(params) {
             <Image
               alt="hike-clear-sky-1.jpg"
               className="rounded-lg"
-              src={"/clicks/hike-clear-sky-1.jpg"}
+              src={'/clicks/hike-clear-sky-1.jpg'}
               width={600}
               height={600}
             />
             <Image
               alt="sea"
               className="rounded-lg"
-              src={"/clicks/sea.jpg"}
+              src={'/clicks/sea.jpg'}
               width={600}
               height={600}
             />
@@ -43,84 +43,84 @@ export default function Home(params) {
           <Image
             alt="fog.jpg"
             className="rounded-lg"
-            src={"/clicks/fog.jpg"}
+            src={'/clicks/fog.jpg'}
             width={600}
             height={600}
           />
           <Image
             alt="trees.jpg"
             className="rounded-lg"
-            src={"/clicks/trees.jpg"}
+            src={'/clicks/trees.jpg'}
             width={600}
             height={600}
           />
           <Image
             alt="nandi.jpg"
             className="rounded-lg"
-            src={"/clicks/nandi.jpg"}
+            src={'/clicks/nandi.jpg'}
             width={600}
             height={600}
           />
           <Image
             alt="road_2.jpg"
             className="rounded-lg"
-            src={"/clicks/road_2.jpg"}
+            src={'/clicks/road_2.jpg'}
             width={600}
             height={600}
           />
           <Image
             alt="jublie-bulding.jpg"
             className="rounded-lg"
-            src={"/clicks/jublie-bulding.jpg"}
+            src={'/clicks/jublie-bulding.jpg'}
             width={600}
             height={600}
           />
           <Image
             alt="plane-glider.jpg"
             className="rounded-lg"
-            src={"/clicks/plane-glider.jpg"}
+            src={'/clicks/plane-glider.jpg'}
             width={600}
             height={600}
           />
           <Image
             alt="sea-beach-closeup.jpg"
             className="rounded-lg"
-            src={"/clicks/sea-beach-closeup.jpg"}
+            src={'/clicks/sea-beach-closeup.jpg'}
             width={600}
             height={600}
           />
           <Image
             alt="forest.jpg"
             className="rounded-lg"
-            src={"/clicks/forest.jpg"}
+            src={'/clicks/forest.jpg'}
             width={600}
             height={600}
           />
           <Image
             alt="road.jpg"
             className="rounded-lg"
-            src={"/clicks/road.jpg"}
+            src={'/clicks/road.jpg'}
             width={600}
             height={600}
           />
           <Image
             alt="stadium-left-side.jpg"
             className="rounded-lg"
-            src={"/clicks/stadium-left-side.jpg"}
+            src={'/clicks/stadium-left-side.jpg'}
             width={600}
             height={600}
           />
           <Image
             alt="hike-1.jpg"
             className="rounded-lg"
-            src={"/clicks/hike-1.jpg"}
+            src={'/clicks/hike-1.jpg'}
             width={600}
             height={600}
           />
           <Image
             alt="hike-filter-shoes.JPG"
             className="rounded-lg"
-            src={"/clicks/hike-filter-shoes.JPG"}
+            src={'/clicks/hike-filter-shoes.JPG'}
             width={600}
             height={600}
           />
