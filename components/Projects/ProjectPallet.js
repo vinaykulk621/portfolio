@@ -19,7 +19,7 @@ export function ProjectPallet({
           alt={alt}
           className="w-full rounded-2xl rounded-b-lg p-2"
         />
-        <div className="flex flex-col justify-center space-y-3">
+        <div className="flex h-fit flex-col justify-center space-y-3">
           <div className="px-2 text-4xl underline-offset-4 group-hover:underline">
             {projectName}
           </div>
