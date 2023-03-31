@@ -31,6 +31,9 @@ export function Intro({}) {
             </div>
             <div className="space-x-2">
               Check Out{' '}
+              <Link href={'/projects'} className="link-color">
+                Projects
+              </Link>
               <Link href={'/blog'} className="link-color">
                 Blog
               </Link>

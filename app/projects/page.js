@@ -53,7 +53,15 @@ export default function Home() {
               Preview={'spamBot.png'}
               alt="Spammer Project at https://github.com/vinaykulk621/my_spam_bot"
             />
-          </div>{' '}
+            <ProjectPallet
+              DemoUrl={'https://vinaykulk621.github.io/Crypto_Cell/'}
+              github_repo_name="vinaykulk621/Crypto_Cell"
+              projectName="Crypto Store"
+              projectDescription="A Crypto Market Landing Page With Neat UI."
+              Preview={'crypto.png'}
+              alt="Cryptopunk Project at https://github.com/vinaykulk621/Crypto_Cell"
+            />
+          </div>
         </div>
       </main>
     </>
