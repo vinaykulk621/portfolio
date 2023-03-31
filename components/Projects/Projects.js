@@ -38,11 +38,10 @@ export function Projects({}) {
           alt="Spotify Project at https://github.com/vinaykulk621/Spotify-landingPage"
         />
       </div>
-      <Link
-        href={'/project'}
-        className="bg-gray-700/20 p-3 text-center text-4xl text-white"
-      >
-        More Projects
+      <Link href={'/project'} className="m-auto mt-0">
+        <p className="w-fit rounded-lg bg-neutral-900 p-3 text-center text-2xl text-white transition-all hover:bg-gray-600/50 xs:text-4xl">
+          More Projects
+        </p>
       </Link>
     </div>
   )
