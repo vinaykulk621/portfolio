@@ -1,5 +1,10 @@
 import Image from 'next/image'
 
+export const metadata = {
+  title: 'Clicks',
+  description: 'Portofolio website',
+}
+
 export default function Home(params) {
   return (
     <>

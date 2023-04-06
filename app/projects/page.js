@@ -1,5 +1,10 @@
 import { ProjectPallet } from '../../components/Projects/ProjectPallet'
 
+export const metadata = {
+  title: 'Projects',
+  description: 'Portofolio website',
+}
+
 export default function Home() {
   return (
     <>

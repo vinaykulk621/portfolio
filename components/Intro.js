@@ -24,24 +24,20 @@ export function Intro({}) {
           />
           <div className="flex flex-col items-center space-y-1 text-2xl text-white md:items-stretch">
             <div>
-              Hey, This is{' '}
-              <span className="cursor-pointer text-link-col">
-                Vinay Kulkarni
-              </span>
+              Hey, This is <span className="text-link-col">Vinay Kulkarni</span>
             </div>
-            <div className="space-x-2">
-              Check Out{' '}
-              <Link href={'/projects'} className="link-color">
+            <div className="space-x-6">
+              <Link href={'/projects'} className="link-color hover:underline">
                 Projects
               </Link>
-              <Link href={'/blog'} className="link-color">
+              <Link href={'/blog'} className="link-color hover:underline">
                 Blog
               </Link>
-              <Link href={'/clicks'} className="link-color">
+              <Link href={'/clicks'} className="link-color hover:underline">
                 Clicks
               </Link>
             </div>
-            <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-6 mt-2">
               <EmailSVG />
               <LinkedinSVG />
               <GithubSVG url={'vinaykulk621'} />

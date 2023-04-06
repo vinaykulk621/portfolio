@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <div className="overflow-x-hidden">
         <ThreeD />
-        <div className="t bg-gradient-to-b from-simple-black-2 to-simple-black font-spotify">
+        <div className="bg-gradient-to-b from-simple-black-2 to-simple-black font-spotify">
           <div className="h-screen">
             <Intro />
           </div>
