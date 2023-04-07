@@ -14,7 +14,11 @@ export default function HomePage() {
 
   return (
     <>
-      <div className="h-screen w-screen bg-[#111010] flex items-center justify-center flex-col">{postPreviews}</div>
+      <div className="flex h-screen w-screen items-center justify-center bg-[#111010]">
+        <div className="flex flex-col items-start space-y-2">
+        {postPreviews}
+        </div>
+      </div>
     </>
   )
 }
