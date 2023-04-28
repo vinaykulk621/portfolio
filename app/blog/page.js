@@ -3,7 +3,7 @@ import PostPreview from '../../components/blog/PostPreview'
 
 export const metadata = {
   title: 'Blog',
-  description: 'Portofolio website',
+  description: 'Blog Bro',
 }
 
 export default function HomePage() {
@@ -13,12 +13,8 @@ export default function HomePage() {
   ))
 
   return (
-    <>
-      <div className="flex h-screen w-screen items-center justify-center bg-[#111010]">
-        <div className="flex flex-col items-start space-y-2">
-        {postPreviews}
-        </div>
-      </div>
-    </>
+    <div className="flex h-screen w-screen items-center justify-center bg-[#111010]">
+      <div className="flex flex-col items-start space-y-2">{postPreviews}</div>
+    </div>
   )
 }
