@@ -1,3 +1,3 @@
 # Portofolio
 
-Portofolio at [vinay621.live](https://www.vinay621.live)
+Portofolio at [vinaykulka.vercel.app](https://vinaykulka.vercel.app)

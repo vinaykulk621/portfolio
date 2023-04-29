@@ -8,7 +8,7 @@ date: '26-04-2023'
 
 Let's make a cool 3D webpage using Three-js in Next.js 13.
 
-____
+---
 
 Start of with creating a new `Next-js` project with app-dir and install three-js.
 Here i am using JS, tailwindCSS and `Next-js 13.2` with app-directory.
@@ -18,7 +18,7 @@ npx create-next-app@latest
 npm i three
 ```
 
-___
+---
 
 ### Next steps
 
@@ -29,7 +29,7 @@ ___
 populate `/app/Three.js` with the following starter code.
 
 ```js
-export default function Three (){
+export default function Three() {
   return <>Three-js code goes here</>
 }
 ```
@@ -39,7 +39,7 @@ go ahead and import this component. Now your `/app/page.js` should look like thi
 ```js
 import Three from './Three'
 
-export default function Home(){
+export default function Home() {
   return <Three />
 }
 ```
@@ -47,7 +47,7 @@ export default function Home(){
 **Note**:
 In the next steps you will editing `/app/Three.js` file only.
 
-___
+---
 
 ### Next-steps
 
@@ -63,7 +63,7 @@ populate `/app/Three.js` page with the following code that sets up our scene in 
 import React, { useRef, useEffect } from 'react'
 import * as THREE from 'three'
 
-export default function Three (){
+export default function Three() {
   const sceneRef = useRef(null)
   const cameraRef = useRef(null)
   const rendererRef = useRef(null)
@@ -78,11 +78,11 @@ export default function Three (){
     )
     rendererRef.current = new THREE.WebGLRenderer({ antialias: true })
   }, [])
-    return <>Three-js cool.</>
+  return <>Three-js cool.</>
 }
 ```
 
-___
+---
 
 #### Next-steps
 
@@ -97,7 +97,7 @@ In the following code block you are rendering the your 3D geometry as soon as yo
 import React, { useRef, useEffect } from 'react'
 import * as THREE from 'three'
 
-export default function Three (){
+export default function Three() {
   const sceneRef = useRef(null)
   const cameraRef = useRef(null)
   const rendererRef = useRef(null)
@@ -113,7 +113,6 @@ export default function Three (){
     rendererRef.current = new THREE.WebGLRenderer({ antialias: true })
   }, [])
 
-
   // New Code Here
   useEffect(() => {
     const scene = sceneRef.current
@@ -124,7 +123,7 @@ export default function Three (){
 
     document.body.after(renderer.domElement)
   }, [])
-    return <></>
+  return <></>
 }
 ```
 
@@ -137,10 +136,10 @@ Sphere geometry takes a bunch of parameters in it's constructor while creating i
 The following code creates a **Ball** and adds it to the scene.
 
 ```js
-const geometry = new THREE.SphereGeometry( 15, 32, 16 );
-const material = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
-const sphere = new THREE.Mesh( geometry, material );
-scene.add( sphere );
+const geometry = new THREE.SphereGeometry(15, 32, 16)
+const material = new THREE.MeshBasicMaterial({ color: 0xffff00 })
+const sphere = new THREE.Mesh(geometry, material)
+scene.add(sphere)
 ```
 
 Now for the final step you can copy the following code block to your `/api/Three.js` file and do `npm run dev`.
@@ -150,7 +149,7 @@ Now for the final step you can copy the following code block to your `/api/Three
 import React, { useRef, useEffect } from 'react'
 import * as THREE from 'three'
 
-export default function Three (){
+export default function Three() {
   const sceneRef = useRef(null)
   const cameraRef = useRef(null)
   const rendererRef = useRef(null)
@@ -166,7 +165,6 @@ export default function Three (){
     rendererRef.current = new THREE.WebGLRenderer({ antialias: true })
   }, [])
 
-
   useEffect(() => {
     const scene = sceneRef.current
     const camera = cameraRef.current
@@ -175,12 +173,12 @@ export default function Three (){
     renderer.setSize(window.innerWidth, window.innerHeight)
 
     document.body.after(renderer.domElement)
-    
+
     // New Code Here
-    const geometry = new THREE.SphereGeometry( 15, 32, 16 );
-    const material = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
-    const ball = new THREE.Mesh( geometry, material );
-    scene.add( ball );
+    const geometry = new THREE.SphereGeometry(15, 32, 16)
+    const material = new THREE.MeshBasicMaterial({ color: 0xffff00 })
+    const ball = new THREE.Mesh(geometry, material)
+    scene.add(ball)
 
     const animate = () => {
       requestAnimationFrame(animate)
@@ -189,27 +187,26 @@ export default function Three (){
 
     animate()
   }, [])
-  
+
   return <></>
 }
 ```
 
 And That's It Folk now you have a **ball** on your screen.
 
-___
-
+---
 
 **Fun-Note**
 
 > you can wrap your **ball** with any picture to make it look cool or like a planet or a star or anything that comes to your imagination. Let's make a **moon** 🌚,
-you can get the 🌚 `jpg` from [here](tinyurl.com/spj4rujm).
+> you can get the 🌚 `jpg` from [here](tinyurl.com/spj4rujm).
 
 ```js
 'use client'
 import React, { useRef, useEffect } from 'react'
 import * as THREE from 'three'
 
-export default function Three (){
+export default function Three() {
   const sceneRef = useRef(null)
   const cameraRef = useRef(null)
   const rendererRef = useRef(null)
@@ -225,7 +222,6 @@ export default function Three (){
     rendererRef.current = new THREE.WebGLRenderer({ antialias: true })
   }, [])
 
-
   useEffect(() => {
     const scene = sceneRef.current
     const camera = cameraRef.current
@@ -234,31 +230,31 @@ export default function Three (){
     renderer.setSize(window.innerWidth, window.innerHeight)
 
     document.body.after(renderer.domElement)
-    
+
     // New Code Here
     const moonImg = 'tinyurl.com/spj4rujm'
 
     const ball = new THREE.Mesh(
-      new THREE.SphereGeometry(10, 150, 20), 
-      new THREE.MeshBasicMaterial(
-        { map: new THREE.TextureLoader().load(moonImg) }
-      )
-    );
-    
-    scene.add( ball );
+      new THREE.SphereGeometry(10, 150, 20),
+      new THREE.MeshBasicMaterial({
+        map: new THREE.TextureLoader().load(moonImg),
+      })
+    )
+
+    scene.add(ball)
 
     const animate = () => {
       requestAnimationFrame(animate)
 
       // Rotating the Moon around it's own axis
       ball.rotation.x += 0.01
-        
+
       renderer.render(scene, camera)
     }
 
     animate()
   }, [])
-  
+
   return <></>
 }
 ```
