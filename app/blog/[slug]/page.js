@@ -39,7 +39,7 @@ export default function PostPage(props) {
           <div className="mx-2 h-[0.2em] flex-1 bg-neutral-100 dark:bg-neutral-800" />
         </div>
       </div>
-      <article className="prose w-screen p-5 text-zinc-100 xs:prose-sm md:prose-lg lg:prose-xl prose-h1:text-white prose-h2:text-white prose-h3:text-white prose-h4:text-white prose-p:text-justify prose-p:font-spotify prose-blockquote:text-white prose-strong:text-white prose-code:text-link-col/80">
+      <article className="prose w-screen p-5 text-zinc-100 xs:prose-sm md:prose-lg lg:prose-xl prose-h1:text-white prose-h2:text-white prose-h3:text-white prose-h4:text-white prose-p:text-justify prose-p:font-spotify prose-blockquote:text-gray-400 prose-strong:text-white prose-code:text-link-col/80">
         <Markdown>{post.content}</Markdown>
       </article>
     </div>
