@@ -75,7 +75,6 @@ people get bored oftenly compared to getiing hungry.
 
 > Menu
 
-
 * Paani-puri(5-Pcs): 15Rs.
 * vadapaav: 20Rs.
 * paav-bhaaji: 30Rs.
