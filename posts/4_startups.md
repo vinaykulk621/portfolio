@@ -1,14 +1,14 @@
 ---
 title: 'My startup ideas.'
 subtitle: 'What to startup.'
-date: '30-04-2023'
+date: 'April 30, 2023'
 ---
 
 ### Hello There🐼.
 Let's startup.
 
 
-> This is a list of startup ideas made by me. If engineering doesn't workout as it suppose to and i get no job these are few things i might do with a bunch of unemployed friends of mine. **I hold legal rights to all of these**.
+> This is a list of startup ideas made by me. If engineering doesn't workout as it suppose to and i get no job these are few things i might do with a bunch of unemployed friends of mine. **I hold legal rights to all of the ideas**.
 
 ___
 

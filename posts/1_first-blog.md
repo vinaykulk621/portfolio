@@ -1,7 +1,7 @@
 ---
 title: 'First Blog'
 subtitle: 'My First Ever Blog Post.'
-date: '06-04-2023'
+date: 'April 06, 2023'
 ---
 
 ## Hello There🐼
@@ -10,4 +10,4 @@ date: '06-04-2023'
 
 This is my first ever Blog.
 
-I made this portofolio website using `Next.js-13`, `TailwindCSS`, `Three.js`, `MDX`.This website is currently deployed on vercel.
+I made this portofolio website using `Next.js-13`, `TailwindCSS`, `Three.js`, and `MDX`. This website is currently deployed on vercel.

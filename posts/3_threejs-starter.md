@@ -1,7 +1,7 @@
 ---
 title: 'Getting started with Three-js in Next-js 13'
 subtitle: 'How to get started with Three-js in Next-js 13 app-dir'
-date: '26-04-2023'
+date: 'April 26, 2023'
 ---
 
 ## Hello There🐼

@@ -1,7 +1,7 @@
 ---
 title: 'My Go-To Tech Stack'
 subtitle: 'My Glorius tech Stack  That I use to Make Shitty stuff'
-date: '07-04-2023'
+date: 'April 07, 2023'
 ---
 
 ### My Tech Stack: Next.js 🚀, TailwindCSS 💅, MongoDB 🍃, and a pinch of laziness 😴
