@@ -90,6 +90,14 @@ export default function Home() {
              Preview={'sierpinski.png'}
              alt="sierpinski triangle Project at https://github.com/vinaykulk621/sierpinski-triangle"
            />
+           <ProjectPallet
+             DemoUrl={'https://soch.vercel.app'}
+             github_repo_name="vinaykulk621/soch"
+             projectName="Soch"
+             projectDescription="A Twitter like webApp. Built using Next.js and supabase. No need of authentication or an account to SOCH."
+             Preview={'soch.png'}
+             alt="soch Project at https://github.com/vinaykulk621/soch"
+           />
          </div>
        </div>
      </main>
