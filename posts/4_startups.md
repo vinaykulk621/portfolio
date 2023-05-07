@@ -16,7 +16,7 @@ ___
 Every guy studying in uni had think opening one and i think this **xerox shop** idea is most scam and profitable idea.Like **Bro**!! you just put text on the paper with a machine and that text too you don't write on your own, The **customer🤑💵💲💸😻💓🥰😍** only gives it to you.
 
 1. Intial cost - around 5-lakhs to buy a **xerox** machine(big one) and rent a place near some college or ofiice where you will be attracting your customers.
-2. Monthly revenue - let's say you get around '150' pages to print in one day that's '45,000' pages in a month and you charge 1 rupee per copy for normal A4 sheet and much higher for diferent copies. 
+2. Monthly revenue - let's say you get around '150' pages to print in one day that's '45,000' pages in a month and you charge 1 rupee per copy for normal A4 sheet and much higher for diferent size of paper copies. 
 
 For example:
 
@@ -28,12 +28,12 @@ For example:
 
 your revenue will be easliy more than 1,00,000Rs per month.
 
-What about maintenance charges?
+What about maintenance charges tho?
 
 ___
 
 ## Egg Rice stall
-Many students and day workers who have a strict scchedule to be followed prefer quick food.What can be quicker than an egg rice made on a road side stall.Believe me there is lot of scope and place to grow in this business.
+Many students and day workers who have a strict schedule prefer quick food. What can be quicker than an egg rice made on a road side stall. Believe me there is lot of scope and place to grow in this business.
 
 **Make egg rice** <br />
 1. Get eggs.
