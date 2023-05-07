@@ -98,6 +98,14 @@ export default function Home() {
              Preview={'soch.png'}
              alt="soch Project at https://github.com/vinaykulk621/soch"
            />
+           <ProjectPallet
+             DemoUrl={'https://noote.vercel.app'}
+             github_repo_name="vinaykulk621/noote"
+             projectName="noote"
+             projectDescription="An online note sharing application. No need of login. Create a secret url and share to anyone."
+             Preview={'noote.png'}
+             alt="noote Project at https://github.com/vinaykulk621/noote"
+           />
          </div>
        </div>
      </main>

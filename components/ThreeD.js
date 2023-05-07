@@ -68,7 +68,6 @@ const ThreeD = () => {
         fragmentShader: fragmentShader,
         uniforms: {
           globeTexture: {
-            // I wasn't even using the picture of earth that i downloaded 🤦‍♂️🤦‍♂️🤦‍♂️
             value: new THREE.TextureLoader().load('/globe/earth-night.jpg'),
           },
         },
@@ -138,7 +137,6 @@ const ThreeD = () => {
       camera.position.x = 5 * Math.sin(Date.now() * 0.0001)
       camera.position.z = 5 * Math.cos(Date.now() * 0.0001)
 
-      // controls.update()
       renderer.render(scene, camera)
     }
 
