@@ -2,9 +2,11 @@
 title: 'My startup ideas.'
 subtitle: 'What to startup.'
 date: 'April 30, 2023'
+author: 'Vinay Kulkarni'
 ---
 
-### Hello There🐼.
+### Hello There🐼
+
 Let's startup.
 
 
