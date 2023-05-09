@@ -12,11 +12,11 @@ export default function Home() {
        <div className="flex flex-col space-y-9 md:h-fit">
          <div className="grid grid-cols-1 justify-items-center space-y-5 text-white xs:space-y-5 md:grid-cols-2 md:gap-5 md:space-y-0 lg:m-10 lg:grid-cols-4 lg:gap-8">
            <ProjectPallet
-             github_repo_name="vinaykulk621/my_spam_bot"
+             github_repo_name="vinaykulk621/spam-bot"
              projectName="Spam Bot"
              projectDescription="A Python Bot to spam messages across any social media."
              Preview={'spamBot.png'}
-             alt="Spammer Project at https://github.com/vinaykulk621/my_spam_bot"
+             alt="Spammer Project at https://github.com/vinaykulk621/spam-bot"
            />
            <ProjectPallet
              DemoUrl={'https://cuboido.vercel.app/'}
