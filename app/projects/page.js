@@ -1,4 +1,3 @@
-import { randInt } from 'three/src/math/MathUtils'
 import { ProjectPallet } from '../../components/Projects/ProjectPallet'
 
 export const metadata = {
