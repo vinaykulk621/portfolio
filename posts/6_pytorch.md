@@ -86,3 +86,24 @@ tensor = tensor * 10    # tensor([10, 20, 30])
 # Matrix Multiplication
 tensor = tensor * tensor    # tensor(14)
 ```
+
+
+#### **Aggregation operations**
+
+```python
+x = torch.arange(0, 100, 20)    #tensor([0, 20, 60, 80])
+
+# Minimum
+x.min()         #tensor(0) <--Value
+x.argmin()      #tensor(0) <--position
+
+# Maximum
+x.max()         #tensor(80) <--Value
+x.argmin()      #tensor(3) <--position
+
+# Sum
+x.sum()         #tensor(160) <--Value
+
+# Mean
+x.mean()        #tensor(40) <--Value
+```
