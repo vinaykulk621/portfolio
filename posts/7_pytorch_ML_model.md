@@ -42,6 +42,10 @@ Linear regression is a method where we **predict** the _value_ of a _variable_ d
 
 #### Let's code
 
+Basic idea of this model is to intialize the **independent** variable to some random number,and then through training we adjust the value of _**weight**_ and _**bias**_ or we can say models parameters.
+
+### **Step-1**:
+
 
 ```python
 import torch
@@ -72,17 +76,78 @@ X = torch.rand(100)
 
 Formula ==> `Y = aX + b`
 
-a ==> weight = 0.7
-
+a ==> weight = 0.7 <br/>
 b ==> bias = 0.3
 
-here weight and bias are 
+### **Step-2**:
 
+Splitting dataset into _**training**_ and _**testing**_ dataset in 80-20 ratio.
+
+```python
+split = int(0.8 * len(data))
+X_train, Y_train = data[:split], Y[:split]
+X_test, Y_test = data[split:], Y[split:]
+```
+
+
+### **Step-3**:
+
+Creating the model class.
+
+In pytorch every model has to inherit pytorch's `nn.Module`.
+
+```python
+# Creating model with name regression
+class regression(nn.Module):
+  def __init__(self):
+    super().__init__()
+    self.weights = nn.Parameter(torch.randn(1))
+    self.bias = nn.Parameter(torch.randn(1))
+  def forward(self,x): 
+    return self.weights * x + self.bias
+```
+
+```python
+# Creating an object of the model
+model = regression()
+```
+
+In this above code there are few things that need to be understood.
+* Our model name is `regression` and it is inheriting pytorch's `nn.Module` which has all the models defined in it. 
+* Every model need to overwrite `forward()` method which defines how the nueral network should progress. In our case the `forward()` method is doing the simple linear algebra `Y = aX + b`.
+
+
+### **Step-4**:
+
+Let's define `plot_graph()` function that will generate a graph for visualization.
+
+```python
+def plot_graph(train_data = X_train, train_label = Y_train, test_data = X_test, test_label = Y_test, prediction = None):
+  plt.figure(figsize=(10,7))
+  plt.scatter(train_data, train_label, c="b", s=5, label="Training data")
+  plt.scatter(test_data, test_label, c="r", s=5, label="Testing data")
+  if prediction is not None:
+    plt.scatter(test_data, prediction, c="g", s=5, label="prediction")
+  plt.legend(prop={"size":14})
+```
+
+
+### **Step-5**:
+
+Testing our model's predicting capabilities.
+
+```python
+with torch.inference_mode():
+  ans = model(X_test)
+plot_graph(prediction = ans.detach().numpy())
+```
+
+![Prediction-1](images/prediction_1.png)
 
 
 <br/>
 
-> Few things that if found interesting
+> Few things that i found interesting
 
 * `torch.inference_mode()` -- It is a context manager. This basically speeds up the training of your model by not keeping track of bunch of numbers while training your model. 
 
