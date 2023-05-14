@@ -1,7 +1,7 @@
 ---
-title: 'Learning Pytorch 🔥.'
+title: 'Learning Pytorch basics 🔥.'
 subtitle: 'Some basic stuff learnt in pytorch.'
-date: 'May 13, 2023'
+date: 'May 14, 2023'
 author: 'Vinay Kulkarni'
 ---
 
@@ -107,3 +107,10 @@ x.sum()         #tensor(160) <--Value
 # Mean
 x.mean()        #tensor(40) <--Value
 ```
+
+And that covers the basic of pytorch datatypes and stuff.
+
+<br/>
+<br/>
+
+**Good Day**
