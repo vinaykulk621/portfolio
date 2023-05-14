@@ -81,6 +81,50 @@ my_set = {1, 2, 3, 3}  # my_set = {1, 2, 3}
 
 > we can perform many operations on set like **_Union_**, **_intersection_**, and **_difference_**.
 
+___ 
+
+# Match
+
+Switch case version of python introduced in python-3.10
+
+```python
+color = input("Enter a color")
+
+match color:
+    case "green":
+       print("Earth is green") 
+    case "black":
+       print("Black is cool") 
+    case "pink":
+       print("Barbie is pink??") 
+    case "blue":
+       print("sky is blue") 
+    case _:
+        print("You should enter a color name")
+```
+
+___ 
+
+# Counter
+
+Count the number of occurances of a charecter/number or anything that is itterable.
+
+```python
+from collections import Counter
+
+word = "aaaabbbccc"
+count = Counter(word)
+
+print(count)
+# Counter({'a': 4, 'b': 3, 'c': 3})
+
+print(count.most_common(1))
+# [("a", 4)]
+
+print(count.most_common(2))
+# [("a", 4), ("b", 3)]
+```
+
 <br/>
 <br/>
 
