@@ -144,6 +144,70 @@ plot_graph(prediction = ans.detach().numpy())
 
 ![Prediction-1](images/prediction_1.png)
 
+Our model's predictions are completely wrong as it has not been trained. 
+
+
+### **Step-5**:
+
+We need to create training and testing loop which will train our model to predict the values of `Y` correctly.
+
+```python
+# Loss Function
+loss_fn = nn.L1Loss()
+
+# Optimizer
+optimizer = torch.optim.SGD(params = model.parameters(), lr = 0.01)
+
+# Loss function and Optimizer is explained in the begining of this blog post.
+```
+
+```python
+# Training loop
+
+epoch = 10000 # Number of time the model has to iterate through the dataset to learn or adjust the value of weight and bias to predict the output correctly.
+
+for e in range(epoch):
+  model.train() # Enable trianing mode(gradient tracking)
+
+  # Forward pass
+  y_pred = model(X_train)
+
+  # Loss
+  loss=loss_fn(y_pred,Y_train)
+ 
+  # Optimize zero grad
+  optimizer.zero_grad()
+
+  # Loss backwards(backpropagation)
+  loss.backward()
+
+  # Optimize
+  optimizer.step()
+
+  model.eval() # Turn off gradient tracking and start testing
+  
+  with torch.inference_mode():
+    
+    # Forward pass
+    test_pred = model(X_test)
+
+    # Loss
+    test_loss = loss_fn(test_pred, Y_test)
+```
+
+### **Step-6**:
+
+We check the model's prediction after training.
+
+```python
+with torch.inference_mode():
+  ans = model(X_test)
+plot_graph(prediction = ans.detach().numpy())
+```
+
+![Prediction-2](images/prediction-2.png)
+
+As you can see in the image our model is predicting almost exact value as our testing dataset.
 
 <br/>
 
