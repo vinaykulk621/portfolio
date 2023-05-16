@@ -25,6 +25,7 @@ import torch.nn as nn
 The above two conditions need to be satisified by any nueral network model in pytorch.
 
 ___
+
 ### Let's create a linear regression model
 
 #### **what??**
@@ -142,7 +143,7 @@ with torch.inference_mode():
 plot_graph(prediction = ans.detach().numpy())
 ```
 
-![Prediction-1](images/prediction_1.png)
+![Prediction-1](https://lxpvudvqfvttinrfcjmq.supabase.co/storage/v1/object/public/images/images/prediction_1.png)
 
 Our model's predictions are completely wrong as it has not been trained. 
 
@@ -205,7 +206,7 @@ with torch.inference_mode():
 plot_graph(prediction = ans.detach().numpy())
 ```
 
-![Prediction-2](images/prediction-2.png)
+![Prediction-2](https://lxpvudvqfvttinrfcjmq.supabase.co/storage/v1/object/public/images/images/prediction-2.png)
 
 As you can see in the image our model is predicting almost exact value as our testing dataset.
 

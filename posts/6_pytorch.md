@@ -9,7 +9,7 @@ author: 'Vinay Kulkarni'
 
 Let's talk pytorch 🔥.
 
----
+___
 
 ```python
 import torch
