@@ -209,11 +209,9 @@ plot_graph(prediction = ans.detach().numpy())
 
 As you can see in the image our model is predicting almost exact value as our testing dataset.
 
-<br/>
 
-> Few things that i found interesting
-
-* `torch.inference_mode()` -- It is a context manager. This basically speeds up the training of your model by not keeping track of bunch of numbers while training your model. 
+> 🎊🎉 There you go, you have your own linear regression model trined and ready to predict some real time data like raise and fall in stocks.
+___
 
 <br/>
 <br/>
