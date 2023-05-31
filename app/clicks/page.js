@@ -1,8 +1,19 @@
 import Image from 'next/image'
 
 export const metadata = {
-  title: 'Clicks',
-  description: 'Portofolio website',
+  title: 'Vinay | CLICKS',
+  description: 'CLICKS',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 }
 
 export default function Home(params) {
