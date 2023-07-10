@@ -3,6 +3,7 @@ title: 'Learning Pytorch basics 🔥.'
 subtitle: 'Some basic stuff learnt in pytorch.'
 date: 'May 14, 2023'
 author: 'Vinay Kulkarni'
+blog_count: 6
 ---
 
 ### Hello There 🐼

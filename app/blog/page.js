@@ -1,22 +1,6 @@
 import GetPostMetadata from '../../components/blog/GetPostMetadata'
 import PostPreview from '../../components/blog/PostPreview'
 
-export const metadata = {
-  title: 'Vinay | Blog',
-  description: 'Blog Bro',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-}
-
 export default function HomePage() {
   const postMetadata = GetPostMetadata()
   const postPreviews = postMetadata.map((post) => (

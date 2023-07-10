@@ -3,22 +3,6 @@ import Markdown from 'markdown-to-jsx'
 import matter from 'gray-matter'
 import GetPostMetadata from '../../../components/blog/GetPostMetadata'
 
-export const metadata = {
-  title: 'Vinay | Blog',
-  description: 'Blog Post',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-}
-
 function getPostContent(slug) {
   const folder = 'posts/'
   const file = `${folder}${slug}.md`

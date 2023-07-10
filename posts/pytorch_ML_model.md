@@ -3,6 +3,7 @@ title: 'Creating a ML model in pytorch 🔥.'
 subtitle: 'Creating a linear regression model in pytorch.'
 date: 'May 16, 2023'
 author: 'Vinay Kulkarni'
+blog_count: 7
 ---
 
 ### Hello There 🐼

@@ -3,6 +3,7 @@ title: 'My startup ideas.'
 subtitle: 'What to startup.'
 date: 'April 30, 2023'
 author: 'Vinay Kulkarni'
+blog_count: 4
 ---
 
 ### Hello There🐼

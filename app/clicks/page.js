@@ -20,7 +20,7 @@ export default function Home(params) {
   return (
     <>
       <div className="bg-gradient-to-b from-simple-black to-simple-black-2">
-        <div className="grid grid-cols-1 gap-y-6 px-14 py-5 xs:grid-cols-3 xs:gap-x-6 xs:py-8 md:grid-cols-4">
+        <div className="grid grid-cols-1 grid-rows-[masonry] gap-y-6 px-14 py-5 xs:grid-cols-3 xs:gap-x-6 xs:py-8 md:grid-cols-4">
           <p className="col-span-2 justify-center text-center font-spotify text-6xl text-white xs:flex xs:items-center xs:justify-center xs:text-8xl md:text-9xl">
             CLICKS
           </p>
