@@ -1,3 +1,3 @@
-# Portofolio
+# Portfolio
 
-Portofolio at [vinaykulka.vercel.app](https://vinaykulka.vercel.app)
+[vinaykulka.vercel.app](https://vinaykulka.vercel.app)
