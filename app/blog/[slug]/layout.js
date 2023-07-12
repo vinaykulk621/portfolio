@@ -1,6 +1,6 @@
 export async function generateMetadata({ params, searchParams }, parent) {
   return {
-    title: `${params.slug.slice(2).replace('-', ' ')}`,
+    title: `${params.slug.replace('-', ' ')}`,
     description: 'Blog Post',
     alternates: {
       canonical: `/blog/${params.slug}`,

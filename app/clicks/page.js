@@ -16,7 +16,7 @@ export const metadata = {
   },
 }
 
-export default function Home(params) {
+export default function Home() {
   return (
     <>
       <div className="bg-gradient-to-b from-simple-black to-simple-black-2">
