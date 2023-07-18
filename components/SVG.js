@@ -1,25 +1,32 @@
-export function BackButton({}) {
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip'
+
+export function DownArrow({}) {
   return (
-    <a href={'/'}>
-      <div className="absolute left-2 top-2 rounded-xl bg-gray-900 px-4 py-2 text-center font-spotify hover:bg-gray-800">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth="1.5"
-          stroke="white"
-          className="h-6 w-6"
-        >
-          <path d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
-        </svg>
-      </div>
-    </a>
+    <div className="flex animate-bounce items-center justify-center">
+      <svg
+        stroke="currentColor"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+        height="1em"
+        width="10em"
+        xmlns="http://www.w3.org/2000/svg"
+        className="text-4xl text-white"
+      >
+        <polyline points="7 13 12 18 17 13"></polyline>
+        <polyline points="7 6 12 11 17 6"></polyline>
+      </svg>
+    </div>
   )
 }
 
 export function CSSSVG({}) {
   return (
-    <div className="bg-pallet">
+    <div className="xs:p-3 mt-3 flex items-center gap-3 rounded-md bg-[#ffffff0a]/5 p-2">
       <div className="items-center justify-center rounded-lg bg-[#264de426] p-2">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
           <path
@@ -43,7 +50,7 @@ export function CSSSVG({}) {
 
 export function HTMLSVG({}) {
   return (
-    <div className="bg-pallet">
+    <div className="xs:p-3 mt-3 flex items-center gap-3 rounded-md bg-[#ffffff0a]/5 p-2">
       <div className="items-center justify-center rounded-lg bg-[#dd4b2526] p-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +68,7 @@ export function HTMLSVG({}) {
 
 export function CSVG({}) {
   return (
-    <div className="bg-pallet">
+    <div className="xs:p-3 mt-3 flex items-center gap-3 rounded-md bg-[#ffffff0a]/5 p-2">
       <div className="items-center justify-center rounded-lg bg-[#03599c]/20 p-2">
         <svg viewBox="0 0 124 124" className="h-5 w-5">
           <path
@@ -85,27 +92,31 @@ export function CSVG({}) {
 
 export function EmailSVG({}) {
   return (
-    <div className="has-tooltip">
-      <span className="tooltip mt-7 rounded bg-black p-1 text-xl text-white">
-        kulkarnivinay621@gmail.com{' '}
-      </span>
-      <a
-        className="text-sm text-gray-500 transition hover:text-gray-600"
-        target="_blank"
-        rel="noopener noreferrer"
-        href="mailto:kulkarnivinay621@gmail.com"
-      >
-        <span className="sr-only">mail</span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-          className="h-6 w-6 fill-current text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400"
-        >
-          <path d="M2.003 5.884 10 9.882l7.997-3.998A2 2 0 0 0 16 4H4a2 2 0 0 0-1.997 1.884z"></path>
-          <path d="m18 8.118-8 4-8-4V14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.118z"></path>
-        </svg>
-      </a>
-    </div>
+    <TooltipProvider>
+      <Tooltip>
+        <TooltipTrigger>
+          <a
+            className="text-sm text-gray-500 transition hover:text-gray-600"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="mailto:kulkarnivinay621@gmail.com"
+          >
+            <span className="sr-only">mail</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              className="h-6 w-6 fill-current  text-gray-200 hover:text-blue-500"
+            >
+              <path d="M2.003 5.884 10 9.882l7.997-3.998A2 2 0 0 0 16 4H4a2 2 0 0 0-1.997 1.884z"></path>
+              <path d="m18 8.118-8 4-8-4V14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.118z"></path>
+            </svg>
+          </a>
+        </TooltipTrigger>
+        <TooltipContent className="border-none bg-black text-white">
+          <p>kulkarnivinay621@gmail.com</p>
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
   )
 }
 
@@ -121,7 +132,7 @@ export function GithubSVG({ url }) {
       <svg
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6 fill-current text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400"
+        className="h-6 w-6 fill-current text-gray-200 hover:text-blue-400"
       >
         <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
       </svg>
@@ -131,7 +142,7 @@ export function GithubSVG({ url }) {
 
 export function JavascriptSVG({}) {
   return (
-    <div className="bg-pallet">
+    <div className="xs:p-3 mt-3 flex items-center gap-3 rounded-md bg-[#ffffff0a]/5 p-2">
       <div className="items-center justify-center rounded-lg bg-[#f0db4f26] p-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -170,7 +181,7 @@ export function LinkedinSVG({}) {
       <svg
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6 fill-current text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400"
+        className="h-6 w-6 fill-current text-gray-200 hover:text-blue-400"
       >
         <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
       </svg>
@@ -180,7 +191,7 @@ export function LinkedinSVG({}) {
 
 export function MongoSVG({}) {
   return (
-    <div className="bg-pallet">
+    <div className="xs:p-3 mt-3 flex items-center gap-3 rounded-md bg-[#ffffff0a]/5 p-2">
       <div className="items-center justify-center rounded-lg bg-green-600/10 p-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -200,14 +211,14 @@ export function MongoSVG({}) {
 
 export function NextJsSVG({}) {
   return (
-    <div className="bg-pallet">
-      <div className="items-center justify-center rounded-lg bg-white p-2 dark:bg-[#ffffff14]">
+    <div className="xs:p-3 mt-3 flex items-center gap-3 rounded-md bg-[#ffffff0a]/5 p-2">
+      <div className="items-center justify-center rounded-lg bg-[#ffffff14] bg-white p-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 256 256"
           version="1.1"
           preserveAspectRatio="xMidYMid"
-          className="h-5 w-5  dark:fill-slate-200"
+          className="h-5 w-5  fill-slate-200"
         >
           <g>
             <path d=" M119.616813,0.0688905149 C119.066276,0.118932037 117.314565,0.294077364 115.738025,0.419181169 C79.3775171,3.69690087 45.3192571,23.3131775 23.7481916,53.4631946 C11.7364614,70.2271045 4.05395894,89.2428829 1.15112414,109.384595 C0.12512219,116.415429 0,118.492153 0,128.025062 C0,137.557972 0.12512219,139.634696 1.15112414,146.665529 C8.10791789,194.730411 42.3163245,235.11392 88.7116325,250.076335 C97.0197458,252.753556 105.778299,254.580072 115.738025,255.680985 C119.616813,256.106338 136.383187,256.106338 140.261975,255.680985 C157.453763,253.779407 172.017986,249.525878 186.382014,242.194795 C188.584164,241.068861 189.00958,240.768612 188.709286,240.518404 C188.509091,240.36828 179.124927,227.782837 167.86393,212.570214 L147.393939,184.922273 L121.743891,146.965779 C107.630108,126.098464 96.0187683,109.034305 95.9186706,109.034305 C95.8185728,109.009284 95.7184751,125.873277 95.6684262,146.465363 C95.5933529,182.52028 95.5683284,183.971484 95.1178886,184.82219 C94.4672532,186.048207 93.9667644,186.548623 92.915738,187.099079 C92.114956,187.499411 91.4142717,187.574474 87.6355816,187.574474 L83.3063539,187.574474 L82.1552297,186.848872 C81.4044966,186.373477 80.8539589,185.747958 80.4785924,185.022356 L79.9530792,183.896422 L80.0031281,133.729796 L80.0782014,83.5381493 L80.8539589,82.5623397 C81.25435,82.0369037 82.1051808,81.3613431 82.7057674,81.0360732 C83.7317693,80.535658 84.1321603,80.4856165 88.4613881,80.4856165 C93.5663734,80.4856165 94.4172043,80.6857826 95.7434995,82.1369867 C96.1188661,82.5373189 110.007429,103.454675 126.623656,128.650581 C143.239883,153.846488 165.962072,188.250034 177.122972,205.139048 L197.392766,235.839522 L198.418768,235.163961 C207.502639,229.259062 217.112023,220.852086 224.719453,212.09482 C240.910264,193.504394 251.345455,170.835585 254.848876,146.665529 C255.874878,139.634696 256,137.557972 256,128.025062 C256,118.492153 255.874878,116.415429 254.848876,109.384595 C247.892082,61.3197135 213.683675,20.9362052 167.288368,5.97379012 C159.105376,3.32158945 150.396872,1.49507389 140.637341,0.394160408 C138.234995,0.143952798 121.693842,-0.131275573 119.616813,0.0688905149 L119.616813,0.0688905149 Z M172.017986,77.4831252 C173.219159,78.0836234 174.195112,79.2345784 174.545455,80.435575 C174.74565,81.0861148 174.795699,94.9976579 174.74565,126.348671 L174.670577,171.336 L166.73783,159.17591 L158.780059,147.01582 L158.780059,114.313685 C158.780059,93.1711423 158.880156,81.2862808 159.030303,80.7108033 C159.430694,79.3096407 160.306549,78.2087272 161.507722,77.5581875 C162.533724,77.0327515 162.909091,76.98271 166.837928,76.98271 C170.541544,76.98271 171.19218,77.0327515 172.017986,77.4831252 Z"></path>
@@ -221,7 +232,7 @@ export function NextJsSVG({}) {
 
 export function NodeSVG({}) {
   return (
-    <div className="bg-pallet">
+    <div className="xs:p-3 mt-3 flex items-center gap-3 rounded-md bg-[#ffffff0a]/5 p-2">
       <div className="items-center justify-center rounded-lg bg-[#6fa66026] p-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -240,7 +251,7 @@ export function NodeSVG({}) {
 
 export function PythonSVG({}) {
   return (
-    <div className="bg-pallet">
+    <div className="xs:p-3 mt-3 flex items-center gap-3 rounded-md bg-[#ffffff0a]/5 p-2">
       <div className="items-center justify-center rounded-lg bg-gradient-to-b from-[#0277bd]/10 to-[#ffc107]/10 p-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -290,7 +301,7 @@ export function Redirect({ DemoUrl }) {
 
 export function TailwindSVG({}) {
   return (
-    <div className="bg-pallet">
+    <div className="xs:p-3 mt-3 flex items-center gap-3 rounded-md bg-[#ffffff0a]/5 p-2">
       <div className="items-center justify-center rounded-lg bg-[#44a8b326] p-2">
         <svg
           viewBox="0 0 24 24"
@@ -327,7 +338,7 @@ export function TailwindSVG({}) {
 
 export function Threejs({}) {
   return (
-    <div className="bg-pallet">
+    <div className="xs:p-3 mt-3 flex items-center gap-3 rounded-md bg-[#ffffff0a]/5 p-2">
       <div className="items-center justify-center rounded-lg bg-white/70 p-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -362,7 +373,7 @@ export function Threejs({}) {
 
 export function MySQL({}) {
   return (
-    <div className="bg-pallet">
+    <div className="xs:p-3 mt-3 flex items-center gap-3 rounded-md bg-[#ffffff0a]/5 p-2">
       <div className="items-center justify-center rounded-lg bg-white/70 p-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -384,7 +395,7 @@ export function MySQL({}) {
 
 export function Bash({}) {
   return (
-    <div className="bg-pallet">
+    <div className="xs:p-3 mt-3 flex items-center gap-3 rounded-md bg-[#ffffff0a]/5 p-2">
       <div className="items-center justify-center rounded-lg bg-[#2f3a3e]/40 p-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -418,25 +429,6 @@ export function Bash({}) {
   )
 }
 
-export function TwitterSVG({}) {
-  return (
-    <a
-      className="text-sm text-gray-500 transition hover:text-gray-600"
-      target="_blank"
-      rel="noopener noreferrer"
-      href="https://twitter.com/kuylycljhyvvy"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        className="h-6 w-6 fill-current text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400"
-      >
-        <path d="M23.953 4.57a10 10 0 0 1-2.825.775 4.958 4.958 0 0 0 2.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 0 0-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 0 0-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 0 1-2.228-.616v.06a4.923 4.923 0 0 0 3.946 4.827 4.996 4.996 0 0 1-2.212.085 4.936 4.936 0 0 0 4.604 3.417 9.867 9.867 0 0 1-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0 0 7.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0 0 24 4.59z"></path>
-      </svg>
-    </a>
-  )
-}
-
 export function VoltFM({}) {
   return (
     <a
@@ -448,7 +440,7 @@ export function VoltFM({}) {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1024 1024"
-        className="m-0 h-6 fill-current text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400"
+        className="m-0 h-6 fill-current text-gray-200 hover:text-blue-400"
       >
         <path d="M924 0c55.228 0 100 44.772 100 100v824c0 55.228-44.772 100-100 100H100C44.772 1024 0 979.228 0 924V100C0 44.772 44.772 0 100 0h824ZM413.505 341.879H292.73V711.85c0 6.98 1.292 13.509 3.876 19.585 2.584 6.075 6.202 11.376 10.853 15.9 4.65 4.524 10.077 8.08 16.279 10.665 6.201 2.585 12.79 3.878 19.767 3.878 40.569 0 78.23-5.494 112.985-16.482 34.754-10.988 66.925-26.113 96.511-45.374 29.587-19.261 56.59-42.142 81.008-68.643 24.419-26.5 46.512-55.328 66.28-86.482 19.767-31.154 37.273-63.924 52.519-98.31 15.245-34.386 28.552-69.289 39.922-104.71H665.753c-4.65 17.84-11.692 38.006-21.124 60.5-9.431 22.493-20.865 45.438-34.302 68.836-13.437 23.398-28.747 46.214-45.93 68.449-17.184 22.234-35.853 42.077-56.008 59.529-20.155 17.451-41.538 31.477-64.147 42.077-22.61 10.6-30.737 8.627-30.737 5.9V341.88Z"></path>
       </svg>

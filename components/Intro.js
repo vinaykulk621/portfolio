@@ -1,4 +1,4 @@
-import { VoltFM, TwitterSVG, LinkedinSVG, GithubSVG, EmailSVG } from './SVG'
+import { VoltFM, LinkedinSVG, GithubSVG, EmailSVG } from './SVG'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -6,7 +6,7 @@ export function Intro({}) {
   return (
     <div className="flex flex-col items-center justify-center space-y-3 pt-20 text-5xl">
       <Link href={'/'}>
-        <p className="group text-4xl text-white xs:text-5xl md:text-6xl">
+        <p className="xs:text-5xl group text-4xl text-white md:text-6xl">
           Vinay&apos;s{' '}
           <span className="text-gray-400 group-hover:text-white">web</span>
         </p>
@@ -26,13 +26,22 @@ export function Intro({}) {
             Hey, This is <span className="text-link-col">Vinay Kulkarni</span>
           </div>
           <div className="space-x-6">
-            <Link href={'/projects'} className="link-color hover:underline">
+            <Link
+              href={'/projects'}
+              className="text-link-col hover:text-orange-400/80 hover:underline"
+            >
               Projects
             </Link>
-            <Link href={'/blog'} className="link-color hover:underline">
+            <Link
+              href={'/blog'}
+              className="text-link-col hover:text-orange-400/80 hover:underline"
+            >
               Blog
             </Link>
-            <Link href={'/clicks'} className="link-color hover:underline">
+            <Link
+              href={'/clicks'}
+              className="text-link-col hover:text-orange-400/80 hover:underline"
+            >
               Clicks
             </Link>
           </div>
@@ -40,7 +49,6 @@ export function Intro({}) {
             <EmailSVG />
             <LinkedinSVG />
             <GithubSVG url={'vinaykulk621'} />
-            <TwitterSVG />
             <VoltFM />
           </div>
         </div>

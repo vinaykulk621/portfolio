@@ -3,17 +3,6 @@ import { ProjectPallet } from '../../components/Projects/ProjectPallet'
 export const metadata = {
   title: 'Vinay | Projects',
   description: 'Projects',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
 }
 
 export default function Home() {

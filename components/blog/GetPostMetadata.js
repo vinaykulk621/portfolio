@@ -8,9 +8,8 @@ export default function GetPostMetadata() {
 
   const posts = markdownPosts
     .map((fileName) => {
-      const fileContents = fs.readFileSync(`posts/${fileName}`, 'utf8')
-      const matterResult = matter(fileContents)
-
+      const matterResult = matter(fs.readFileSync(`posts/${fileName}`, 'utf8'))
+      
       return {
         title: matterResult.data.title,
         blog_count: matterResult.data.blog_count,
