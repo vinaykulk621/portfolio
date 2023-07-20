@@ -11,22 +11,22 @@ blog_count: 7
 
 Let's talk ML model in pytorch 🔥.
 
-___
+---
 
 ```python
 import torch
 import torch.nn as nn
 ```
 
-
 #### Pytorch models
+
 1. Inherit `nn.Module` class from pytorch to make any nueral network.
 2. Override `forward()` method. This method defines what happens in forward computation.
 3. `nn.Parameter` contains what parameters the model should learn.
 
 The above two conditions need to be satisified by any nueral network model in pytorch.
 
-___
+---
 
 ### Let's create a linear regression model
 
@@ -36,19 +36,17 @@ Linear regression is a method where we **predict** the _value_ of a _variable_ d
 
 #### _**Few things to know before we code**_
 
-* We are going to initialize two variables _**weight**_ and _**bias**_ to a random number between 0-1, which will act as part of our linear regression formula. Through training we will adjust the value of _**weight**_ and _**bias**_ to predict the correct value of `Y` in `Y = aX + b` by the model.
-* **Cost**: If we consider the output of our model as a number between 0-1, It is the diference between the value of what our model has predicted and what it should have predicted.
-* **Gradient descent**: It tells us how much we should change (decrease or increase) our _**weight**_ and _**bias**_ value so that the **cost** of our model is minimized. Or in simple terms how we can make our model predict more accuratley. 
-* **Loss function**: It is basically a function which tells us how wrongly our model is performing or predicting the vallue of `Y`. Pytorch 🔥 has some built in loss functions, we will use MEA (Mean Absolute error).
-* **Optimiser**: Takes into account the loss a model and adjusts the model's parameters. Here in our case it is _**weight**_ and _**bias**_. Basically tells our model how to update the internal parameters to lower our losses.
-
+- We are going to initialize two variables _**weight**_ and _**bias**_ to a random number between 0-1, which will act as part of our linear regression formula. Through training we will adjust the value of _**weight**_ and _**bias**_ to predict the correct value of `Y` in `Y = aX + b` by the model.
+- **Cost**: If we consider the output of our model as a number between 0-1, It is the diference between the value of what our model has predicted and what it should have predicted.
+- **Gradient descent**: It tells us how much we should change (decrease or increase) our _**weight**_ and _**bias**_ value so that the **cost** of our model is minimized. Or in simple terms how we can make our model predict more accuratley.
+- **Loss function**: It is basically a function which tells us how wrongly our model is performing or predicting the vallue of `Y`. Pytorch 🔥 has some built in loss functions, we will use MEA (Mean Absolute error).
+- **Optimiser**: Takes into account the loss a model and adjusts the model's parameters. Here in our case it is _**weight**_ and _**bias**_. Basically tells our model how to update the internal parameters to lower our losses.
 
 #### Let's code
 
 Basic idea of this model is to intialize the **independent** variable to some random number,and then through training we adjust the value of _**weight**_ and _**bias**_ or we can say models parameters.
 
 ### **Step-1**:
-
 
 ```python
 import torch
@@ -92,7 +90,6 @@ X_train, Y_train = data[:split], Y[:split]
 X_test, Y_test = data[split:], Y[split:]
 ```
 
-
 ### **Step-3**:
 
 Creating the model class.
@@ -106,7 +103,7 @@ class regression(nn.Module):
     super().__init__()
     self.weights = nn.Parameter(torch.randn(1))
     self.bias = nn.Parameter(torch.randn(1))
-  def forward(self,x): 
+  def forward(self,x):
     return self.weights * x + self.bias
 ```
 
@@ -116,9 +113,9 @@ model = regression()
 ```
 
 In this above code there are few things that need to be understood.
-* Our model name is `regression` and it is inheriting pytorch's `nn.Module` which has all the models defined in it. 
-* Every model need to overwrite `forward()` method which defines how the nueral network should progress. In our case the `forward()` method is doing the simple linear algebra `Y = aX + b`.
 
+- Our model name is `regression` and it is inheriting pytorch's `nn.Module` which has all the models defined in it.
+- Every model need to overwrite `forward()` method which defines how the nueral network should progress. In our case the `forward()` method is doing the simple linear algebra `Y = aX + b`.
 
 ### **Step-4**:
 
@@ -134,7 +131,6 @@ def plot_graph(train_data = X_train, train_label = Y_train, test_data = X_test, 
   plt.legend(prop={"size":14})
 ```
 
-
 ### **Step-5**:
 
 Testing our model's predicting capabilities.
@@ -147,8 +143,7 @@ plot_graph(prediction = ans.detach().numpy())
 
 ![Prediction-1](https://lxpvudvqfvttinrfcjmq.supabase.co/storage/v1/object/public/images/images/prediction_1.png)
 
-Our model's predictions are completely wrong as it has not been trained. 
-
+Our model's predictions are completely wrong as it has not been trained.
 
 ### **Step-5**:
 
@@ -177,7 +172,7 @@ for e in range(epoch):
 
   # Loss
   loss=loss_fn(y_pred,Y_train)
- 
+
   # Optimize zero grad
   optimizer.zero_grad()
 
@@ -188,9 +183,9 @@ for e in range(epoch):
   optimizer.step()
 
   model.eval() # Turn off gradient tracking and start testing
-  
+
   with torch.inference_mode():
-    
+
     # Forward pass
     test_pred = model(X_test)
 
@@ -212,9 +207,9 @@ plot_graph(prediction = ans.detach().numpy())
 
 As you can see in the image our model is predicting almost exact value as our testing dataset.
 
-
 > 🎊🎉 There you go, you have your own linear regression model trined and ready to predict some real time data like raise and fall in stocks.
-___
+
+---
 
 <br/>
 <br/>

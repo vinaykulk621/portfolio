@@ -7,10 +7,9 @@ publishedAt: '2023-04-07'
 blog_count: 2
 ---
 
-
 ### My Tech Stack: Next.js 🚀, TailwindCSS 💅, MongoDB 🍃, and a pinch of laziness 😴
 
-___
+---
 
 Hey there! Are you ready to hear about my tech stack? I use Next.js 13, TailwindCSS 💅, and sometimes MongoDB🍃 for my database needs. Now, you might be wondering why I chose Next.js. It's simple: I hated learning React and got stuck with this React framework. Plus, I'm too lazy to learn any other framework out there (oops!).
 

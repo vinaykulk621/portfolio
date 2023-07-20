@@ -11,12 +11,11 @@ blog_count: 5
 
 Let's talk python 🐍.
 
-___
+---
 
 # List
 
 Setting up of a list
-
 
 ```python
 my_list = list()
@@ -31,7 +30,7 @@ my_list.insert(1,"hi")   # Insert "hi" at position 1.
 my_list.extend([2,3,4])  # Insert 2,3,4 at the end.
 ```
 
-**__bonus__**
+****bonus****
 
 ```python
 my_list = [1,2,3,4,5]
@@ -70,7 +69,7 @@ reverse_list = my_list.reverse()    # reverse 'my_list'
 
 > Working with **Tuples** is more **_memory_** and **_time_** efficient compared to working with **Lists**.
 
-___ 
+---
 
 # Set
 
@@ -83,7 +82,7 @@ my_set = {1, 2, 3, 3}  # my_set = {1, 2, 3}
 
 > we can perform many operations on set like **_Union_**, **_intersection_**, and **_difference_**.
 
-___ 
+---
 
 # Match
 
@@ -94,18 +93,18 @@ color = input("Enter a color")
 
 match color:
     case "green":
-       print("Earth is green") 
+       print("Earth is green")
     case "black":
-       print("Black is cool") 
+       print("Black is cool")
     case "pink":
-       print("Barbie is pink??") 
+       print("Barbie is pink??")
     case "blue":
-       print("sky is blue") 
+       print("sky is blue")
     case _:
         print("You should enter a color name")
 ```
 
-___ 
+---
 
 # Counter
 

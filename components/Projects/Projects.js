@@ -4,7 +4,7 @@ import { ProjectPallet } from './ProjectPallet'
 export function Projects({}) {
   return (
     <div className="flex flex-col space-y-9 md:h-screen">
-      <div className="grid grid-cols-1 justify-items-center space-y-5 text-white xs:space-y-5 md:grid-cols-2 md:gap-5 md:space-y-0 lg:m-10 lg:grid-cols-4 lg:gap-8">
+      <div className="xs:space-y-5 grid grid-cols-1 justify-items-center space-y-5 text-white md:grid-cols-2 md:gap-5 md:space-y-0 lg:m-10 lg:grid-cols-4 lg:gap-8">
         <ProjectPallet
           DemoUrl={'https://noote.vercel.app'}
           github_repo_name="vinaykulk621/noote"
@@ -39,7 +39,7 @@ export function Projects({}) {
         />
       </div>
       <Link href={'/projects'} className="m-auto mt-0">
-        <p className="w-fit rounded-lg bg-neutral-900 p-3 text-center text-2xl text-white transition-all hover:bg-gray-600/50 xs:text-4xl">
+        <p className="xs:text-4xl w-fit rounded-lg bg-neutral-900 p-3 text-center text-2xl text-white transition-all hover:bg-gray-600/50">
           More Projects
         </p>
       </Link>

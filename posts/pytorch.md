@@ -11,7 +11,7 @@ blog_count: 6
 
 Let's talk pytorch 🔥.
 
-___
+---
 
 ```python
 import torch
@@ -88,7 +88,6 @@ tensor = tensor * 10    # tensor([10, 20, 30])
 # Matrix Multiplication
 tensor = tensor * tensor    # tensor(14)
 ```
-
 
 #### **Aggregation operations**
 

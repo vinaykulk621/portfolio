@@ -7,10 +7,9 @@ publishedAt: '2023-04-06'
 blog_count: 1
 ---
 
-
 ### Hello There🐼
 
-___
+---
 
 This is my first ever Blog.
 

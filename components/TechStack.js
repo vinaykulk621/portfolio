@@ -13,7 +13,6 @@ import {
   MySQL,
 } from './SVG'
 
-
 export function TechStack({}) {
   return (
     <div className="flex flex-shrink-0 flex-col items-center space-y-6 lg:items-start">

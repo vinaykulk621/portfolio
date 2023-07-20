@@ -1,9 +1,8 @@
-import { AboutMe } from "@/components/AboutMe";
-import { Intro } from "@/components/Intro";
-import { Projects } from "@/components/Projects/Projects";
-import { TechStack } from "@/components/TechStack";
-import ThreeD from "@/components/ThreeD";
-
+import { AboutMe } from '@/components/AboutMe'
+import { Intro } from '@/components/Intro'
+import { Projects } from '@/components/Projects/Projects'
+import { TechStack } from '@/components/TechStack'
+import ThreeD from '@/components/ThreeD'
 
 export default function Home() {
   return (
@@ -29,4 +28,3 @@ export default function Home() {
     </>
   )
 }
-
