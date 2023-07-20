@@ -1,5 +1,5 @@
-import { ProjectPallet } from './ProjectPallet'
 import Link from 'next/link'
+import { ProjectPallet } from './ProjectPallet'
 
 export function Projects({}) {
   return (

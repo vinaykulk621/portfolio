@@ -1,5 +1,5 @@
-import GetPostMetadata from '../../components/blog/GetPostMetadata'
-import PostPreview from '../../components/blog/PostPreview'
+import GetPostMetadata from '@/components/blog/GetPostMetadata'
+import PostPreview from '@/components/blog/PostPreview'
 
 export const metadata = {
   title: 'Vinay | Blog',

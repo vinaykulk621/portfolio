@@ -1,4 +1,4 @@
-import GetPostMetadata from '../components/blog/GetPostMetadata'
+import GetPostMetadata from "@/components/blog/GetPostMetadata"
 
 export default async function sitemap() {
   const postMetadata = GetPostMetadata()

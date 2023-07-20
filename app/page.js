@@ -1,8 +1,9 @@
-import { AboutMe } from '../components/AboutMe'
-import { Projects } from '../components/Projects/Projects'
-import { Intro } from '../components/Intro'
-import { TechStack } from '../components/TechStack'
-import ThreeD from '../components/ThreeD'
+import { AboutMe } from "@/components/AboutMe";
+import { Intro } from "@/components/Intro";
+import { Projects } from "@/components/Projects/Projects";
+import { TechStack } from "@/components/TechStack";
+import ThreeD from "@/components/ThreeD";
+
 
 export default function Home() {
   return (
@@ -12,7 +13,6 @@ export default function Home() {
         <div className="bg-gradient-to-b from-simple-black-2 to-simple-black font-spotify">
           <div className="flex h-screen flex-col justify-between">
             <Intro />
-            
           </div>
           <div className="flex h-screen flex-col items-center justify-center space-y-10 p-4 lg:flex-row lg:space-x-10">
             <TechStack />

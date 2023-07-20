@@ -1,4 +1,4 @@
-import { Redirect, GithubSVG } from '../SVG'
+import { GithubSVG, Redirect } from '../SVG'
 import Image from 'next/image'
 
 export function ProjectPallet({

@@ -1,4 +1,4 @@
-import { VoltFM, LinkedinSVG, GithubSVG, EmailSVG } from './SVG'
+import { EmailSVG, GithubSVG, LinkedinSVG, VoltFM } from './SVG'
 import Image from 'next/image'
 import Link from 'next/link'
 

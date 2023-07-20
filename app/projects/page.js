@@ -1,4 +1,4 @@
-import { ProjectPallet } from '../../components/Projects/ProjectPallet'
+import { ProjectPallet } from "@/components/Projects/ProjectPallet"
 
 export const metadata = {
   title: 'Vinay | Projects',
