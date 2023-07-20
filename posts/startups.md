@@ -3,6 +3,7 @@ title: 'My startup ideas.'
 subtitle: 'What to startup.'
 date: 'April 30, 2023'
 author: 'Vinay Kulkarni'
+publishedAt: '2023-04-30'
 blog_count: 4
 ---
 

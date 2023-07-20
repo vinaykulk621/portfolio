@@ -3,6 +3,7 @@ title: 'My Go-To Tech Stack'
 subtitle: 'My Glorius tech Stack  That I use to Make Shitty stuff'
 date: 'April 07, 2023'
 author: 'Vinay Kulkarni'
+publishedAt: '2023-04-07'
 blog_count: 2
 ---
 

@@ -1,3 +1,4 @@
+import formatDate from '@/lib/formatDate'
 import Link from 'next/link'
 
 export default function PostPreview(props) {
@@ -6,7 +7,7 @@ export default function PostPreview(props) {
       <h2 className="text-xl text-gray-300 group-hover:underline">
         {props.title}
       </h2>
-      <p className="text-xs text-slate-400">{props.date}</p>
+      <p className="text-xs text-slate-400">{formatDate(props.publishedAt)}</p>
     </Link>
   )
 }

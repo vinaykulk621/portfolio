@@ -1,7 +1,6 @@
 import fs from 'fs'
 import Markdown from 'markdown-to-jsx'
 import matter from 'gray-matter'
-import GetPostMetadata from '../../../components/blog/GetPostMetadata'
 
 export async function generateMetadata({ params, searchParams }, parent) {
   return {

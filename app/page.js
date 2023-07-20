@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <div className="overflow-x-hidden">
-        <ThreeD />
+        {/* <ThreeD /> */}
         <div className="bg-gradient-to-b from-simple-black-2 to-simple-black font-spotify">
           <div className="flex h-screen flex-col justify-between">
             <Intro />

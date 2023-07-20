@@ -3,8 +3,10 @@ title: 'First Blog'
 subtitle: 'My First Ever Blog Post.'
 date: 'April 06, 2023'
 author: 'Vinay Kulkarni'
+publishedAt: '2023-04-06'
 blog_count: 1
 ---
+
 
 ### Hello There🐼
 
@@ -12,4 +14,4 @@ ___
 
 This is my first ever Blog.
 
-I made this portofolio website using `Next.js-13`, `TailwindCSS`, `Three.js`, and `MDX`. This website is currently deployed on vercel.
+I made this portofolio website using `Next.js-13`, `TailwindCSS`, `Three.js`, and `MD`. This website is currently deployed on vercel.
