@@ -3,6 +3,7 @@ import { Intro } from '@/components/Intro'
 import { Projects } from '@/components/Projects/Projects'
 import { TechStack } from '@/components/TechStack'
 import ThreeD from '@/components/ThreeD'
+import React from 'react'
 
 export default function Home() {
   return (

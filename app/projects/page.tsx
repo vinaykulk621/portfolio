@@ -1,4 +1,5 @@
 import { ProjectPallet } from '@/components/Projects/ProjectPallet'
+import React from 'react'
 
 export const metadata = {
   title: 'Vinay | Projects',

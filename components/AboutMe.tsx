@@ -1,6 +1,8 @@
-export function AboutMe({}) {
+import React from "react";
+
+export function AboutMe({ }) {
   return (
-    <div className="xs:space-y-6 flex flex-col items-center space-y-2 text-justify lg:items-start">
+    <div className="xs:space-y-6 flex flex-col items-center space-y-2 text-justify lg:items-start" >
       <p className="xs:text-5xl text-4xl text-white ">About Me</p>
       <p className="xs:text-xl max-w-xl text-lg text-white">
         Hey, This is Vinay Kulkarni and I&apos;m enthusiastic about{' '}

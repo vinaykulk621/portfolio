@@ -1,8 +1,9 @@
 import { EmailSVG, GithubSVG, LinkedinSVG, VoltFM } from './SVG'
 import Image from 'next/image'
 import Link from 'next/link'
+import React from 'react'
 
-export function Intro({}) {
+export function Intro({ }) {
   return (
     <div className="flex flex-col items-center justify-center space-y-3 pt-20 text-5xl">
       <Link href={'/'}>
