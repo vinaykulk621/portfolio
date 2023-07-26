@@ -3,25 +3,27 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-export function Intro({ }) {
+export function Intro({}) {
   return (
     <div className="flex flex-col items-center justify-center space-y-3 pt-20 text-5xl">
-      <Link href={'/'}>
-        <p className="xs:text-5xl group text-4xl text-white md:text-6xl">
+      <Link href={'https://vinaykulka.vercel.app/'}>
+        <p className="xs:text-5xl group text-4xl font-bold text-transparent text-white md:text-6xl">
           Vinay&apos;s{' '}
           <span className="text-gray-400 group-hover:text-white">web</span>
         </p>
       </Link>
       <div className="h-14 w-[55%] max-w-6xl border-t border-gray-400"></div>
       <div className="flex flex-col items-center gap-10 md:flex-row">
-        <Image
-          className="overflow-hidden rounded-full"
-          src="/me.svg"
-          alt="Picture of the Creator"
-          width={230}
-          height={230}
-          priority
-        />
+        <Link href={'https://vinaykulka.vercel.app/'}>
+          <Image
+            className="overflow-hidden rounded-full grayscale duration-100 hover:grayscale-0"
+            src="/me.svg"
+            alt="Picture of the Creator"
+            width={230}
+            height={230}
+            priority
+          />
+        </Link>
         <div className="flex flex-col items-center space-y-1 text-2xl text-white md:items-stretch">
           <div>
             Hey, This is <span className="text-link-col">Vinay Kulkarni</span>

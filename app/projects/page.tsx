@@ -7,9 +7,9 @@ export const metadata = {
 }
 
 export default function Home() {
-  const projects = [
+  const projects: Array<Array<string>> = [
     [
-      undefined,
+      '',
       'vinaykulk621/spam-bot',
       'Spam Bot',
       'A Python Bot to spam messages across any social media.',

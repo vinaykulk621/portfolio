@@ -8,9 +8,16 @@ export function ProjectPallet({
   DemoUrl,
   Preview,
   alt,
+}: {
+  projectName: string
+  projectDescription: string
+  github_repo_name: string
+  DemoUrl: string
+  Preview: string
+  alt: string
 }) {
   return (
-    <div className="group h-full max-w-sm overflow-hidden rounded-b-lg rounded-t-2xl bg-neutral-900 transition-all hover:bg-neutral-800">
+    <div className="group h-full max-w-sm overflow-hidden rounded-b-lg rounded-t-2xl bg-gradient-to-br from-[#1e1e1e] to-[#121212] transition-all hover:bg-neutral-800">
       <Image
         src={`/projects/${Preview}`}
         height={300}
@@ -20,7 +27,7 @@ export function ProjectPallet({
       />
       <div className="flex space-x-2 px-4">
         <GithubSVG url={github_repo_name} />
-        {DemoUrl !== undefined ? <Redirect DemoUrl={DemoUrl} /> : ''}
+        {DemoUrl !== '' ? <Redirect DemoUrl={DemoUrl} /> : ''}
       </div>
       <div className="flex h-fit flex-col justify-evenly space-y-3 px-1 py-2">
         <div className="px-2 text-4xl underline-offset-4 group-hover:underline">

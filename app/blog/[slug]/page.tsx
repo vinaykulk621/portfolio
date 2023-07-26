@@ -2,7 +2,11 @@ import fs from 'fs'
 import Markdown from 'markdown-to-jsx'
 import matter from 'gray-matter'
 
-export async function generateMetadata({ params, searchParams }, parent) {
+type params = {
+  slug: string
+}
+
+export async function generateMetadata({ params }: { params: params }) {
   return {
     title: `${params.slug.replace('-', ' ')}`,
     description: `Blog: ${params.slug.replace(' ', '-')}`,
@@ -12,7 +16,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
   }
 }
 
-function getPostContent(slug) {
+function getPostContent(slug: string): matter.GrayMatterFile<string> {
   const folder = 'posts/'
   const file = `${folder}${slug}.md`
   const content = fs.readFileSync(file, 'utf8')
@@ -20,7 +24,7 @@ function getPostContent(slug) {
   return matterResult
 }
 
-export default function PostPage({ params }) {
+export default function PostPage({ params }: { params: params }) {
   const post = getPostContent(params.slug)
   return (
     <div className="min-w-screen xs:text-sm flex min-h-screen flex-col items-center bg-[#111010] p-4 text-base text-white">

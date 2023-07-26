@@ -34,8 +34,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "components/useIsVisible.js"
-  ],
+ "components/blog/GetPostMetadata.js"  ],
   "exclude": [
     "node_modules"
   ]

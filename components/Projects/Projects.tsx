@@ -39,7 +39,7 @@ export function Projects({}) {
         />
       </div>
       <Link href={'/projects'} className="m-auto mt-0">
-        <p className="xs:text-4xl w-fit rounded-lg bg-neutral-900 p-3 text-center text-2xl text-white transition-all hover:bg-gray-600/50">
+        <p className="xs:text-4xl w-fit rounded-lg bg-gradient-to-br from-[#1e1e1e] to-[#121212] p-3 text-center text-2xl text-white transition-all">
           More Projects
         </p>
       </Link>

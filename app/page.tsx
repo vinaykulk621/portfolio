@@ -1,6 +1,7 @@
 import { AboutMe } from '@/components/AboutMe'
 import { Intro } from '@/components/Intro'
 import { Projects } from '@/components/Projects/Projects'
+import { DownArrow } from '@/components/SVG'
 import { TechStack } from '@/components/TechStack'
 import ThreeD from '@/components/ThreeD'
 import React from 'react'
@@ -9,12 +10,13 @@ export default function Home() {
   return (
     <>
       <div className="overflow-x-hidden">
-        <ThreeD />
+        {/* <ThreeD /> */}
         <div className="bg-gradient-to-b from-simple-black-2 to-simple-black font-spotify">
           <div className="flex h-screen flex-col justify-between">
             <Intro />
+            <DownArrow />
           </div>
-          <div className="flex h-screen flex-col items-center justify-center space-y-10 p-4 lg:flex-row lg:space-x-10">
+          <div className="flex h-screen flex-col items-center justify-center space-y-10 p-4 lg:flex-row lg:space-x-14">
             <TechStack />
             <AboutMe />
           </div>

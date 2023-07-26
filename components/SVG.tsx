@@ -6,9 +6,9 @@ import {
 } from '@/components/ui/tooltip'
 import React from 'react'
 
-export function DownArrow({ }) {
+export function DownArrow({}) {
   return (
-    <div className="flex animate-bounce items-center justify-center">
+    <div className="flex items-center justify-center">
       <svg
         stroke="currentColor"
         strokeWidth="2"
@@ -18,14 +18,20 @@ export function DownArrow({ }) {
         xmlns="http://www.w3.org/2000/svg"
         className="text-4xl text-white"
       >
-        <polyline points="7 13 12 18 17 13"></polyline>
-        <polyline points="7 6 12 11 17 6"></polyline>
+        <polyline
+          points="7 13 12 18 17 13"
+          className="animate-pulse delay-300"
+        ></polyline>
+        <polyline
+          points="7 6 12 11 17 6"
+          className="animate-pulse delay-75"
+        ></polyline>
       </svg>
     </div>
   )
 }
 
-export function CSSSVG({ }) {
+export function CSSSVG({}) {
   return (
     <div className="xs:p-3 mt-3 flex items-center gap-3 rounded-md bg-[#ffffff0a]/5 p-2">
       <div className="items-center justify-center rounded-lg bg-[#264de426] p-2">
@@ -49,7 +55,7 @@ export function CSSSVG({ }) {
   )
 }
 
-export function HTMLSVG({ }) {
+export function HTMLSVG({}) {
   return (
     <div className="xs:p-3 mt-3 flex items-center gap-3 rounded-md bg-[#ffffff0a]/5 p-2">
       <div className="items-center justify-center rounded-lg bg-[#dd4b2526] p-2">
@@ -67,7 +73,7 @@ export function HTMLSVG({ }) {
   )
 }
 
-export function CSVG({ }) {
+export function CSVG({}) {
   return (
     <div className="xs:p-3 mt-3 flex items-center gap-3 rounded-md bg-[#ffffff0a]/5 p-2">
       <div className="items-center justify-center rounded-lg bg-[#03599c]/20 p-2">
@@ -91,7 +97,7 @@ export function CSVG({ }) {
   )
 }
 
-export function EmailSVG({ }) {
+export function EmailSVG({}) {
   return (
     <TooltipProvider>
       <Tooltip>
@@ -141,7 +147,7 @@ export function GithubSVG({ url }: { url: string }) {
   )
 }
 
-export function JavascriptSVG({ }) {
+export function JavascriptSVG({}) {
   return (
     <div className="xs:p-3 mt-3 flex items-center gap-3 rounded-md bg-[#ffffff0a]/5 p-2">
       <div className="items-center justify-center rounded-lg bg-[#f0db4f26] p-2">
@@ -171,7 +177,7 @@ export function JavascriptSVG({ }) {
   )
 }
 
-export function LinkedinSVG({ }) {
+export function LinkedinSVG({}) {
   return (
     <a
       className="text-sm text-gray-500 transition hover:text-gray-600"
@@ -190,7 +196,7 @@ export function LinkedinSVG({ }) {
   )
 }
 
-export function MongoSVG({ }) {
+export function MongoSVG({}) {
   return (
     <div className="xs:p-3 mt-3 flex items-center gap-3 rounded-md bg-[#ffffff0a]/5 p-2">
       <div className="items-center justify-center rounded-lg bg-green-600/10 p-2">
@@ -210,10 +216,10 @@ export function MongoSVG({ }) {
   )
 }
 
-export function NextJsSVG({ }) {
+export function NextJsSVG({}) {
   return (
     <div className="xs:p-3 mt-3 flex items-center gap-3 rounded-md bg-[#ffffff0a]/5 p-2">
-      <div className="items-center justify-center rounded-lg bg-[#ffffff14] bg-white p-2">
+      <div className="items-center justify-center rounded-lg bg-[#ffffff14] p-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 256 256"
@@ -231,7 +237,7 @@ export function NextJsSVG({ }) {
   )
 }
 
-export function NodeSVG({ }) {
+export function NodeSVG({}) {
   return (
     <div className="xs:p-3 mt-3 flex items-center gap-3 rounded-md bg-[#ffffff0a]/5 p-2">
       <div className="items-center justify-center rounded-lg bg-[#6fa66026] p-2">
@@ -250,7 +256,7 @@ export function NodeSVG({ }) {
   )
 }
 
-export function PythonSVG({ }) {
+export function PythonSVG({}) {
   return (
     <div className="xs:p-3 mt-3 flex items-center gap-3 rounded-md bg-[#ffffff0a]/5 p-2">
       <div className="items-center justify-center rounded-lg bg-gradient-to-b from-[#0277bd]/10 to-[#ffc107]/10 p-2">
@@ -300,7 +306,7 @@ export function Redirect({ DemoUrl }: { DemoUrl: string }) {
   )
 }
 
-export function TailwindSVG({ }) {
+export function TailwindSVG({}) {
   return (
     <div className="xs:p-3 mt-3 flex items-center gap-3 rounded-md bg-[#ffffff0a]/5 p-2">
       <div className="items-center justify-center rounded-lg bg-[#44a8b326] p-2">
@@ -337,7 +343,7 @@ export function TailwindSVG({ }) {
   )
 }
 
-export function Threejs({ }) {
+export function Threejs({}) {
   return (
     <div className="xs:p-3 mt-3 flex items-center gap-3 rounded-md bg-[#ffffff0a]/5 p-2">
       <div className="items-center justify-center rounded-lg bg-white/70 p-2">
@@ -372,7 +378,7 @@ export function Threejs({ }) {
   )
 }
 
-export function MySQL({ }) {
+export function MySQL({}) {
   return (
     <div className="xs:p-3 mt-3 flex items-center gap-3 rounded-md bg-[#ffffff0a]/5 p-2">
       <div className="items-center justify-center rounded-lg bg-white/70 p-2">
@@ -394,7 +400,7 @@ export function MySQL({ }) {
   )
 }
 
-export function Bash({ }) {
+export function Bash({}) {
   return (
     <div className="xs:p-3 mt-3 flex items-center gap-3 rounded-md bg-[#ffffff0a]/5 p-2">
       <div className="items-center justify-center rounded-lg bg-[#2f3a3e]/40 p-2">
@@ -430,7 +436,7 @@ export function Bash({ }) {
   )
 }
 
-export function VoltFM({ }) {
+export function VoltFM({}) {
   return (
     <a
       className="text-sm text-gray-500 transition hover:text-gray-600"
