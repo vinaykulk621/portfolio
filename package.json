@@ -5,6 +5,7 @@
     "name": "Vinay Kulkarni",
     "email": "Kulkarnivinay621@gmail.com"
   },
+  "type": "module",
   "repository": {
     "url": "https://github.com/vinaykulk621/portfolio"
   },
@@ -19,10 +20,10 @@
   },
   "dependencies": {
     "@radix-ui/react-tooltip": "^1.0.6",
-    "@vercel/analytics": "^0.1.11",
     "@types/node": "20.4.2",
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",
+    "@vercel/analytics": "^0.1.11",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "eslint": "8.33.0",
@@ -31,8 +32,14 @@
     "lucide-react": "^0.261.0",
     "markdown-to-jsx": "^7.1.7",
     "next": "^13.4.0",
+    "next-contentlayer": "^0.3.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rehype-autolink-headings": "^6.1.1",
+    "rehype-pretty-code": "^0.10.0",
+    "rehype-slug": "^5.1.0",
+    "remark-gfm": "^3.0.1",
+    "shiki": "^0.14.3",
     "tailwind-merge": "^1.14.0",
     "tailwindcss-animate": "^1.0.6",
     "typescript": "5.1.6"
