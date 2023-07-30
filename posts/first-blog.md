@@ -13,4 +13,4 @@ blog_count: 1
 
 This is my first ever Blog.
 
-I made this portofolio website using `Next.js-13`, `TailwindCSS`, `Three.js`, and `MD`. This website is currently deployed on vercel.
+I made this Portfolio website using `Next.js-13`, `TailwindCSS`, `Three.js`, and `MD`. This website is currently deployed on vercel.
