@@ -1,25 +1,34 @@
 import React from 'react'
 import './globals.css'
 import { Analytics } from '@vercel/analytics/react'
+import { siteConfig } from '@/config/site'
 
 export const metadata = {
   metadataBase: new URL('https://vinaykulka.vercel.app'),
-  title: 'Vinay | Portfolio',
-  description: 'Portfolio website',
+  title: siteConfig.name,
+  description: siteConfig.description,
+  keywords: [
+    'Next.js',
+    'React',
+    'Tailwind CSS',
+    'Server Components',
+    'Radix UI',
+  ],
+  creator: 'Vinay',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://vinaykulka.vercel.app',
-    title: 'Vinay | Portfolio',
-    description: 'Vinay | Portfolio',
-    siteName: 'Portofolio',
+    url: siteConfig.url,
+    title: siteConfig.name,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Vinay | Portfolio',
-    description: 'Vinay | Portfolio',
-    images: ['https://vinaykulka.vercel.app/og.jpg'],
-    creator: 'Vinay Kulkarni',
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [`${siteConfig.url}/og.jpg`],
+    creator: '@kuylycljhyvvy',
   },
 }
 

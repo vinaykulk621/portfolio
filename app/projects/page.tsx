@@ -114,7 +114,7 @@ export default function Home() {
               return (
                 <>
                   <ProjectPallet
-                    key={Date.now() * Math.random()}
+                    key={e[2]}
                     DemoUrl={e[0]}
                     github_repo_name={e[1]}
                     projectName={e[2]}
