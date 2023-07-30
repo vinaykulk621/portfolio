@@ -1,12 +1,12 @@
 {
-  "name": "Portfolio",
+  "name": "portfolio",
   "version": "1.0.0",
   "author": {
     "name": "Vinay Kulkarni",
     "email": "Kulkarnivinay621@gmail.com"
   },
   "repository": {
-    "url": "https://github.com/vinaykulk621/Portfolio"
+    "url": "https://github.com/vinaykulk621/portfolio"
   },
   "homepage": "https://vinaykulka.vercel.app",
   "scripts": {
@@ -14,8 +14,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format:write": "prettier --write \"**/*.{js,tsx,mdx,md}\" --cache",
-    "format:check": "prettier --check \"**/*.{js,tsx,mdx,md}\" --cache"
+    "format-w": "prettier --write \"**/*.{js,tsx,mdx,md}\" --cache",
+    "format-c": "prettier --check \"**/*.{js,tsx,mdx,md}\" --cache"
   },
   "dependencies": {
     "@radix-ui/react-tooltip": "^1.0.6",
