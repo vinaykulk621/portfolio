@@ -5,7 +5,6 @@
     "name": "Vinay Kulkarni",
     "email": "Kulkarnivinay621@gmail.com"
   },
-  "type": "module",
   "repository": {
     "url": "https://github.com/vinaykulk621/portfolio"
   },
@@ -48,7 +47,7 @@
     "@tailwindcss/typography": "^0.5.9",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",
-    "prettier": "^2.8.4",
+    "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.2.3",
     "tailwindcss": "^3.2.4",
     "three": "^0.149.0"

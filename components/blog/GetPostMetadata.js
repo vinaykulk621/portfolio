@@ -2,13 +2,15 @@ import fs from 'fs'
 import matter from 'gray-matter'
 
 export default function GetPostMetadata() {
-  const folder = 'posts/'
+  const folder = 'content/'
   const files = fs.readdirSync(folder)
-  const markdownPosts = files.filter((file) => file.endsWith('.md'))
+  const markdownPosts = files.filter((file) => file.endsWith('.mdx'))
 
   const posts = markdownPosts
     .map((fileName) => {
-      const matterResult = matter(fs.readFileSync(`posts/${fileName}`, 'utf8'))
+      const matterResult = matter(
+        fs.readFileSync(`content/${fileName}`, 'utf8')
+      )
 
       return {
         title: matterResult.data.title,
@@ -16,7 +18,7 @@ export default function GetPostMetadata() {
         date: matterResult.data.date,
         publishedAt: matterResult.data.publishedAt,
         subtitle: matterResult.data.subtitle,
-        slug: fileName.replace('.md', ''),
+        slug: fileName.replace('.mdx', ''),
       }
     })
     .sort((a, b) => {
