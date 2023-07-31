@@ -1,6 +1,3 @@
-import fs from 'fs'
-import Markdown from 'markdown-to-jsx'
-import matter from 'gray-matter'
 import { allBlogs } from 'contentlayer/generated'
 import { notFound } from 'next/navigation'
 
