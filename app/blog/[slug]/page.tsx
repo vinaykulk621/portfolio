@@ -7,8 +7,6 @@ async function getPost(slug: string) {
   if (!post) {
     return notFound()
   }
-  console.log(post)
-
   return post
 }
 
