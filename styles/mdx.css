@@ -15,11 +15,11 @@
 }
 
 [data-rehype-pretty-code-fragment] {
-  @apply relative border-0;
+  @apply relative mt-10 border-0;
 }
 
 [data-rehype-pretty-code-fragment] code {
-  @apply grid min-w-full break-words rounded-none border-0 p-4;
+  @apply grid min-w-full break-words rounded-none border-0 px-8 py-5;
   counter-reset: line;
   box-decoration-break: clone;
 }
@@ -59,7 +59,7 @@
 }
 
 [data-rehype-pretty-code-title] {
-  @apply px-4 pt-4 text-sm font-medium;
+  @apply rounded-lg rounded-bl-none rounded-br-none bg-zinc-900 px-4 py-2 text-sm font-medium text-zinc-300;
 }
 
 [data-rehype-pretty-code-title] + pre {

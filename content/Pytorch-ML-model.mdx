@@ -13,7 +13,7 @@ Let's talk ML model in pytorch 🔥.
 
 ---
 
-```python
+```python title="main.ipynb"
 import torch
 import torch.nn as nn
 ```
@@ -48,7 +48,7 @@ Basic idea of this model is to intialize the **independent** variable to some ra
 
 ### **Step-1**:
 
-```python
+```python title="main.ipynb"
 import torch
 import torch.nn as nn
 import matplotlib.pyplot as plt
@@ -56,7 +56,7 @@ import matplotlib.pyplot as plt
 
 For this model we will use a dummy data set of random numbers from 0-1. Following are the code blocks.
 
-```python
+```python title="main.ipynb" showLineNumbers
 X = torch.rand(100)
 
 # output
@@ -84,7 +84,7 @@ b ==> bias = 0.3
 
 Splitting dataset into _**training**_ and _**testing**_ dataset in 80-20 ratio.
 
-```python
+```python title="main.ipynb"
 split = int(0.8 * len(data))
 X_train, Y_train = data[:split], Y[:split]
 X_test, Y_test = data[split:], Y[split:]
@@ -96,7 +96,7 @@ Creating the model class.
 
 In pytorch every model has to inherit pytorch's `nn.Module`.
 
-```python
+```python title="main.ipynb"
 # Creating model with name regression
 class regression(nn.Module):
   def __init__(self):
@@ -119,7 +119,7 @@ In this above code there are few things that need to be understood.
 
 Let's define `plot_graph()` function that will generate a graph for visualization.
 
-```python
+```python title="main.ipynb"
 def plot_graph(train_data = X_train, train_label = Y_train,
                test_data = X_test, test_label = Y_test, prediction = None):
   plt.figure(figsize=(10,7))
@@ -134,7 +134,7 @@ def plot_graph(train_data = X_train, train_label = Y_train,
 
 Testing our model's predicting capabilities.
 
-```python
+```python title="main.ipynb"
 with torch.inference_mode():
   ans = model(X_test)
 plot_graph(prediction = ans.detach().numpy())
@@ -148,7 +148,7 @@ Our model's predictions are completely wrong as it has not been trained.
 
 We need to create training and testing loop which will train our model to predict the values of `Y` correctly.
 
-```python
+```python title="main.ipynb"
 # Loss Function
 loss_fn = nn.L1Loss()
 
@@ -158,10 +158,10 @@ optimizer = torch.optim.SGD(params = model.parameters(), lr = 0.01)
 # Loss function and Optimizer is explained in the begining of this blog post.
 ```
 
-```python
+```python title="main.ipynb"
 # Training loop
 
-epoch = 10000 
+epoch = 10000
 # Number of time the model has to iterate through the dataset to learn or,
 # adjust the value of weight and bias to predict the output correctly.
 
@@ -198,7 +198,7 @@ for e in range(epoch):
 
 We check the model's prediction after training.
 
-```python
+```python title="main.ipynb"
 with torch.inference_mode():
   ans = model(X_test)
 plot_graph(prediction = ans.detach().numpy())
@@ -208,9 +208,10 @@ plot_graph(prediction = ans.detach().numpy())
 
 As you can see in the image our model is predicting almost exact value as our testing dataset.
 
-> 🎊🎉 There you go, you have your own linear regression model trined and ready to predict some real time data like raise and fall in stocks.
-
----
+<Callout>
+  🎊🎉 There you go, you have your own linear regression model trined and ready
+  to predict some real time data like raise and fall in stocks.
+</Callout>
 
 <br />
 <br />

@@ -14,8 +14,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format-w": "prettier --write \"**/*.{js,tsx,mdx,md}\" --cache",
-    "format-c": "prettier --check \"**/*.{js,tsx,mdx,md}\" --cache"
+    "format-w": "prettier --write \"**/*.{js,ts,tsx,mdx}\" --cache",
+    "format-c": "prettier --check \"**/*.{js,ts,tsx,mdx}\" --cache",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@radix-ui/react-collapsible": "^1.0.3",
@@ -53,6 +54,7 @@
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.2.3",
     "tailwindcss": "^3.2.4",
-    "three": "^0.149.0"
+    "three": "^0.149.0",
+    "husky": "^8.0.0"
   }
 }

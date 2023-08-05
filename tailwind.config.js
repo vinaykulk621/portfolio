@@ -4,7 +4,7 @@ module.exports = {
   content: [
     './components/**/*.{ts,tsx,js,jsx}',
     './app/**/*.{ts,js,tsx,jsx}',
-    './content/**/*.{mdx}',
+    './content/**/*.mdx',
   ],
   theme: {
     container: {

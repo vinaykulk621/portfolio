@@ -150,7 +150,7 @@ const components = {
       <div>
         <pre
           className={cn(
-            'mb-4 mt-4 max-h-[650px] overflow-y-auto rounded-lg border-0',
+            'mb-4 max-h-[650px] overflow-y-auto rounded-lg rounded-tl-none rounded-tr-none border-0 border-t-2 border-zinc-600',
             className
           )}
           {...props}
