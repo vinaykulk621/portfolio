@@ -16,7 +16,7 @@ export function Intro({}) {
       <div className="flex flex-col items-center gap-10 md:flex-row">
         <Link href={'https://vinaykulka.vercel.app/'}>
           <Image
-            className="overflow-hidden rounded-full grayscale duration-100 hover:grayscale-0"
+            className="overflow-hidden rounded-full duration-100 md:grayscale md:hover:grayscale-0"
             src="/me.svg"
             alt="Picture of the Creator"
             width={230}

@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <div className="overflow-x-hidden">
         <ThreeD />
-        <div className="bg-gradient-to-b from-simple-black-2 to-simple-black font-spotify">
+        <div className="bg-zinc-950 font-spotify">
           <div className="flex h-screen flex-col justify-between">
             <Intro />
             <DownArrow />

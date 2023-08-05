@@ -107,7 +107,7 @@ export default function Home() {
   ]
   return (
     <>
-      <main className="bg-black font-spotify">
+      <main className="bg-zinc-950 font-spotify">
         <div className="flex flex-col space-y-9 md:h-fit">
           <div className="xs:space-y-5 grid grid-cols-1 justify-items-center space-y-5 text-white md:grid-cols-2 md:gap-5 md:space-y-0 lg:m-10 lg:grid-cols-4 lg:gap-8">
             {projects.map((e) => {
