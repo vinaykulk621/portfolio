@@ -1,8 +1,7 @@
-import GetPostMetadata from '@/components/blog/GetPostMetadata'
+import { allBlogs } from 'contentlayer/generated'
 
 export default async function sitemap() {
-  const postMetadata = GetPostMetadata()
-  const blogs = postMetadata.map((post) => ({
+  const blogs = allBlogs.map((post) => ({
     url: `https://vinaykulka.vercel.app/blog/${post.slug}`,
     lastModified: post.date,
   }))
