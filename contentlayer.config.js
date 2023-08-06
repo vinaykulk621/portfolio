@@ -45,7 +45,7 @@ export const Blog = defineDocumentType(() => ({
       type: 'string',
     },
     blog_count: {
-      type: 'number',
+      type: 'string',
       required: true,
     },
   },

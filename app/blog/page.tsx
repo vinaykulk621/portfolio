@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function HomePage() {
   const postPreviews = allBlogs
-    .sort((a, b) => b.blog_count - a.blog_count)
+    .sort((a, b) => Number(b.blog_count) - Number(a.blog_count))
     .map((post) => {
       return <PostPreview key={post?._id} {...post} />
     })
