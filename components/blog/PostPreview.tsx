@@ -3,10 +3,7 @@ import Link from 'next/link'
 
 type props = {
   title: string
-  blog_count: number
-  date: string
-  publishedAt: Date
-  subtitle: string
+  publishedAt: string
   slug: string
 }
 

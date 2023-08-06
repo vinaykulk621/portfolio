@@ -17,7 +17,7 @@ export async function generateMetadata({
   params: { slug: string }
 }) {
   return {
-    title: `${params.slug.replace('-', ' ')}`,
+    title: `Blog | ${params.slug.replace('-', ' ')}`,
     description: `Blog: ${params.slug.replace(' ', '-')}`,
     alternates: {
       canonical: `/blog/${params.slug}`,

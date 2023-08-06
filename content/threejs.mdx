@@ -26,7 +26,7 @@ npm i three
 ### Next steps
 
 1. Navigate to `/app/page.js` and clean up the starter code.
-2. Make a `Three.js` component file in `/app` directory (`/app/Three.js`).
+2. Make a `Three.js` component file in `/app` director y (`/app/Three.js`).
 3. `Three.js` is the file where we will be writing our `three-js` code.
 
 populate `/app/Three.js` with the following starter code.
@@ -198,7 +198,7 @@ export default function Three() {
 }
 ```
 
-And That's It Folk now you have a **ball** on your screen.
+And That's It Folks now you have a **ball** on your screen.
 
 ---
 
@@ -220,15 +220,15 @@ export default function Three() {
   const rendererRef = useRef(null)
 
 useEffect(() => {
-sceneRef.current = new THREE.Scene()
-cameraRef.current = new THREE.PerspectiveCamera(
-75,
-window.innerWidth / window.innerHeight,
-0.1,
-1000
-)
-rendererRef.current = new THREE.WebGLRenderer({ antialias: true })
-}, [])
+    sceneRef.current = new THREE.Scene()
+    cameraRef.current = new THREE.PerspectiveCamera(
+      75,
+      window.innerWidth / window.innerHeight,
+      0.1,
+      1000
+    )
+    rendererRef.current = new THREE.WebGLRenderer({ antialias: true })
+  }, [])
 
 useEffect(() => {
 const scene = sceneRef.current
@@ -274,4 +274,4 @@ That's it For Now folks. Maybe in not so far future i might make a something lik
 <br />
 <br />
 
-Good Day
+**Good Day 🐼**

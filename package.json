@@ -1,12 +1,13 @@
 {
-  "name": "portfolio",
+  "name": "portflio",
   "version": "1.0.0",
   "author": {
     "name": "Vinay Kulkarni",
-    "email": "Kulkarnivinay621@gmail.com"
+    "email": "Kulkarnivinay621@gmail.com",
+    "url": "https://vinaykulka.vercel.app"
   },
   "repository": {
-    "url": "https://github.com/vinaykulk621/portfolio"
+    "url": "https://github.com/vinaykulk621/portflio"
   },
   "homepage": "https://vinaykulka.vercel.app",
   "scripts": {
@@ -25,14 +26,12 @@
     "@types/node": "20.4.2",
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",
-    "@vercel/analytics": "^0.1.11",
+    "@vercel/analytics": "^1.0.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "eslint": "8.33.0",
     "eslint-config-next": "^13.2.1",
-    "gray-matter": "^4.0.3",
     "lucide-react": "^0.261.0",
-    "markdown-to-jsx": "^7.1.7",
     "next": "^13.4.0",
     "next-contentlayer": "^0.3.4",
     "react": "^18.2.0",
@@ -48,13 +47,12 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.9",
     "autoprefixer": "^10.4.13",
+    "husky": "^8.0.0",
     "postcss": "^8.4.21",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.2.3",
     "tailwindcss": "^3.2.4",
-    "three": "^0.149.0",
-    "husky": "^8.0.0"
+    "three": "^0.149.0"
   }
 }

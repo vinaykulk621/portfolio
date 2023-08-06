@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { ProjectPallet } from './ProjectPallet'
+import { Button } from '../ui/button'
 
 export function Projects({}) {
   return (
@@ -39,9 +40,9 @@ export function Projects({}) {
         />
       </div>
       <Link href={'/projects'} className="m-auto mt-0">
-        <p className="xs:text-4xl w-fit rounded-lg bg-gradient-to-br from-[#1e1e1e] to-[#121212] p-3 text-center text-2xl text-white transition-all">
+        <Button className="xs:text-4xl w-fit rounded-lg bg-zinc-900 p-3 text-center text-2xl text-white">
           More Projects
-        </p>
+        </Button>
       </Link>
     </div>
   )

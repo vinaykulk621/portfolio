@@ -1,17 +1,23 @@
 'use client'
 
 import * as React from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
-import { useMDXComponent } from 'next-contentlayer/hooks'
 import '@/styles/mdx.css'
+import { useMDXComponent } from 'next-contentlayer/hooks'
+import type { MDXComponents } from 'mdx/types'
 
 import { Event } from '@/lib/events'
 import { cn } from '@/lib/utils'
 import { Callout } from '@/components/callout'
 import { CopyButton } from '@/components/copy-button'
+import { MdxCard } from './mdx-card'
 
-const components = {
+interface MdxProps {
+  code: string
+}
+
+const components: MDXComponents = {
+  MdxCard,
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1
       className={cn(
@@ -133,6 +139,21 @@ const components = {
       {...props}
     />
   ),
+  Step: ({ className, ...props }: React.ComponentProps<'h3'>) => (
+    <h3
+      className={cn(
+        'font-heading mt-8 scroll-m-20 text-xl font-semibold tracking-tight',
+        className
+      )}
+      {...props}
+    />
+  ),
+  Steps: ({ ...props }) => (
+    <div
+      className="[&>h3]:step steps mb-12 ml-4 border-l pl-8 [counter-reset:step]"
+      {...props}
+    />
+  ),
   pre: ({
     className,
     __rawString__,
@@ -175,7 +196,6 @@ const components = {
       {...props}
     />
   ),
-  Image,
   Callout,
   Link: ({ className, ...props }: React.ComponentProps<typeof Link>) => (
     <Link
@@ -183,10 +203,6 @@ const components = {
       {...props}
     />
   ),
-}
-
-interface MdxProps {
-  code: string
 }
 
 export function Mdx({ code }: MdxProps) {

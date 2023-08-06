@@ -1,4 +1,4 @@
-import GetPostMetadata from '@/components/blog/GetPostMetadata'
+import { allBlogs } from 'contentlayer/generated'
 import PostPreview from '@/components/blog/PostPreview'
 
 export const metadata = {
@@ -7,10 +7,11 @@ export const metadata = {
 }
 
 export default function HomePage() {
-  const postMetadata = GetPostMetadata()
-  const postPreviews = postMetadata.map((post) => (
-    <PostPreview key={post.slug} {...post} />
-  ))
+  const postPreviews = allBlogs
+    .sort((a, b) => b.blog_count - a.blog_count)
+    .map((post) => {
+      return <PostPreview key={post?._id} {...post} />
+    })
 
   return (
     <div className="flex h-screen w-screen items-center justify-center bg-zinc-950">
