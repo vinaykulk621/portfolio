@@ -15,6 +15,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "test": "run cypress run --browser chrome --headless --no-exit",
     "format-w": "prettier --write \"**/*.{js,ts,tsx,mdx}\" --cache",
     "format-c": "prettier --check \"**/*.{js,ts,tsx,mdx}\" --cache",
     "prepare": "husky install"
