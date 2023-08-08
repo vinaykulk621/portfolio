@@ -2,8 +2,9 @@ import React from 'react'
 import '@/styles/globals.css'
 import { Analytics } from '@vercel/analytics/react'
 import { siteConfig } from '@/config/site'
+import type { Metadata } from 'next'
 
-export const metadata = {
+export const metadata: Metadata = {
   metadataBase: new URL('https://vinaykulka.vercel.app'),
   title: siteConfig.name,
   description: siteConfig.description,

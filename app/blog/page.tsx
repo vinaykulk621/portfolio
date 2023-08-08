@@ -1,9 +1,38 @@
 import { allBlogs } from 'contentlayer/generated'
 import PostPreview from '@/components/blog/PostPreview'
+import type { Metadata } from 'next'
+import { siteConfig } from '@/config/site'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Vinay | Blog',
   description: 'Blog Bro',
+  metadataBase: new URL('https://vinaykulka.vercel.app'),
+  keywords: [
+    'Next.js',
+    'React',
+    'Tailwind CSS',
+    'Server Components',
+    'Radix UI',
+    'Blogs',
+    'Tech Blogs',
+    'Tech Talks',
+  ],
+  creator: 'Vinay',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: siteConfig.url,
+    title: siteConfig.name,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [`${siteConfig.url}/og.jpg`],
+    creator: '@kuylycljhyvvy',
+  },
 }
 
 export default function HomePage() {

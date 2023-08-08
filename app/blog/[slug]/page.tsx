@@ -2,6 +2,11 @@ import '@/styles/mdx.css'
 import { Mdx } from '@/components/mdx-components'
 import { allBlogs } from 'contentlayer/generated'
 import { notFound } from 'next/navigation'
+import type { Metadata } from 'next'
+
+type Props = {
+  params: { slug: string }
+}
 
 async function getPost(slug: string) {
   const post = allBlogs.find((blog) => blog.slugAsParams === slug)
@@ -11,11 +16,7 @@ async function getPost(slug: string) {
   return post
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string }
-}) {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `Blog | ${params.slug.replace('-', ' ')}`,
     description: `Blog: ${params.slug.replace(' ', '-')}`,
@@ -25,11 +26,7 @@ export async function generateMetadata({
   }
 }
 
-export default async function PostPage({
-  params,
-}: {
-  params: { slug: string }
-}) {
+export default async function PostPage({ params }: Props) {
   const post = await getPost(params.slug)
 
   return (

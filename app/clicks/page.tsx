@@ -1,8 +1,37 @@
 import Image from 'next/image'
+import type { Metadata } from 'next'
+import { siteConfig } from '@/config/site'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Vinay | Clicks',
   description: 'Clicks',
+  metadataBase: new URL('https://vinaykulka.vercel.app'),
+  keywords: [
+    'Next.js',
+    'React',
+    'Tailwind CSS',
+    'Server Components',
+    'Radix UI',
+    'Photography',
+    'nature',
+    'pictures',
+  ],
+  creator: 'Vinay',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: siteConfig.url,
+    title: siteConfig.name,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [`${siteConfig.url}/og.jpg`],
+    creator: '@kuylycljhyvvy',
+  },
 }
 
 export default function Home() {
