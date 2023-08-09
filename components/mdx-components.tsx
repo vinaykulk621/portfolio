@@ -150,9 +150,14 @@ const components: MDXComponents = {
   ),
   Steps: ({ ...props }) => (
     <div
-      className="[&>h3]:step steps mb-12 ml-4 border-l pl-8 [counter-reset:step]"
+      className="[&>h3]:step steps mb-0 ml-[14px] border-l pl-8 [counter-reset:step]"
       {...props}
     />
+  ),
+  Ring: ({ children, ...props }) => (
+    <span className="m-0 rounded-3xl bg-zinc-800 px-[10px] py-[6px]" {...props}>
+      {children}
+    </span>
   ),
   pre: ({
     className,
@@ -171,7 +176,7 @@ const components: MDXComponents = {
       <div>
         <pre
           className={cn(
-            'mb-4 max-h-[650px] overflow-y-auto rounded-lg rounded-tl-none rounded-tr-none border-0 border-t-2 border-zinc-600',
+            'mb-2 max-h-[650px] overflow-y-auto rounded-lg rounded-tl-none rounded-tr-none border-0 border-t-2 border-zinc-600',
             className
           )}
           {...props}
