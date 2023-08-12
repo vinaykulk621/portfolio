@@ -32,6 +32,9 @@ Let's talk Data Structures.
 - [Arrays](#arrays)
 - [Stack](#stack)
 - [Queue](#queue)
+- [Linked List](#linked-list)
+- [Tree](#tree)
+- [Graph](#graph)
 
 <br />
 <br />
@@ -332,7 +335,7 @@ print(index)  # 3
   className="mt-10 flex w-fit flex-col justify-center text-xl"
   id="arrays"
 >
-  <div className="m-0"> ![Arrays](/content/dsa-1/stack/stack-box.svg)</div>
+  <div className="m-0"> ![Stack](/content/dsa-1/stack/stack-box.svg)</div>
   <br />
   <span className="text-zinc-400">
     An array restricted to only two possible operations possible is a stack.
@@ -517,9 +520,9 @@ d.rotate(-1) # deque(['a', 'b', 'c'])
 
 <MdxCard
   className="mt-10 flex w-fit flex-col justify-center text-xl"
-  id="arrays"
+  id="linked-list"
 >
-  <div className="m-0"> ![Arrays](/content/dsa-1/linked-list/linked-list-nodes.svg)</div>
+  <div className="m-0"> ![Linked-list](/content/dsa-1/linked-list/linked-list-nodes.svg)</div>
   <br />
   <span className="text-zinc-400">
     The idea of `Linked List` is to have a memory efficient data structure.
@@ -599,7 +602,7 @@ Intialize the list as shown in the figure.
 
 - Two links exists between 2 nodes. `Prev` and `Next`.
 - You can traverse in only one direction.
-- The last node's `next` pointer points to `head`.
+- The last node's `next` pointer points to `head` node.
 
 <br />
 <br />
@@ -611,4 +614,259 @@ Intialize the list as shown in the figure.
 
 - Two links exists between 2 nodes. `Prev` and `Next`.
 - You can traverse in both direction.
-- The last node's `next` pointer points to `head`.
+- The last node's `next` pointer points to `head` node.
+
+<br />
+<br />
+<br />
+<br />
+
+## ![tree](/content/dsa-1/tree/tree.svg)
+
+<MdxCard
+  className="mt-10 flex w-fit flex-col justify-center text-xl"
+  id="tree"
+>
+  <div className="m-0"> ![Arrays](/content/dsa-1/tree/tree-balls.svg)</div>
+  <br />
+  <span className="text-zinc-400">
+    It is a non-linear hierarchial data structure consisting of nodes and edges used to represent data such that it is easy to navigate and search.
+  </span>
+
+</MdxCard>
+
+### About Trees
+
+- We store data in the nodes and connect to other nodes through edges.
+- There is no restrictions on insertion and deletion of the elements in the tree.
+- There are many trees data structure. Some important ones are listed here.
+
+  - [Binary Tree](#binary-tree)
+
+  - [Binary Search Tree](#doubly-linked-list)
+  - [AVL Tree](#circular-linked-list)
+  - [Red-Black Tree](#circular-doubly-linked-list)
+
+- Traversel in Trees:
+  - [Preorder Traversal](#preorder-traversal)
+  - [Inorder Traversal](#inorder-traversal)
+  - [Postorder Traversal](#postorder-traversal)
+
+<br />
+<br />
+<br />
+
+### Binary Tree
+
+- Each parent node has **at-most** two child nodes.
+- classification based on the number of child node.
+  - [Complete Binary Tree](#complete-binary-tree)
+  - [Perfect Binary Tree](#perfect-binary-tree)
+
+| Measure        | Condition   | Formula                        |
+| -------------- | ----------- | ------------------------------ |
+| Minimum nodes  | Height -`n` | `n + 1`                        |
+| Maximum nodes  | Height -`n` | <code>2<sup>n+1</sup>-1</code> |
+| Maximum Height | Nodes -`n`  | `n + 1`                        |
+| Minimum Height | Nodes -`n`  | <code>log<sub>e</sub>2n</code> |
+
+<br />
+
+#### Complete Binary Tree
+
+All the levels of the tree aare completely filled except for maybe last level.
+
+<div className="flex flex-row space-x-5 pt-5">
+  <MdxCard className="h-fit w-96 border-zinc-700">
+    ![Complete-binary-tree-example-1](/content/dsa-1/tree/complete-binary-1.svg)
+  </MdxCard>
+  <MdxCard className="h-fit w-96 border-zinc-700">
+    ![Complete-binary-tree-example-2](/content/dsa-1/tree/complete-binary-2.svg)
+  </MdxCard>
+</div>
+
+<br />
+
+#### Perfect Binary Tree
+
+- All the leaf nodes are at same deapth.
+- Each node has exactly two or zero child nodes.
+
+<div className="flex flex-row space-x-5 pt-5">
+  <MdxCard className="h-fit w-96 border-zinc-700">
+    ![Complete-binary-tree-example-1](/content/dsa-1/tree/perfect-binary-1.svg)
+  </MdxCard>
+  <MdxCard className="h-fit w-96 border-zinc-700">
+    ![Complete-binary-tree-example-2](/content/dsa-1/tree/perfect-binary-2.svg)
+  </MdxCard>
+</div>
+
+<br />
+<br />
+<br />
+
+### Binary Search Tree
+
+- Each parent node has **at-most** two child nodes.
+- Very useful for searching operations.
+- While insertion:
+  - Element less than the root node goes to `left`.
+  - Element greater than the root node goes to `right`.
+- While deletion:
+  - If it is a leaf node, then simply delete it.
+  - If it has one child, then simply replace the node with it's child.
+  - If it has two children:
+    - Look at the right subtree of the node to be deleted, and replace it with the node with `least` value from right subTree.
+    - OR
+    - Look at the left subtree of the node to be deleted, and replace it with the node with `maximum` value from right subTree.
+
+### Traversal
+
+#### Preorder Traversal
+
+- First element is the root.
+
+<div className="flex flex-row space-x-5 pt-5">
+  <MdxCard className="h-fit w-96 border-zinc-700">
+    ![Preorder-traversal](/content/dsa-1/tree/preorder.svg)
+  </MdxCard>
+  <MdxCard className="h-fit w-96 border-zinc-700">
+    ![Preorder-code](/content/dsa-1/tree/preorder-code.svg)
+  </MdxCard>
+</div>
+
+#### Inorder Traversal
+
+- You get the elements in **ascending order**.
+
+<div className="flex flex-row space-x-5 pt-5">
+  <MdxCard className="h-fit w-96 border-zinc-700">
+    ![inorder-traversal](/content/dsa-1/tree/inorder.svg)
+  </MdxCard>
+  <MdxCard className="h-fit w-96 border-zinc-700">
+    ![inorder-code](/content/dsa-1/tree/inorder-code.svg)
+  </MdxCard>
+</div>
+
+#### postorder Traversal
+
+- Last element is the root.
+
+<div className="flex flex-row space-x-5 pt-5">
+  <MdxCard className="h-fit w-96 border-zinc-700">
+    ![postorder-traversal](/content/dsa-1/tree/postorder.svg)
+  </MdxCard>
+  <MdxCard className="h-fit w-96 border-zinc-700">
+    ![postorder-code](/content/dsa-1/tree/postorder-code.svg)
+  </MdxCard>
+</div>
+
+<br />
+<br />
+<br />
+<br />
+
+## ![Graph](/content/dsa-1/graph/graph.svg)
+
+<MdxCard
+  className="mt-10 flex w-fit flex-col justify-center text-xl"
+  id="graph"
+>
+  <div className="m-0"> ![graph](/content/dsa-1/graph/graph-balls.svg)</div>
+  <br />
+  <span className="text-zinc-400">
+    Graph is just a bunch of nodes or data points connected with each other through edges.
+  </span>
+
+</MdxCard>
+
+#### Exploring the graph
+
+- There are two ways to explore the graph
+  - [Deapth first search](#deapth-first-search)
+  - [Breadth first search](#breadth-first-search)
+
+Sample graph
+
+<MdxCard className="h-80 w-80 border-zinc-700">
+  ![Sample graph](/content/dsa-1/graph/graph-problem.svg)
+</MdxCard>
+
+#### Deapth First Search
+
+- Uses [stack](#stack).
+- Go as deep as possible and trackback is the concept.
+
+#### Aplications
+
+- Check if the graph has cycle.
+- Find path from source to destination in graph.
+
+#### Simple implementation
+
+```python title="main.py"
+def dfs(graph, src) -> None:
+    visited = list()
+    stack = [src]
+
+    while stack:
+        vertex = stack.pop()
+        if vertex not in visited:
+            visited.append(vertex)
+            print(f'Explored {vertex}')
+            stack.extend(
+                neighbour for neighbour in graph[vertex] if neighbour not in visited)
+
+
+# Sample graph
+graph = {
+    'A': ['B', 'C'],
+    'B': ['D', 'E', 'A'],
+    'C': ['F', 'A'],
+    'D': ['B'],
+    'E': ['F', 'B'],
+    'F': ['C', 'E']
+}
+dfs(graph, 'A')
+```
+
+#### Breadth First Search
+
+- Uses [queue](#queue).
+- Go level by level.
+
+#### Aplications
+
+- Find shortest path in a directed graph.
+- Finding solution to a problem which invloves finding least number of possible moves.
+
+#### Simple implementation
+
+```python title="main.py"
+from collections import deque
+
+
+def bfs(graph, src) -> None:
+    visited = list()
+    queue = deque([src])
+
+    while queue:
+        vertex = queue.popleft()
+        if vertex not in visited:
+            visited.append(vertex)
+            print(f'Explored {vertex}')
+            queue.extend(
+                neighbour for neighbour in graph[vertex] if neighbour not in visited)
+
+
+# Sample graph
+graph = {
+    'A': ['B', 'C'],
+    'B': ['D', 'E', 'A'],
+    'C': ['F', 'A'],
+    'D': ['B'],
+    'E': ['F', 'B'],
+    'F': ['C', 'E']
+}
+bfs(graph, 'A')
+```
