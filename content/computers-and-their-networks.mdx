@@ -12,3 +12,89 @@ blog_count: '10'
 Let's talk Computer Networks.
 
 ---
+
+![Components-of-CN](/content/CN/components-of-cn.svg)
+
+#### Hub
+
+- It is a device that splits the network connection into multiple devices that are connceted to it.
+- Or simply put together, Hub tranfers the request or response to all the devices that are conncted to it.
+- It is **Dumb**.
+
+#### Switch
+
+- It is a device that splits the network connection into specific device specified by the sender or reciever.
+- Or simply put together, Switch tranfers the request or response to the device to which it is intended to.
+- It does so by keeping track of MAC addressess of all the devices that are connected to the switch theough it's ports.
+- Switch has something called CAM (Content Addressable Memory) table. Which stores the MAC addressess of the devices connected to it's ports.
+- It is **Smart**.
+
+#### Routers
+
+- It is a device that connects the LAN to outside world or so called **The Internet**.
+- It is usually used to connect different networks.
+- Part of **Network layer**.
+- It is very expensive to maintain one.
+
+<br />
+<br />
+
+### Computer Architecture
+
+![CN-architecture](/content/CN/CN-architecture.svg)
+
+| Peer-to-Peer                                                                                     | Client / Server                                                              |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
+| Equal opportunity to everyone in the network                                                     | Those who are in need only given option to talk with whom they want to talk. |
+| ![Peer-to-Peer](/content/CN/peer-to-peer.svg)                                                    | ![Client-Server](/content/CN/client-server.svg)                              |
+| If the desired computer is busy in talking to other computer we can not talk to it at that time. | High speed data sharing can take place.                                      |
+
+<br />
+<br />
+
+### Various Network Types
+
+![Network-Types](/content/CN/network-types.svg)
+
+#### LAN
+
+- Local Area Network.
+- Involves a bunch of computers/devices connected with each other through cables.
+- Limits to an office or a room or a building.
+- Faster data tranfer takes place.
+- Secure as there is no intervention of external entity.
+
+#### WAN
+
+- Wide Area Network.
+- Spread over large geographical area like states and countries.
+- For example **Internet** is a WAN.
+
+#### PAN
+
+- Personal Area Network.
+- Belongs to a person.
+- Revolves around a persons personal devices like mobile phone, watch and etc..
+
+#### MAN
+
+- Metropolitan Area Network.
+- Group of LAN's together is called MAN.
+- They can be used to connect different branches of a bank in a city together.
+
+<br />
+<br />
+<br />
+
+<MdxCard className="h-fit w-80 border-zinc-700">
+  ![TCP/IP-model](/content/CN/TCP-IP-model.svg)
+</MdxCard>
+
+#### TCP/IP Model
+
+- when devices want to communicate with each other through internet they must follow a protocol.
+
+<br />
+<br />
+
+### Physical Layer
