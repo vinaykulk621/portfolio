@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
-  const projects: Array<Array<string>> = [
+  const projects: string[][] = [
     [
       '',
       'vinaykulk621/spam-bot',
@@ -43,6 +43,14 @@ export default function Home() {
       'A Python Bot to spam messages across any social media.',
       'spamBot.png',
       'Spammer Project at https://github.com/vinaykulk621/spam-bot',
+    ],
+    [
+      'https://words-livid.vercel.app/',
+      'vinaykulk621/words',
+      'Infinte-scroll Words',
+      'A simple implementation of Infinite scroll using in nNext js 13 and server actions.',
+      'words.png',
+      'Infinite scroll Words Project at https://github.com/vinaykulk621/words',
     ],
     [
       'https://cuboido.vercel.app/',
