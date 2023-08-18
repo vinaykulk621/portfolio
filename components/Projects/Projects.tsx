@@ -15,20 +15,20 @@ export function Projects({}) {
           alt="noote Project at https://github.com/vinaykulk621/noote"
         />
         <ProjectPallet
-          DemoUrl={'https://cuboido.vercel.app/'}
-          github_repo_name="vinaykulk621/Cuboido"
-          projectName="Cuboido"
-          projectDescription="3D interactive CUBE Built Using Three.js, Next.js and Tailwind CSS."
-          Preview={'cuboido.png'}
-          alt="Cuboido Project at https://github.com/vinaykulk621/cuboido"
+          DemoUrl={'https://flukx.vercel.app/'}
+          github_repo_name="vinaykulk621/flukx"
+          projectName="Flukx"
+          projectDescription="A link shortner which uses unique words to short links."
+          Preview={'flukx.png'}
+          alt="flukx Project at https://github.com/vinaykulk621/flukx"
         />
         <ProjectPallet
-          DemoUrl={'https://globes.vercel.app/'}
-          github_repo_name="vinaykulk621/globes"
-          projectName="Globes"
-          projectDescription="Collection of Cool 3D Globes Made Using Three.js, Next.js and Tailwind CSS."
-          Preview={'globes.png'}
-          alt="Globes Project at https://github.com/vinaykulk621/globes"
+          DemoUrl={'https://words-livid.vercel.app/'}
+          github_repo_name="vinaykulk621/words"
+          projectName="Infinte-scroll Words"
+          projectDescription="A simple implementation of Infinite scroll using in nNext js 13 and server actions."
+          Preview={'words.png'}
+          alt="Infinite scroll Words Project at https://github.com/vinaykulk621/words"
         />
         <ProjectPallet
           DemoUrl={'https://sierpinskitriangle.vercel.app'}

@@ -10,15 +10,15 @@ export default function Home() {
   return (
     <>
       <div className="overflow-x-hidden">
-        <ThreeD />
+        {/* <ThreeD /> */}
         <div className="bg-zinc-950 font-spotify">
           <div className="flex h-screen flex-col justify-between">
             <Intro />
             <DownArrow />
           </div>
-          <div className="flex h-screen flex-col items-center justify-center space-y-10 p-4 lg:flex-row lg:space-x-14">
-            <TechStack />
+          <div className="flex h-screen flex-col items-center justify-around space-y-10 p-4 lg:flex-row">
             <AboutMe />
+            <TechStack />
           </div>
           <Projects />
           <p className="relative bottom-[20%] text-center text-lg text-gray-400">

@@ -1,6 +1,6 @@
-import Image from 'next/image'
 import type { Metadata } from 'next'
 import { siteConfig } from '@/config/site'
+import PainImage from './painImage'
 
 export const metadata: Metadata = {
   title: 'Vinay | Clicks',
@@ -43,121 +43,25 @@ export default function Home() {
             CLICKS
           </p>
           <div className="col-span-1 row-span-1 grid gap-y-6 ">
-            <Image
-              alt="table-bottle.jpg"
-              className="rounded-lg"
-              src={'/clicks/table-bottle.jpg'}
-              width={600}
-              height={600}
-            />
-            <Image
-              alt="stadium-center-darker-sky.jpg"
-              className="rounded-lg"
-              src={'/clicks/stadium-center-darker-sky.jpg'}
-              width={600}
-              height={600}
-            />
+            <PainImage src={'table-bottle.jpg'} />
+            <PainImage src={'stadium-center-darker-sky.jpg'} />
           </div>
           <div className="col-span-1 row-span-1 grid gap-y-6 ">
-            <Image
-              alt="hike-clear-sky-1.jpg"
-              className="rounded-lg"
-              src={'/clicks/hike-clear-sky-1.jpg'}
-              width={600}
-              height={600}
-            />
-            <Image
-              alt="sea"
-              className="rounded-lg"
-              src={'/clicks/sea.jpg'}
-              width={600}
-              height={600}
-            />
+            <PainImage src={'hike-clear-sky-1.jpg'} />
+            <PainImage src={'sea.jpg'} />
           </div>
-          <Image
-            alt="fog.jpg"
-            className="rounded-lg"
-            src={'/clicks/fog.jpg'}
-            width={600}
-            height={600}
-          />
-          <Image
-            alt="trees.jpg"
-            className="rounded-lg"
-            src={'/clicks/trees.jpg'}
-            width={600}
-            height={600}
-          />
-          <Image
-            alt="nandi.jpg"
-            className="rounded-lg"
-            src={'/clicks/nandi.jpg'}
-            width={600}
-            height={600}
-          />
-          <Image
-            alt="road_2.jpg"
-            className="rounded-lg"
-            src={'/clicks/road_2.jpg'}
-            width={600}
-            height={600}
-          />
-          <Image
-            alt="jublie-bulding.jpg"
-            className="rounded-lg"
-            src={'/clicks/jublie-bulding.jpg'}
-            width={600}
-            height={600}
-          />
-          <Image
-            alt="plane-glider.jpg"
-            className="rounded-lg"
-            src={'/clicks/plane-glider.jpg'}
-            width={600}
-            height={600}
-          />
-          <Image
-            alt="sea-beach-closeup.jpg"
-            className="rounded-lg"
-            src={'/clicks/sea-beach-closeup.jpg'}
-            width={600}
-            height={600}
-          />
-          <Image
-            alt="forest.jpg"
-            className="rounded-lg"
-            src={'/clicks/forest.jpg'}
-            width={600}
-            height={600}
-          />
-          <Image
-            alt="road.jpg"
-            className="rounded-lg"
-            src={'/clicks/road.jpg'}
-            width={600}
-            height={600}
-          />
-          <Image
-            alt="stadium-left-side.jpg"
-            className="rounded-lg"
-            src={'/clicks/stadium-left-side.jpg'}
-            width={600}
-            height={600}
-          />
-          <Image
-            alt="hike-1.jpg"
-            className="rounded-lg"
-            src={'/clicks/hike-1.jpg'}
-            width={600}
-            height={600}
-          />
-          <Image
-            alt="hike-filter-shoes.JPG"
-            className="rounded-lg"
-            src={'/clicks/hike-filter-shoes.JPG'}
-            width={600}
-            height={600}
-          />
+          <PainImage src={'fog.jpg'} />
+          <PainImage src={'trees.jpg'} />
+          <PainImage src={'nandi.jpg'} />
+          <PainImage src={'road_2.jpg'} />
+          <PainImage src={'jublie-bulding.jpg'} />
+          <PainImage src={'plane-glider.jpg'} />
+          <PainImage src={'sea-beach-closeup.jpg'} />
+          <PainImage src={'forest.jpg'} />
+          <PainImage src={'road.jpg'} />
+          <PainImage src={'stadium-left-side.jpg'} />
+          <PainImage src={'hike-1.jpg'} />
+          <PainImage src={'hike-filter-shoes.JPG'} />
         </div>
       </div>
     </>

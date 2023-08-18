@@ -17,7 +17,7 @@ export function ProjectPallet({
   alt: string
 }) {
   return (
-    <div className="group h-full max-w-sm overflow-hidden rounded-b-lg rounded-t-2xl bg-gradient-to-br from-[#1e1e1e] to-[#121212]">
+    <div className="group h-full max-w-sm overflow-hidden rounded-b-lg rounded-t-2xl bg-zinc-900">
       <Image
         src={`/projects/${Preview}`}
         height={300}
