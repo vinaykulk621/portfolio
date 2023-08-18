@@ -53,6 +53,14 @@ export default function Home() {
       'Infinite scroll Words Project at https://github.com/vinaykulk621/words',
     ],
     [
+      'https://flukx.vercel.app/',
+      'vinaykulk621/flukx',
+      'Flukx',
+      'A link shortner which uses unique words to short links.',
+      'flukx.png',
+      'flukx Project at https://github.com/vinaykulk621/flukx',
+    ],
+    [
       'https://cuboido.vercel.app/',
       'vinaykulk621/Cuboido',
       'Cuboido',
