@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <div className="overflow-x-hidden">
-        {/* <ThreeD /> */}
+        <ThreeD />
         <div className="bg-zinc-950 font-spotify">
           <div className="flex h-screen flex-col justify-between">
             <Intro />
