@@ -58,6 +58,7 @@ Let's talk Data Structures.
 - [Deletion](#deletion)
 - [Sorting](#sorting)
 - [Searching](#searching)
+- [Maximum Subarray](#maximum-subarray)
 
 <Callout>
   I will be using python **lists** to demostrate various operations on arrays.
@@ -323,6 +324,58 @@ print(index)  # 3
 ```
 
 </Steps>
+
+### Maximum Subarray
+
+It is a problem from [leetCode](https://leetcode.com) you can find it at [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/description/).
+
+Various approaches to solve this problem
+
+- Brute-force: Try all possible subarray and return the one which has maximum sum.
+- Kadane's algorithm.
+
+To solve this problem we are going to use kadane's algorithm for better optimizaiton.
+
+#### Kadane's algorithm
+
+Consider the following array in which we have to find the maximum sum subarray.
+![kadane-array](/content/dsa-1/array/kadane-array.svg)
+
+- Kdane's algorithm goes from starting index and keeps adding the next item in the list.
+- After addition of the next item if the sum goes to negative it is sure that that sub array will make ur total sum even lesser. Then in that case we have to make a fresh start.
+- We drop the subarray which will give us lesser sum or say negative sum value.
+- We do a fresh start off and then do the same thing till the end of the array.
+
+```python title="kadane.py"
+def maxSubArray(nums: list):
+    currMax: int = 0
+    maxMax: int = min(nums)   # It is done so that we do not
+                              # miss boundary case like if the nums
+                              # array is only one element.
+                              # nums = [-1]
+    for num in nums:
+        currMax += num
+
+        # The sum is getting negative do a fresh start
+        if currMax < 0:
+            currMax = 0
+
+
+        # We might have found a solution update the maxMax value
+        if currMax > maxMax:
+            maxMax = currMax
+    return maxMax
+
+
+nums = [1, -2, 3, 4, -1]
+max_subarray = maxSubArray(nums=nums)
+print(max_subarray)    # 7
+                       # [1, -2, 3,  4, -1]
+                       #         ^   ^
+                       #         |   |
+                       #         |   |
+                       #           +
+```
 
 <br />
 <br />
