@@ -15,8 +15,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format-w": "prettier --write \"**/*.{js,ts,tsx,mdx}\" --cache && git add .",
-    "format-c": "prettier --check \"**/*.{js,ts,tsx,mdx}\" --cache",
+    "format": "prettier --write \"**/*.{js,ts,tsx,mdx,json}\" --cache && git add .",
     "prepare": "husky install"
   },
   "dependencies": {
