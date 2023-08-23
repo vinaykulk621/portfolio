@@ -59,6 +59,7 @@ Let's talk Data Structures.
 - [Sorting](#sorting)
 - [Searching](#searching)
 - [Maximum Subarray](#maximum-subarray)
+- [Two-sum](#two-sum)
 
 <Callout>
   I will be using python **lists** to demostrate various operations on arrays.
@@ -375,6 +376,39 @@ print(max_subarray)    # 7
                        #         |   |
                        #         |   |
                        #           +
+```
+
+### Two-sum
+
+It is one of the most famous interview and [leetcode](https://leetcode.com/problems/two-sum/) question.
+
+Ways to solve it:
+
+- You can Brute force your way out.
+- Use a `hashmap/dictionary` to save the values of the array corresponding to their indices.
+- We will loop through the array.
+- For every element we calculate the residue amount i.e; `currentNumber - target`.
+- In simple terms how much do we need to add to the current element to make up to the target.
+- If we find that the residue is available in the array through `hashmap/dictionary` lookup then we return the positions.
+- Else we store the current number in the loop as the key with it's index as the value.
+
+```python title="two-sum.py"
+def twoSum(nums: list, target: int):
+    # Creating an empty dictionary
+    allVals = dict()
+
+    for i, num in enumerate(nums):
+        residue = target-num
+        if residue in allVals:
+            return [allVals.get(residue), i]
+        allVals[num] = i
+    return []
+
+
+nums = [2, 7, 11, 15]
+target = 9
+ans = twoSum(nums, target)
+print(ans)  # [0, 1]
 ```
 
 <br />
