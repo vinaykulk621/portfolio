@@ -123,6 +123,71 @@ Let's talk Computer Networks.
 ### Data-Link Layer
 
 - Data-Link Layer also known as **Layer-2**.
+- Responsible for moving the data frames from one node to another node in the network from source to destination.
+- Data link layer has sublayers
+
+  <div className="h-64 w-64">
+    ![data-link-layer-sublayers](/content/CN/data-link-layer-sublayers.svg)
+  </div>
+
+- LLC(Logical Link control) or DLC(Data Link Control) is responsible for [Flow control](#flow-control)
+- MAC sublayer is responsible for:
+  - Data Encapsulation:
+    - Frame Assemmbly and disassembly is done here.
+    - Frames are created here.
+    - Header and trailer are added here.
+  - Media Access Control:
+    - Placing and removing of the frames from the media line.
+- Service provided by Data link layer:
+  - [Framing](#framing)
+  - [Physical addressing](#physical-addressing)
+  - [Flow control](#flow-control)
+  - [Error control](#error-control)
+  - [Access control](#access-control)
+
+<br />
+
+#### Framing
+
+- `Frame = Header + Network Layer PDU(Data) + Trailer`
+- Making each data frame that need to be transported unique or distinguishable from each other so that reciever can know what the data is.
+- Each frame of data is made unique by adding a header and trailer to the data that need to be sent over the channel.
+- The bits which are added at the begining and at the end of the frame is agreed by both sender and reciever.
+- We add bunch of bits at the begining and end of the data to mark one data frame. Below figure explains the Framing.
+- Notice how in the below figure we have the same header and trailer bit in the data part of the **frame**. It is called <span className="text-red-500">Framing error</span>.
+  ![Framing](/content/CN/framing.svg)
+- <span className="text-red-500">Framing Error</span> solution:
+
+- **Bit stuffing**
+  is used to overcome framing error problem
+- Let's say that `1001` is the agreed code to be added in header and trailer of the frame.
+- If we encounter `1001` we need to replace it with something else. Like say we replace it with `1011` and let the reciever know that it needs to be converted back to `1001`.
+- We might come across `1011` in the data. In this case the reciever will convert it into `1001` but it is not the correct data. To overcome this kind of problem we need to come up with a very strong and reliable **bit stuffing** code.
+
+  <br />
+
+#### Physical addressing
+
+- This layer is responsible for appending header and trailer to the data frame.
+- The header contains the MAC address of the source and destination.
+
+#### Flow control
+
+- There need to be a flow control mechanism between sender and reciever so that they both are in sync.
+
+#### Error control
+
+- Whenever there is an error in the data frames there are two ways to deal with this problem
+  1. Error detection
+  2. Error Correction
+- Types of error:
+  1. Bit error: There is one bit difference between original data and the recieved data.
+  2. Burst error: Multiple bits difference between original data and the recieved data.
+- Error detection can be implemented in data link layer or [Transport-layer](#transport-layer)
+
+#### Access control
+
+- When multiple devices are accessing the same channel to send data, we need some mechanism to make sure the data do not collide with each other.
 
 <br />
 <br />
