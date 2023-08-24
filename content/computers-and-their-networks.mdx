@@ -184,6 +184,18 @@ Let's talk Computer Networks.
   1. Bit error: There is one bit difference between original data and the recieved data.
   2. Burst error: Multiple bits difference between original data and the recieved data.
 - Error detection can be implemented in data link layer or [Transport-layer](#transport-layer)
+- When the recever gets the data it needs to validate that it is correct. It does so with help of **redundancy bits** added with the data.
+- **Redundancy bits** are just extra bits added to data from sender to validate the correctness of the data by reciever.
+- Some methods of generating **Redundancy bits**:
+  - Checksum:
+    - You divide the data that need to be sent into `k` parts of size `n`.
+    - Then add all `n` parts with each other and take 1's compliment.
+    - This 1's compliment is only **redundancy bits** which are sent with the data
+    - On the reciever's side the recieved data is added together.
+    - If the final value of addition results into `1` at all places then the recieved data is valid.
+    - Else it is descarded and notified to the sender.
+  - Cyclic Redundancy Check(CRC):
+    - We have some complicated method to generate the `CRC`.
 
 #### Access control
 
