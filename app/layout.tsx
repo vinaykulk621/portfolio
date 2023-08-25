@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     'Tailwind CSS',
     'Server Components',
     'Radix UI',
+    'Portfolio website',
   ],
   creator: 'Vinay',
   openGraph: {
@@ -23,13 +24,17 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
+    images: ['https://vinaykulka.vercel.app/og.jpg'],
+    countryName: 'India',
   },
   twitter: {
     card: 'summary_large_image',
     title: siteConfig.name,
     description: siteConfig.description,
-    images: [`${siteConfig.url}/og.jpg`],
+    images: ['https://vinaykulka.vercel.app/og.jpg'],
     creator: '@kuylycljhyvvy',
+    creatorId: '@kuylycljhyvvy',
+    site: 'https://vinaykulka.vercel.app',
   },
 }
 
@@ -40,7 +45,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="overflow-x-hidden">
+      <body>
         {children}
         <Analytics />
       </body>

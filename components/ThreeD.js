@@ -87,55 +87,17 @@ const ThreeD = () => {
 
     scene.add(sphere)
     scene.add(atmosphere)
-    sphere.position.x = 2
-    atmosphere.position.x = 2
-    camera.position.z = 10
+    camera.position.z = 7
 
     renderer.setClearColor(0x000000, 1)
-
-    function addStars() {
-      const starColors = [
-        '#ffffff', // white
-        '#ffff00', // yellow
-        '#ff0000', // red
-        '#9900cc', // purple
-        '#0000ff', // blue
-      ]
-      const star = new THREE.Mesh(
-        new THREE.SphereGeometry(0.3),
-        new THREE.MeshBasicMaterial({
-          color: new THREE.Color().set(
-            starColors[Math.floor(Math.random() * starColors.length)]
-          ),
-        })
-      )
-      const [x, y, z] = Array(3)
-        .fill()
-        .map(() => THREE.MathUtils.randFloatSpread(700))
-      star.position.set(x, y, z)
-      scene.add(star)
-    }
-    Array(800).fill().forEach(addStars)
 
     const animate = () => {
       requestAnimationFrame(animate)
 
       // SPHERE Rotation
-      sphere.rotation.x += 0.0001
-      sphere.rotation.z += 0.0001
-
-      // Changing the position of the sphere as we scroll
-      sphere.position.y = (-window.pageYOffset / 100) * 0.4
-      sphere.position.z = (window.pageYOffset / 100) * 0.4
-      atmosphere.position.y = (-window.pageYOffset / 100) * 0.4
-      atmosphere.position.z = (window.pageYOffset / 100) * 0.4
-
-      //  Rotating the camera around the sphere
-      camera.lookAt(sphere.position)
-
-      // Anticlockwise spin
-      camera.position.x = 5 * Math.sin(Date.now() * 0.0001)
-      camera.position.z = 5 * Math.cos(Date.now() * 0.0001)
+      sphere.rotation.x += 0.01
+      sphere.rotation.z += 0.01
+      sphere.rotation.y += 0.01
 
       renderer.render(scene, camera)
     }

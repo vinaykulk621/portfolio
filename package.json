@@ -15,8 +15,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "prepare": "husky install",
     "format": "prettier --write \"**/*.{js,ts,tsx,mdx,json}\" --cache && git add .",
-    "prepare": "husky install"
+    "restart": "rm -rf node_modules/ .next/ && npm i && npm run dev"
   },
   "dependencies": {
     "@radix-ui/react-collapsible": "^1.0.3",
