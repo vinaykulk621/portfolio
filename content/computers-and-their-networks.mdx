@@ -174,6 +174,16 @@ Let's talk Computer Networks.
 #### Flow control
 
 - There need to be a flow control mechanism between sender and reciever so that they both are in sync.
+- It is basically the amount of data a sender can send before recieving an acknowledgement from the recever.
+- Various Flow control protocols:
+  - Simple protocol: Simply just send all the frames that need to be transmitted.
+  - Stop-and-wait: After sending a frame wait for the acknowledgement of that frame from the reciever so that you can send next frame in the row.
+  - Stop-and-wait-ARQ: It is same as **Stop-and-wait**, The difference is that here we have a timer. After the timer burns out the unacknowledged frame is sent again.
+  - Sliding-window: We have a fixed window size of some length say `n`.
+    - We send first `n` frmaes and wait for their acknowledgement in the order we sent the frames.
+    - If we get the acknowledgement for the first frame we slide the window and send the next frame.
+    - If the timer burns out or we get acknowledgement for wrong frame we send back the first frame assuming that there was a problem with the frame transmission.
+  - Go-back--ARQ: It is same as Sliding-window as we have a sliding-window here too. The only difference is whenever we get the wrong frame acknowledgement or no acknowledgement we send back all the frames available on our window size.
 
 #### Error control
 
@@ -200,6 +210,13 @@ Let's talk Computer Networks.
 #### Access control
 
 - When multiple devices are accessing the same channel to send data, we need some mechanism to make sure the data do not collide with each other.
+
+| Random Access protocol | controlled access protocol | Channelization |
+| ---------------------- | -------------------------- | -------------- |
+| Aloha                  | Reserving                  | FDMA           |
+| CSMA                   | Polling                    | WDMA           |
+| CSMA/CD                | Token Passing              | CDMA           |
+| CSMA/CA                |                            |                |
 
 <br />
 <br />
