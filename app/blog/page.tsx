@@ -43,7 +43,7 @@ export default function HomePage() {
     })
 
   return (
-    <div className="flex h-screen w-screen items-center justify-center bg-zinc-950">
+    <div className="max-w-screen flex h-screen items-center justify-center bg-zinc-950">
       <div className="flex flex-col items-start space-y-4 pr-80">
         {postPreviews}
       </div>

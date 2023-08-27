@@ -30,7 +30,7 @@ export default async function PostPage({ params }: Props) {
   const post = await getPost(params.slug)
 
   return (
-    <div className="min-w-screen xs:text-sm flex min-h-screen flex-col items-center bg-zinc-950 p-4 text-base text-white">
+    <div className="min-w-screen xs:text-sm flex min-h-screen flex-col items-center overflow-x-hidden bg-zinc-950 p-4 text-base text-white">
       <div className="my-8 ml-0">
         <h1 className="xs:text-5xl mb-3 max-w-[650px] font-spotify text-5xl">
           {post?.title}
