@@ -124,6 +124,7 @@ Let's talk Computer Networks.
 
 - Data-Link Layer also known as **Layer-2**.
 - Responsible for moving the data frames from one node to another node in the network from source to destination.
+- You can also call it Hop-to-Hop delivery of the data.
 - Data link layer has sublayers
 
   <div className="h-64 w-64">
@@ -165,7 +166,7 @@ Let's talk Computer Networks.
 #### Physical addressing
 
 - This layer is responsible for appending header and trailer to the data frame.
-- The header contains the MAC address of the source and destination.
+- The header contains the MAC addresss of each node in between source and destination.
 
 #### Flow control
 
@@ -326,6 +327,29 @@ There are few steps to be followed to calculate the number of IP addresses in a 
 3. Count the minimum number of bits required to denote the number of devices in Binary format. Call it `n`. For the above example it will be `6`.
 4. To represent the new subnet mask in `/`-notation, Just do `32-n`.
 5. Make the new range of IP addresses from the new `/`-notation.
+
+### Network Layer Protocols:
+
+Few protocols which network layer provides.
+
+#### ARP(Address Resolution Protocol)
+
+- It is a protocol used to get the MAC address of other devices present in the network which is essential for communication between two devices in the same or different network.
+- The sender or host who wants to know the MAC address will send a brodcast message to all the devices in the network.
+- The one to whom the broadcast is intended to responds back with it's MAC address.
+
+#### ICMP(Internet Control Message Protocol)
+
+- It is a protocol used to send notifications of IP datagram packets.
+- It's main functionality is to alert the router about the problem but not to fix them.
+- It has the least priority over all other protocols.
+- This
+
+#### IGMP(Internet Group Message Protocol)
+
+- It is a protocol used to identify the members of a group in LAN.
+- It is essential in multicast addressing.
+- In multicast addressing data needs to be tranmitted to multiple hosts. IGMP is essential to identify the devices in the network.
 
 <br />
 <br />
