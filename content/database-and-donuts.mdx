@@ -23,6 +23,54 @@ Let's talk Database management.
 
 ## ![Database](/content/DBMS/database.svg)
 
+We have a lot of things in DBMS. we are going to cover few important ones here.
+
+- [Cardinallity and it's ratio](#cardinallity-and-it's-ratio)
+- [Keys](#keys)
+- [SQL](#sql)
+
+### Cardinallity and it's ratio
+
+- **Cardinallity** is a measure to represt how the entities are related to each other.
+- There are 4 types of cardinality ratio:
+  1. One-to-One
+  2. One-to-Many
+  3. Many-to-One
+  4. Many-to-Many
+
+### Keys
+
+- Keys play an important role in Database.
+- There are various keys:
+  1. [Primary key](#primary-key)
+  2. [Super key](#super-key)
+  3. [Candidate key](#candidate-key)
+  4. [Foreign key](#foreign-key)
+  5. [Unique key](#unique-key)
+
+#### Primary key
+
+- A unique attribute in a table which can be used to identify all other keys in the table.
+- It can not be null.
+- All primary keys are [super keys](#super-keys)
+
+### SQL
+
+- Structured Query Language.
+- Used to talk with the database.
+- Multiple types of commands are there in SQL, Mainly
+  1. DDL(Data Definition Language)
+  2. DML(Data Manipulation Language)
+  3. DCL(Data Control Language)
+  4. TCL(Transaction Control Language)
+
+| DDL                                                                                                 | DML                                                                                  | DCL                                                                                             | TCL                                                                               |
+| --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| Commands which are used to defines the data. Like **TABLES**, **DATABASE**, **VIEWS**, **TRIGGERS** | Commands which are used to Manipulate the existing data. Like **UPDATE**, **INSERT** | Commands which are used to control the behaviour or charecteristics of the data. Like **GRANT** | Commands which are used to control transactions in the database. Like **COMMMIT** |
+| **CREATE**                                                                                          | **INSERT**                                                                           | **GRANT**                                                                                       | **COMMIT**                                                                        |
+| **DROP**                                                                                            | **UPDATE**                                                                           | **REVOKE**                                                                                      | --                                                                                |
+| **ALTER**                                                                                           | **DELETE**                                                                           | --                                                                                              | --                                                                                |
+
 <br />
 <br />
 
