@@ -5,7 +5,6 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Vinay | Projects',
   description: 'Projects',
-
   metadataBase: new URL('https://vinaykulka.vercel.app'),
   keywords: [
     'Next.js',
@@ -18,6 +17,7 @@ export const metadata: Metadata = {
   ],
   creator: 'Vinay',
   openGraph: {
+    images: ['https://vinaykulka.vercel.app/og.jpg'],
     type: 'website',
     locale: 'en_US',
     url: siteConfig.url,
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 export default function Home() {
   const projects: string[][] = [
     [
-      '',
+      'https://github.com/vinaykulk621/spam-bot',
       'vinaykulk621/spam-bot',
       'Spam Bot',
       'A Python Bot to spam messages across any social media.',
@@ -61,6 +61,14 @@ export default function Home() {
       'flukx Project at https://github.com/vinaykulk621/flukx',
     ],
     [
+      'https://noote.vercel.app',
+      'vinaykulk621/noote',
+      'noote',
+      'An online note sharing application. No need of login. Create a secret url and share to anyone.',
+      'noote.png',
+      'noote Project at https://github.com/vinaykulk621/noote',
+    ],
+    [
       'https://cuboido.vercel.app/',
       'vinaykulk621/Cuboido',
       'Cuboido',
@@ -75,6 +83,14 @@ export default function Home() {
       '3D Globes Made Using Three.js, Next.js and Tailwind CSS.',
       'globes.png',
       'Globes Project at https://github.com/vinaykulk621/globes',
+    ],
+    [
+      'https://clocko.vercel.app',
+      'vinaykulk621/clock',
+      'Digital Clock',
+      'A Simple digital clock that shows current time based on your current location.',
+      'clock.png',
+      'clock Project at https://github.com/vinaykulk621/clock',
     ],
     [
       'https://vinaykulk621.github.io/typewriter/',
@@ -117,14 +133,6 @@ export default function Home() {
       'Devil Fruits Project at https://github.com/vinaykulk621/DEVIL_FRUITS',
     ],
     [
-      'https://clocko.vercel.app',
-      'vinaykulk621/clock',
-      'Digital Clock',
-      'A Simple digital clock that shows current time based on your current location.',
-      'clock.png',
-      'clock Project at https://github.com/vinaykulk621/clock',
-    ],
-    [
       'https://sierpinskitriangle.vercel.app',
       'vinaykulk621/sierpinski-triangle',
       'Sierpinski Triangle',
@@ -140,38 +148,26 @@ export default function Home() {
       'soch.png',
       'soch Project at https://github.com/vinaykulk621/soch',
     ],
-    [
-      'https://noote.vercel.app',
-      'vinaykulk621/noote',
-      'noote',
-      'An online note sharing application. No need of login. Create a secret url and share to anyone.',
-      'noote.png',
-      'noote Project at https://github.com/vinaykulk621/noote',
-    ],
   ]
   return (
-    <>
-      <main className="bg-zinc-950 font-spotify">
-        <div className="flex flex-col space-y-9 md:h-fit">
-          <div className="xs:space-y-5 grid grid-cols-1 justify-items-center space-y-5 text-white md:grid-cols-2 md:gap-5 md:space-y-0 lg:m-10 lg:grid-cols-4 lg:gap-8">
-            {projects.map((e) => {
-              return (
-                <>
-                  <ProjectPallet
-                    key={e[2]}
-                    DemoUrl={e[0]}
-                    github_repo_name={e[1]}
-                    projectName={e[2]}
-                    projectDescription={e[3]}
-                    Preview={e[4]}
-                    alt={e[5]}
-                  />
-                </>
-              )
-            })}
-          </div>
-        </div>
-      </main>
-    </>
+    <main className="h-fit bg-zinc-950 font-spotify">
+      <div className="grid grid-cols-1 justify-items-center gap-5 p-5 text-white md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+        {projects.map((e) => {
+          return (
+            <>
+              <ProjectPallet
+                key={e[2]}
+                DemoUrl={e[0]}
+                github_repo_name={e[1]}
+                projectName={e[2]}
+                projectDescription={e[3]}
+                Preview={e[4]}
+                alt={e[5]}
+              />
+            </>
+          )
+        })}
+      </div>
+    </main>
   )
 }

@@ -23,6 +23,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical: `/blog/${params.slug}`,
     },
+    openGraph: {
+      images: ['https://vinaykulka.vercel.app/og.jpg'],
+      type: 'article',
+      authors: 'Vinay Kulkarni',
+      title: `Blog | ${params.slug.replace('-', ' ')}`,
+    },
   }
 }
 

@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   ],
   creator: 'Vinay',
   openGraph: {
+    images: ['https://vinaykulka.vercel.app/og.jpg'],
     type: 'website',
     locale: 'en_US',
     url: siteConfig.url,

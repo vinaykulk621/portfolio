@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   ],
   creator: 'Vinay',
   openGraph: {
+    images: ['https://vinaykulka.vercel.app/og.jpg'],
     type: 'website',
     locale: 'en_US',
     url: siteConfig.url,
@@ -43,8 +44,8 @@ export default function HomePage() {
     })
 
   return (
-    <div className="max-w-screen flex h-screen items-center justify-center bg-zinc-950">
-      <div className="flex flex-col items-start space-y-4 pr-80">
+    <div className="max-w-screen flex h-fit min-h-screen items-center justify-center bg-zinc-950">
+      <div className="flex flex-col items-start space-y-4 md:pr-80">
         {postPreviews}
       </div>
     </div>
