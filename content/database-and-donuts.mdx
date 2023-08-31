@@ -42,27 +42,61 @@ We have a lot of things in DBMS. we are going to cover few important ones here.
 
 - Keys play an important role in Database.
 - There are various keys:
-  1. [Primary key](#primary-key)
-  2. [Super key](#super-key)
-  3. [Candidate key](#candidate-key)
-  4. [Foreign key](#foreign-key)
-  5. [Unique key](#unique-key)
+
+<div className="flex flex-row gap-x-20">
+<div>
+
+1. [Super key](#super-key)
+2. [Candidate key](#candidate-key)
+3. [Primary key](#primary-key)
+4. [Unique key](#unique-key)
+5. [Foreign key](#foreign-key)
+
+</div>
+
+   <div className='h-80 w-80'>![Keys in DBMS](/content/DBMS/keys.svg)</div>
+   
+   </div>
+
+#### Super key
+
+- All possible key combinations in a table or a realtion are known as super keys.
+- It's like a superset of all keys.
+
+#### Candidate key
+
+- It is a subset of all minimal super keys.
+- All **candidate keys** as **super keys**.
 
 #### Primary key
 
+- Subset of candidate keys who's value can not be null.
 - A unique attribute in a table which can be used to identify all other keys in the table.
-- It can not be null.
-- All primary keys are [super keys](#super-keys)
+- All primary keys are **Candidate keys**.
+- The value can not be null.
+
+#### Unique key
+
+- Subset of **Candidate keys** which are not **primary key**
+- Value can be null.
+
+#### Foreign key
+
+- The attribute from one table which is refferenced in other table.
+- It can only take values which are defined in the parent table.
+- A foreign key is allways reffering a primary key of other table.
+
+### Joins
 
 ### SQL
 
 - Structured Query Language.
 - Used to talk with the database.
 - Multiple types of commands are there in SQL, Mainly
-  1. DDL(Data Definition Language)
-  2. DML(Data Manipulation Language)
-  3. DCL(Data Control Language)
-  4. TCL(Transaction Control Language)
+  1. DDL (Data Definition Language)
+  2. DML (Data Manipulation Language)
+  3. DCL (Data Control Language)
+  4. TCL (Transaction Control Language)
 
 | DDL                                                                                                 | DML                                                                                  | DCL                                                                                             | TCL                                                                               |
 | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |

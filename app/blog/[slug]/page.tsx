@@ -18,8 +18,8 @@ async function getPost(slug: string) {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
-    title: `Blog | ${params.slug.replace('-', ' ')}`,
-    description: `Blog: ${params.slug.replace(' ', '-')}`,
+    title: `Blog | ${params.slug.replaceAll('-', ' ')}`,
+    description: `Blog: ${params.slug.replaceAll(' ', '-')}`,
     alternates: {
       canonical: `/blog/${params.slug}`,
     },
@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: ['https://vinaykulka.vercel.app/og.jpg'],
       type: 'article',
       authors: 'Vinay Kulkarni',
-      title: `Blog | ${params.slug.replace('-', ' ')}`,
+      title: `Blog | ${params.slug.replaceAll('-', ' ')}`,
     },
   }
 }
