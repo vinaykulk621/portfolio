@@ -1,9 +1,9 @@
 ---
 title: 'Database and donuts'
 subtitle: 'database-and-donuts'
-date: 'August 10, 2023'
+date: 'September 2, 2023'
 author: 'Vinay Kulkarni'
-publishedAt: '2023-08-010'
+publishedAt: '2023-03-03'
 blog_count: '9'
 ---
 
@@ -27,7 +27,11 @@ We have a lot of things in DBMS. we are going to cover few important ones here.
 
 - [Cardinallity and it's ratio](#cardinallity-and-it's-ratio)
 - [Keys](#keys)
+- [Joins](#joins)
+- [Functional dependency](#functional-dependency)
 - [SQL](#sql)
+
+<br />
 
 ### Cardinallity and it's ratio
 
@@ -37,6 +41,8 @@ We have a lot of things in DBMS. we are going to cover few important ones here.
   2. One-to-Many
   3. Many-to-One
   4. Many-to-Many
+
+<br />
 
 ### Keys
 
@@ -53,9 +59,7 @@ We have a lot of things in DBMS. we are going to cover few important ones here.
 5. [Foreign key](#foreign-key)
 
 </div>
-
-   <div className='h-80 w-80'>![Keys in DBMS](/content/DBMS/keys.svg)</div>
-   
+   <div className='h-80 w-80'>![Keys in DBMS](/content/DBMS/keys.svg)</div>   
    </div>
 
 #### Super key
@@ -86,17 +90,62 @@ We have a lot of things in DBMS. we are going to cover few important ones here.
 - It can only take values which are defined in the parent table.
 - A foreign key is allways reffering a primary key of other table.
 
+<br />
+
 ### Joins
 
 - Joining one or more tables together on some common attribute or some comparison of columns from both the tables.
 - There are multiple types of join:
-  1. Natural Join
-  2. Equi Join
-  3. Self Join
+  1. [Natural Join](#natural-join)
+  2. [Equi Join](#equi-join)
+  3. [Self Join](#self-join)
   4. Outter Join:
-     - Left outter join
-     - Right outter join
-     - Full outter join
+     - [Left outter join](#left-outter-join)
+     - [Right outter join](#right-outter-join)
+     - [Full outter join](#full-outter-join)
+
+#### Natural Join
+
+- Joining two tables based on the common attributes which is in both the tables.
+
+#### Equi Join
+
+- It is same of [natural join](#natural-join) but here you can join the tables based on any attribute.
+- The joining attribute need not be the same.
+
+#### Self Join
+
+- Here we join the table with itself.
+
+#### Left outter Join
+
+- After joining two tables we get the common attributes from both the table along with that we get all the attributes from **left** table.
+- Syntax:`SELECT * FROM emp LEFT OUTTER JOIN(dept) ON(emp.id = dept.id)`
+
+#### Right outter Join
+
+- After joining two tables we get the common attributes from both the table along with that we get all the attributes from **right** table.
+- Syntax:`SELECT * FROM emp RIGHT OUTTER JOIN(dept) ON(emp.id = dept.id)`
+
+#### FULL outter Join
+
+- After joining two tables we get the common attributes from both the table along with that we get all the attributes from **BOTH** tables.
+- Syntax:`SELECT * FROM emp FULL OUTTER JOIN(dept) ON(emp.id = dept.id)`
+
+<br />
+
+### Functional dependency
+
+- A given attribute relation `X-->Y`. Here `Y` is said to be dependent on `X`.
+- If `X` can uniquely identify `Y` for any value of `X`.
+
+| Trivial Functional dependency | Non-Trivial Functional dependency |
+| ----------------------------- | --------------------------------- |
+| `X-->Y`                       | `X-->Y`                           |
+| <code>Y &#x2286; X</code>     | <code>Y &#x2288; X</code>         |
+| EX: `AB-->A`                  | EX: `AB-->C`                      |
+
+<br />
 
 ### SQL
 

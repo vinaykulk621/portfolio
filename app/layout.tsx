@@ -1,13 +1,13 @@
 import React from 'react'
 import '@/styles/globals.css'
 import { Analytics } from '@vercel/analytics/react'
-import { siteConfig } from '@/config/site'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://vinaykulka.vercel.app'),
-  title: siteConfig.name,
-  description: siteConfig.description,
+  title: 'Vinay | Portfolio',
+  description:
+    'Portfolio website built using Next.js 13, TailwindCSS and MDX on vercel.',
   keywords: [
     'Next.js',
     'React',
@@ -20,17 +20,19 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: siteConfig.url,
-    title: siteConfig.name,
-    description: siteConfig.description,
-    siteName: siteConfig.name,
+    url: 'https://vinaykulka.vercel.app',
+    title: 'Vinay | Portfolio',
+    description:
+      'Portfolio website built using Next.js 13, TailwindCSS and MDX on vercel.',
+    siteName: 'Vinay | Portfolio',
     images: ['https://vinaykulka.vercel.app/og.jpg'],
     countryName: 'India',
   },
   twitter: {
     card: 'summary_large_image',
-    title: siteConfig.name,
-    description: siteConfig.description,
+    title: 'Vinay | Portfolio',
+    description:
+      'Portfolio website built using Next.js 13, TailwindCSS and MDX on vercel.',
     images: ['https://vinaykulka.vercel.app/og.jpg'],
     creator: '@kuylycljhyvvy',
     creatorId: '@kuylycljhyvvy',

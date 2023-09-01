@@ -1,5 +1,4 @@
 import { ProjectPallet } from '@/components/Projects/ProjectPallet'
-import { siteConfig } from '@/config/site'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -20,16 +19,18 @@ export const metadata: Metadata = {
     images: ['https://vinaykulka.vercel.app/og.jpg'],
     type: 'website',
     locale: 'en_US',
-    url: siteConfig.url,
-    title: siteConfig.name,
-    description: siteConfig.description,
-    siteName: siteConfig.name,
+    url: 'https://vinaykulka.vercel.app',
+    title: 'Vinay | Portfolio',
+    description:
+      'Portfolio website built using Next.js 13, TailwindCSS and MDX on vercel.',
+    siteName: 'Vinay | Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
-    title: siteConfig.name,
-    description: siteConfig.description,
-    images: [`${siteConfig.url}/og.jpg`],
+    title: 'Vinay | Portfolio',
+    description:
+      'Portfolio website built using Next.js 13, TailwindCSS and MDX on vercel.',
+    images: ['https://vinaykulka.vercel.app/og.jpg'],
     creator: '@kuylycljhyvvy',
   },
 }
