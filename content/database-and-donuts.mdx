@@ -1,9 +1,7 @@
 ---
 title: 'Database and donuts'
-subtitle: 'database-and-donuts'
-date: 'September 2, 2023'
 author: 'Vinay Kulkarni'
-publishedAt: '2023-03-03'
+publishedAt: '2023-09-02'
 blog_count: '9'
 ---
 
@@ -92,6 +90,23 @@ We have a lot of things in DBMS. we are going to cover few important ones here.
 
 <br />
 
+### Prime and Non-Prime attributes
+
+| Prime attributes                                  | Non Prime attributes                                      |
+| ------------------------------------------------- | --------------------------------------------------------- |
+| The attributes which are part of a candidate key. | The attributes which are **not** part of a candidate key. |
+| Say Candidate Key is `AB-->CD`.                   | Say Candidate Key is `AB-->CD`.                           |
+| `AB` are Prime attributes.                        | `CD` are Non Prime attributes.                            |
+
+<br />
+
+### Partial dependency
+
+- For a Candidate key `AB-->CD` if there exists a relation `B-->C` or `B-->D` or `A-->C` or `A-->D` then this is called partial dependency.
+- Basically all **non prime attributes** should completely depend only on **Candidate key**.
+
+<br />
+
 ### Joins
 
 - Joining one or more tables together on some common attribute or some comparison of columns from both the tables.
@@ -144,6 +159,50 @@ We have a lot of things in DBMS. we are going to cover few important ones here.
 | `X-->Y`                       | `X-->Y`                           |
 | <code>Y &#x2286; X</code>     | <code>Y &#x2288; X</code>         |
 | EX: `AB-->A`                  | EX: `AB-->C`                      |
+
+<br />
+
+### Closure set
+
+- It is a set of all attribute which can be identied by a given attribute.
+- <code>
+    (A)<sup>+</sup>=ABC
+  </code>
+
+<br />
+
+### Normalization
+
+- Breaking down a bigger table into smaller tables based on some rules is **normalization**.
+- Need for **normalization** is to get rid of problem realted with **INSERT**, **UPDATE** and **DELETE** anomalies.
+- Or in simple terms u can say that you want to get rid of redundancy.
+- Various normalization forms:
+  1. [1NF](#1nf)
+  2. [2NF](#2nf)
+  3. [3NF](#3nf)
+  4. [BCNF](#bcnf)
+  5. [4NF](#4nf)
+
+#### 1NF
+
+- Each cell in a table should have only atomic or one value.
+- Or you can say that each cell should not have multivalued attribute.
+- How to convert a table into 1NF if it is not in 1NF form:
+  - Make one more row for each multivalued attribute in a cell.
+
+#### 2NF
+
+- We need to know the concept of [Prime and Non-Prime attributes](#prime-and-non-prime-attributes) to understand 2NF.
+- Consider Candidate keys `AB-->CD`, `B-->C` and `AB-->D`.
+- Here `CD` are **Non Prime attributes** and `AB` are **Prime attributes**.
+- `C` is entirely not dependent on the **prime attributes** or **candidate keys**.
+- `C` can be derived from a subset of **Prime attribute** `B`.
+- This is known as **[Partial dependency](#partial-dependency)**.
+- **Partial dependency** is to be avoided in **2NF**.
+- In simple terms we can say that **non prime attributes** should entirely depend on **candidate key** and not a **subset** of the **candidate key**.
+- How to make a table into **2NF**:
+  - Make another table with **candidate key** and all the attributes which are completely dependent on the candidate key.
+  - Make separate table for all the other keys which are defying the rule of partial dependency.
 
 <br />
 

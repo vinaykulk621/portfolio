@@ -32,6 +32,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
+function formatDate(date: string) {
+  const targetDate = new Date(date)
+
+  const fullDate = targetDate.toLocaleString('en-us', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+  })
+  return fullDate
+}
+
 export default async function PostPage({ params }: Props) {
   const post = await getPost(params.slug)
 
@@ -43,7 +54,7 @@ export default async function PostPage({ params }: Props) {
         </h1>
         <div className="flex flex-row items-center justify-center">
           <div className="rounded-md bg-zinc-800 px-2 py-1 text-sm tracking-tighter">
-            {post?.publishedAt}
+            {formatDate(post?.publishedAt)}
           </div>
           <div className="mx-2 h-[0.2em] flex-1 bg-zinc-800" />
         </div>
