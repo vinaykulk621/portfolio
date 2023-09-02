@@ -107,6 +107,16 @@ We have a lot of things in DBMS. we are going to cover few important ones here.
 
 <br />
 
+### Transitive dependency
+
+- For a given candidate key `A-->BC` we have realtions `B-->C`.
+- `A` is **prime attribute**.
+- `B` and `C` are **non prime attributes**.
+- `B` being a non prime attribute is identifying `C` which is also a non prime attribute.
+- This kind of situation in **Transitive dependency**.
+
+<br />
+
 ### Joins
 
 - Joining one or more tables together on some common attribute or some comparison of columns from both the tables.
@@ -203,6 +213,24 @@ We have a lot of things in DBMS. we are going to cover few important ones here.
 - How to make a table into **2NF**:
   - Make another table with **candidate key** and all the attributes which are completely dependent on the candidate key.
   - Make separate table for all the other keys which are defying the rule of partial dependency.
+
+<br />
+
+#### 3NF
+
+- We Need to avoid [Transitive dependency](#transitive-dependency).
+- For any given functional dependency `X--->Y` If we satisfy **either** of the two rules then the table is in 3NF
+  1. `X` should be a **super key**.
+  2. `Y` should be a **Prime attribute**.
+- How to make table into 3NF:
+- Whoever is voilating the rule make separate table for them along with all the attributes which it is identifying.
+
+<br />
+
+#### BCNF
+
+- Only one condition is there:
+- **LHS** should be a [Super key](#super-key).
 
 <br />
 
