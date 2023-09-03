@@ -3,7 +3,7 @@ import { allBlogs } from 'contentlayer/generated'
 export default async function sitemap() {
   const blogs = allBlogs.map((post) => ({
     url: `https://vinaykulka.vercel.app/blog${post.slug}`,
-    lastModified: post.date,
+    lastModified: post.publishedAt,
   }))
 
   const routes = ['/', '/blog', '/clicks', '/projects'].map((route) => ({
