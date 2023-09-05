@@ -144,6 +144,8 @@ Let's talk Computer Networks.
   - [Error control](#error-control)
   - [Access control](#access-control)
 
+<br />
+
 #### Framing
 
 - `Frame = Header + Network Layer PDU(Data) + Trailer`
@@ -161,10 +163,14 @@ Let's talk Computer Networks.
 - If we encounter `1001` we need to replace it with something else. Like say we replace it with `1011` and let the reciever know that it needs to be converted back to `1001`.
 - We might come across `1011` in the data. In this case the reciever will convert it into `1001` but it is not the correct data. To overcome this kind of problem we need to come up with a very strong and reliable **bit stuffing** code.
 
+<br />
+
 #### Physical addressing
 
 - This layer is responsible for appending header and trailer to the data frame.
 - The header contains the MAC addresss of each node in between source and destination.
+
+<br />
 
 #### Flow control
 
@@ -179,6 +185,8 @@ Let's talk Computer Networks.
     - If we get the acknowledgement for the first frame we slide the window and send the next frame.
     - If the timer burns out or we get acknowledgement for wrong frame we send back the first frame assuming that there was a problem with the frame transmission.
   - Go-back--ARQ: It is same as Sliding-window as we have a sliding-window here too. The only difference is whenever we get the wrong frame acknowledgement or no acknowledgement we send back all the frames available on our window size.
+
+<br />
 
 #### Error control
 
@@ -201,6 +209,8 @@ Let's talk Computer Networks.
     - Else it is descarded and notified to the sender.
   - Cyclic Redundancy Check(CRC):
     - We have some complicated method to generate the `CRC`.
+
+<br />
 
 #### Access control
 
@@ -229,10 +239,16 @@ Let's talk Computer Networks.
   - Inter networking
   - Fragmentation
 
+<br />
+
 ### IP address
 
 - It is a logical address which is used to identify the device's connection to the internet.
-- There are two types of IP addresses [`IPV4`](#ipv4)- **32 bits** and [`IPV6`](#ipv6)- **128 bits**
+- There are two types of IP addresses
+  1. [`IPV4`](#ipv4)- **32 bits**
+  2. [`IPV6`](#ipv6)- **128 bits**
+
+<br />
 
 #### IPV4
 
@@ -240,6 +256,8 @@ Let's talk Computer Networks.
 - There are two types of address:
   1. [**Classfull** addressing](#classfull-addressing)
   2. [**Classless** addressing](#classless-addressing)
+
+<br />
 
 ### Classfull addressing
 
@@ -287,8 +305,8 @@ Let's talk Computer Networks.
 - Here the concept of private and public IP address comes into picture.
 - Devices which need not connect to the internet can use private IP addresses.
 - But, what if that device want to connect to the internet???
-- This can be achieved via connceting the device to a Proxy server or a router which has NAT setup init.
-- What NAT basically does is, It maps out the private IP address to public IP address of the router and handles the request.
+- This can be achieved via connceting the device to a Proxy server or a router which has **NAT** setup init.
+- What **NAT** basically does is, It maps out the **private IP address** to **public IP address** of the router and handles the request.
 - Few Private IP addresses:
 
   | Address                                              |
@@ -296,6 +314,8 @@ Let's talk Computer Networks.
   | `10.0.0.0` - `10.255.255.255` (`10.0.0.0/8`)         |
   | `172.16.0.0` - `172.31.255.255` (`172.16.0.0/12`)    |
   | `192.168.0.0` - `192.168.255.255` (`192.168.0.0/16`) |
+
+<br />
 
 ### Classless addressing
 
@@ -316,6 +336,8 @@ Let's talk Computer Networks.
   - `/`-notaion is used to represent the subnet mask
   - `/3` --> `11100000 00000000 00000000 00000000`
 
+<br />
+
 #### Problems on Subnetting
 
 There are few steps to be followed to calculate the number of IP addresses in a subnet
@@ -323,8 +345,18 @@ There are few steps to be followed to calculate the number of IP addresses in a 
 1. Given the IP address figure out how many devices need to be there in a given subnet.
 2. Convert the number of devices into binary format. For example we need to address `32` devices then we convert `32` into Binary format which is `100000`.
 3. Count the minimum number of bits required to denote the number of devices in Binary format. Call it `n`. For the above example it will be `6`.
-4. To represent the new subnet mask in `/`-notation, Just do `32-n`.
+4. To represent the new subnet mask in `/`-notation, Just do `32 - n`.
 5. Make the new range of IP addresses from the new `/`-notation.
+
+<br />
+
+#### IPV6
+
+- **128** bits long.
+
+![IPV6](/content/CN/IPV6.svg)
+
+<br />
 
 ### Network Layer Protocols:
 
@@ -341,13 +373,51 @@ Few protocols which network layer provides.
 - It is a protocol used to send notifications of IP datagram packets.
 - It's main functionality is to alert the router about the problem but not to fix them.
 - It has the least priority over all other protocols.
-- This
 
 #### IGMP(Internet Group Message Protocol)
 
 - It is a protocol used to identify the members of a group in LAN.
 - It is essential in multicast addressing.
 - In multicast addressing data needs to be tranmitted to multiple hosts. IGMP is essential to identify the devices in the network.
+
+<br />
+
+## Transport Layer
+
+- Responsible for transporting data to the correct process running on the destination's computer.
+- Uses port number to identify the process.
+
+![PortNumbers](/content/CN/portNumbers.svg)
+
+- We have **Error control**, **Flow control** and **Access control** defined in this layer.
+- This layer deals with process to process communication that's why we need it here.
+
+<MdxCard className='text-white'>
+
+**Error control** and **Flow control** are defined in both [Transport layer](#transport-layer) and [Data Link Layer](#data-link-layer) because:
+
+1. [Transport layer](#transport-layer) deals with Process to Process communication. There need to be flow and error control while transfering the data.
+2. [Data Link layer](#data-link-layer) deals with **node-to-node** transportation of data hence we need flow and error control.
+
+</MdxCard>
+
+<br />
+<br />
+
+## Application Layer
+
+- Through this layer users can access the internet.
+
+### Application Layer Protocols:
+
+#### DHCP
+
+- **Dynamic host configuration protocol** used to assign IP address to devices dynamically.
+- Steps in assigning dynamic IP address
+  1. Client(device) sends a broadcast signal to all nearby server <span className='text-red-500'>DISCOVER</span> message.
+  2. Some server will respond to that broadcast message with a <span className='text-red-500'>OFFER</span> message.
+  3. For the <span className='text-red-400'>OFFER</span> message client responds with <span className='text-red-500'>REQUEST</span> message.
+  4. The server assigns an IP address to the client and sends an <span className='text-red-500'>ACKNOWLEDGEMENT</span> message.
 
 <br />
 <br />
