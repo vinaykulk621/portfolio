@@ -391,6 +391,8 @@ Few protocols which network layer provides.
 
 - We have **Error control**, **Flow control** and **Access control** defined in this layer.
 - This layer deals with process to process communication that's why we need it here.
+- `Socket-address = IP address + Port number`
+- Purpose of **Socket address** is to uniquely identify each process running
 
 <MdxCard className='text-white'>
 
@@ -400,6 +402,47 @@ Few protocols which network layer provides.
 2. [Data Link layer](#data-link-layer) deals with **node-to-node** transportation of data hence we need flow and error control.
 
 </MdxCard>
+
+- There are two major protocols used in transport layer: [TCP](#tcp) and [UDP](#udp).
+
+<br />
+
+#### TCP
+
+- **Transmission control protocol**.
+- TCP is a communication standard over which enables application programs to excahnge data over the internet.
+- This communication standard requires a connection to be made before transmission of any data.
+- Offers byte streaming. i.e; Sender sends the data through the connection.
+- It has a **FULL DUPLEX** transmission method.
+- We can piggyback the acknowledgement and data.
+- Has **Error Control**
+- Has **Flow Control**
+
+Three-way-handshake connection mechanism:
+
+![Three-way](/content/CN/Three-way.svg)
+
+#### UDP
+
+- **User Datagram protocol**.
+- **UDP** does not require a connection to be made before transmission of the data(UDP is a connectionless protocol).
+- **UDP** is **<span className='text-red-500'>not reliable</span>** as it does not offer **Error control**, **Congestion control** and **Flow control**.
+- **UDP** is **<span className='text-green-500'>Faster</span>** than **TCP** as it does not require a large header.
+
+Applications:
+
+- Streaming videos(Youtube live stream) as we need speed transmission of the data.
+- Single request and response protocols(RIP).
+
+<br />
+
+| TCP                                                                                                                                                                                           | UDP                                                                                                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Transmission control Protocol                                                                                                                                                                 | User datagram protocol                                                                                                                                                                        |
+| <span className='text-red-500'>**Slower**</span>                                                                                                                                              | <span className='text-green-500'>**Faster**</span>                                                                                                                                            |
+| <span className='text-green-500'>**Reliable**</span>                                                                                                                                          | <span className='text-red-500'>**Not Reliable**</span>                                                                                                                                        |
+| Offers <span className='text-green-500'>**FLow control**</span>, <span className='text-green-500'>**Error control**</span> and <span className='text-green-500'>**congestion control**</span> | Do not offer <span className='text-red-500'>**FLow control**</span>, <span className='text-red-500'>**Error control**</span> and <span className='text-red-500'>**congestion control**</span> |
+| Connection Oriented Protocol                                                                                                                                                                  | Not a connection Oriented Protocol                                                                                                                                                            |
 
 <br />
 <br />
