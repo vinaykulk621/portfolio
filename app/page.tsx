@@ -1,4 +1,3 @@
-import { AboutMe } from '@/components/AboutMe'
 import { Intro } from '@/components/Intro'
 import { Projects } from '@/components/Projects/Projects'
 import { DownArrow } from '@/components/SVG'
@@ -14,10 +13,10 @@ export default function Home() {
             <Intro />
             <DownArrow />
           </div>
-          <div className="flex h-screen flex-col items-center justify-around space-y-10 p-4 lg:flex-row">
+          <div className="flex h-fit flex-col items-center justify-around space-y-10 p-4 lg:flex-row">
             <TechStack />
+            <Projects />
           </div>
-          <Projects />
         </div>
       </div>
     </>

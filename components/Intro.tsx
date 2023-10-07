@@ -1,4 +1,4 @@
-import { EmailSVG, GithubSVG, LinkedinSVG, VoltFM } from './SVG'
+import { EmailSVG, GithubSVG, LinkedinSVG, Pointer, VoltFM } from './SVG'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -24,25 +24,27 @@ export function Intro({}) {
             priority
           />
         </Link>
-        <div className="flex flex-col items-center space-y-1 text-xl text-white md:items-stretch">
-          <div>Hi, i&apos;m Vinay Kulkarni</div>
-          <div className="space-x-4">
+        <div className="flex flex-col items-center space-y-5 text-xl text-white md:items-stretch">
+          <div className="flex flex-row items-center space-x-2">
             <Link
               href={'/projects'}
-              className="text-zinc-400/80 underline hover:text-zinc-400"
+              className="flex flex-row items-center justify-center text-zinc-400/80 hover:text-zinc-400"
             >
+              <Pointer />
               Projects
             </Link>
             <Link
               href={'/blog'}
-              className="text-zinc-400/80 underline hover:text-zinc-400"
+              className="flex flex-row items-center justify-center text-zinc-400/80 hover:text-zinc-400"
             >
+              <Pointer />
               Blog
             </Link>
             <Link
               href={'/clicks'}
-              className="text-zinc-400/80 underline hover:text-zinc-400"
+              className="flex flex-row items-center justify-center text-zinc-400/80 hover:text-zinc-400"
             >
+              <Pointer />
               Clicks
             </Link>
           </div>
@@ -56,7 +58,7 @@ export function Intro({}) {
       </div>
       <div className="xs:space-y-6 mx-10 flex flex-col items-center space-y-2 text-justify lg:items-start">
         <p className="max-w-xl px-10 text-base text-[#a0a0a0]">
-          Hey, This is Vinay Kulkarni and I&apos;m enthusiastic about{' '}
+          Hi, i&apos;m Vinay Kulkarni and I&apos;m enthusiastic about{' '}
           <span className="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text font-extrabold text-transparent">
             technology
           </span>
