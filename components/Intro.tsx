@@ -19,31 +19,29 @@ export function Intro({}) {
             className="overflow-hidden rounded-full duration-100 md:grayscale md:hover:grayscale-0"
             src="/me.svg"
             alt="Picture of the Creator"
-            width={230}
-            height={230}
+            width={210}
+            height={210}
             priority
           />
         </Link>
-        <div className="flex flex-col items-center space-y-1 text-2xl text-white md:items-stretch">
-          <div>
-            Hey, This is <span className="text-link-col">Vinay Kulkarni</span>
-          </div>
-          <div className="space-x-6">
+        <div className="flex flex-col items-center space-y-1 text-xl text-white md:items-stretch">
+          <div>Hi, i&apos;m Vinay Kulkarni</div>
+          <div className="space-x-4">
             <Link
               href={'/projects'}
-              className="text-link-col hover:text-orange-400/80 hover:underline"
+              className="text-zinc-400/80 underline hover:text-zinc-400"
             >
               Projects
             </Link>
             <Link
               href={'/blog'}
-              className="text-link-col hover:text-orange-400/80 hover:underline"
+              className="text-zinc-400/80 underline hover:text-zinc-400"
             >
               Blog
             </Link>
             <Link
               href={'/clicks'}
-              className="text-link-col hover:text-orange-400/80 hover:underline"
+              className="text-zinc-400/80 underline hover:text-zinc-400"
             >
               Clicks
             </Link>
@@ -55,6 +53,18 @@ export function Intro({}) {
             <VoltFM />
           </div>
         </div>
+      </div>
+      <div className="xs:space-y-6 mx-10 flex flex-col items-center space-y-2 text-justify lg:items-start">
+        <p className="max-w-xl px-10 text-base text-[#a0a0a0]">
+          Hey, This is Vinay Kulkarni and I&apos;m enthusiastic about{' '}
+          <span className="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text font-extrabold text-transparent">
+            technology
+          </span>
+          , especially open source projects. I enjoy tackling problems 🐼💡 and
+          during my free time, I like to unwind by watching{' '}
+          <span className="font-bold text-green-400">ads</span> and{' '}
+          <span className="font-bold text-purple-400">anime</span>.
+        </p>
       </div>
     </div>
   )

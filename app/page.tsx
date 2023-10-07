@@ -15,7 +15,6 @@ export default function Home() {
             <DownArrow />
           </div>
           <div className="flex h-screen flex-col items-center justify-around space-y-10 p-4 lg:flex-row">
-            <AboutMe />
             <TechStack />
           </div>
           <Projects />
