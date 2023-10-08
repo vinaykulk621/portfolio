@@ -44,25 +44,73 @@ export default function Home() {
           CLICKS
         </p>
         <div className="col-span-1 row-span-1 grid gap-y-6 ">
-          <PainImage src={'table-bottle.jpg'} />
-          <PainImage src={'stadium-center-darker-sky.jpg'} />
+          <PainImage
+            src={'table-bottle.jpg'}
+            desc="Glass bottle, still and pure, Reflecting the world around."
+          />
+          <PainImage
+            src={'stadium-center-darker-sky.jpg'}
+            desc="Roar of the crowd, crack of the bat, Cricket's magic casts its spell."
+          />
         </div>
         <div className="col-span-1 row-span-1 grid gap-y-6 ">
-          <PainImage src={'hike-clear-sky-1.jpg'} />
-          <PainImage src={'sea.jpg'} />
+          <PainImage
+            src={'hike-clear-sky-1.jpg'}
+            desc="Mountain majesty, kissing the clouds."
+          />
+          <PainImage
+            src={'sea.jpg'}
+            desc="Waves crashing ashore, symphony of the sea."
+          />
         </div>
-        <PainImage src={'fog.jpg'} />
-        <PainImage src={'trees.jpg'} />
-        <PainImage src={'nandi.jpg'} />
-        <PainImage src={'road_2.jpg'} />
-        <PainImage src={'jublie-bulding.jpg'} />
-        <PainImage src={'plane-glider.jpg'} />
-        <PainImage src={'sea-beach-closeup.jpg'} />
-        <PainImage src={'forest.jpg'} />
-        <PainImage src={'road.jpg'} />
-        <PainImage src={'stadium-left-side.jpg'} />
-        <PainImage src={'hike-1.jpg'} />
-        <PainImage src={'hike-filter-shoes.JPG'} />
+        <PainImage
+          src={'fog.jpg'}
+          desc="Silent forest, bathed in mist, Where secrets lie, and mysteries persist."
+        />
+        <PainImage
+          src={'trees.jpg'}
+          desc="Palm fronds swaying high, a tropical ballet."
+        />
+        <PainImage
+          src={'nandi.jpg'}
+          desc="Stairway to the forest's heart, Where ancient secrets softly start."
+        />
+        <PainImage
+          src={'road_2.jpg'}
+          desc="Black mirror, smooth and sleek, Reflecting the world's mystique."
+        />
+        <PainImage
+          src={'jublie-bulding.jpg'}
+          desc="City skyline soars, reaching for the stars."
+        />
+        <PainImage
+          src={'plane-glider.jpg'}
+          desc="Silver blades in azure dance, Propelling dreams to distant lands."
+        />
+        <PainImage
+          src={'sea-beach-closeup.jpg'}
+          desc="Ocean's vast expanse, a mirror to the sky."
+        />
+        <PainImage
+          src={'forest.jpg'}
+          desc="Serpentine path, entwined with roots, A journey through the forest's secret routes."
+        />
+        <PainImage
+          src={'road.jpg'}
+          desc="Close-up of a street, a city's heartbeat."
+        />
+        <PainImage
+          src={'stadium-left-side.jpg'}
+          desc="Coliseum of dreams, where passions soar, A symphony of cheers, forevermore."
+        />
+        <PainImage
+          src={'hike-1.jpg'}
+          desc="Autumn leaves ablaze, a fiery symphony."
+        />
+        <PainImage
+          src={'hike-filter-shoes.JPG'}
+          desc="Peak of the world, one soul stands tall, Embracing the vastness, answering the call."
+        />
       </div>
     </div>
   )
