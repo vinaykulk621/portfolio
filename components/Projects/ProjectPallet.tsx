@@ -19,7 +19,7 @@ export function ProjectPallet({
 }) {
   return (
     <div className="group mx-4 my-2 h-full max-w-sm overflow-hidden rounded-b-lg rounded-t-2xl bg-zinc-900 md:mx-0 md:my-0">
-      <Link href={DemoUrl}>
+      <Link href={DemoUrl} target="_blank">
         <Image
           src={`/projects/${Preview}`}
           height={300}
