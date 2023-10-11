@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import PainImage from './painImage'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Vinay | Clicks',
@@ -40,9 +41,12 @@ export default function Home() {
   return (
     <div className="bg-gradient-to-b from-simple-black to-simple-black-2">
       <div className="xs:grid-cols-2 xs:gap-x-6 xs:py-8 grid grid-cols-1 gap-x-4 gap-y-6 px-14 py-5 md:grid-cols-3 lg:grid-cols-4">
-        <p className="col-span-2 shrink items-center place-self-center text-center font-spotify text-7xl font-bold text-zinc-200 md:text-9xl lg:col-span-2">
+        <Link
+          href="/clicks"
+          className="col-span-2 shrink items-center place-self-center text-center font-spotify text-7xl font-bold text-zinc-200 md:text-9xl lg:col-span-2"
+        >
           CLICKS
-        </p>
+        </Link>
         <div className="col-span-1 row-span-1 grid gap-y-6 ">
           <PainImage
             src={'table-bottle.jpg'}
@@ -106,10 +110,6 @@ export default function Home() {
         <PainImage
           src={'hike-1.jpg'}
           desc="Autumn leaves ablaze, a fiery symphony."
-        />
-        <PainImage
-          src={'hike-filter-shoes.JPG'}
-          desc="Peak of the world, one soul stands tall, Embracing the vastness, answering the call."
         />
       </div>
     </div>

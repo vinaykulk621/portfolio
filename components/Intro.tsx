@@ -5,14 +5,13 @@ import React from 'react'
 
 export function Intro({}) {
   return (
-    <div className="flex flex-col items-center justify-center space-y-3 pt-20 text-5xl">
+    <div className="flex flex-col items-center justify-center space-y-3 pt-20">
       <Link href={'https://vinaykulka.vercel.app/'}>
-        <p className="xs:text-5xl group text-4xl font-bold text-transparent text-white md:text-6xl">
+        <p className="xs:text-5xl group text-4xl font-bold text-transparent text-white underline decoration-zinc-600 md:text-6xl">
           Vinay&apos;s{' '}
           <span className="text-gray-400 group-hover:text-white">web</span>
         </p>
       </Link>
-      <div className="h-14 w-[55%] max-w-6xl border-t border-gray-400"></div>
       <div className="flex flex-col items-center gap-10 md:flex-row">
         <Link href={'https://vinaykulka.vercel.app/'}>
           <Image
