@@ -49,7 +49,7 @@ export default function Home() {
       'https://words-livid.vercel.app/',
       'vinaykulk621/words',
       'Infinte-scroll Words',
-      'A simple implementation of Infinite scroll using in nNext js 13 and server actions.',
+      'A simple implementation of Infinite scroll using in Next js 13 and server actions.',
       'words.png',
       'Infinite scroll Words Project at https://github.com/vinaykulk621/words',
     ],

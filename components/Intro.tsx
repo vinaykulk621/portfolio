@@ -7,9 +7,8 @@ export function Intro({}) {
   return (
     <div className="flex flex-col items-center justify-center space-y-3 pt-20">
       <Link href={'https://vinaykulka.vercel.app/'}>
-        <p className="xs:text-5xl group text-4xl font-bold text-transparent text-white underline decoration-zinc-600 md:text-6xl">
-          Vinay&apos;s{' '}
-          <span className="text-gray-400 group-hover:text-white">web</span>
+        <p className="xs:text-4xl text-3xl text-transparent text-white underline decoration-zinc-600 md:text-6xl">
+          Vinay&apos;s <span className="text-gray-400">web</span>
         </p>
       </Link>
       <div className="flex flex-col items-center gap-10 md:flex-row">
@@ -56,7 +55,7 @@ export function Intro({}) {
         </div>
       </div>
       <div className="xs:space-y-6 mx-10 flex flex-col items-center space-y-2 text-justify lg:items-start">
-        <p className="max-w-xl px-10 text-base text-[#a0a0a0]">
+        <p className="max-w-xl px-6 text-base text-[#a0a0a0]">
           Hi, i&apos;m Vinay Kulkarni and I&apos;m enthusiastic about{' '}
           <span className="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text font-extrabold text-transparent">
             technology
