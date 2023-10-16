@@ -2,7 +2,7 @@ import { ShortLink } from '../SVG'
 
 export function Projects({}) {
   return (
-    <div className="flex flex-col items-start space-y-5 px-16 pb-12">
+    <div className="flex flex-col items-start space-y-5 px-28 pb-12 md:px-16">
       <span className="text-white">Projects</span>
       <ShortLink
         key={'Noote'}

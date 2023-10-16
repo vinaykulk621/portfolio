@@ -158,6 +158,7 @@ export default function Home() {
             <>
               <ProjectPallet
                 key={e[2]}
+                key_id={e[2]}
                 DemoUrl={e[0]}
                 github_repo_name={e[1]}
                 projectName={e[2]}

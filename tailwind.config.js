@@ -35,9 +35,6 @@ module.exports = {
       colors: {
         'simple-black': '#0c0c0c',
         'simple-black-2': '#171717',
-        'simple-blue': '#0a2725',
-        'link-col': '#ff9a00',
-        'regal-blue': '#243c5a',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',

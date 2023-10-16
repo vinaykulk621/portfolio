@@ -9,6 +9,7 @@ export function ProjectPallet({
   DemoUrl,
   Preview,
   alt,
+  key_id,
 }: {
   projectName: string
   projectDescription: string
@@ -16,9 +17,13 @@ export function ProjectPallet({
   DemoUrl: string
   Preview: string
   alt: string
+  key_id: string
 }) {
   return (
-    <div className="group mx-4 my-2 h-full max-w-sm overflow-hidden rounded-b-lg rounded-t-2xl bg-zinc-900 md:mx-0 md:my-0">
+    <div
+      className="group mx-4 my-2 h-full max-w-sm overflow-hidden rounded-b-lg rounded-t-2xl bg-zinc-900 md:mx-0 md:my-0"
+      key={key_id}
+    >
       <Link href={DemoUrl} target="_blank">
         <Image
           src={`/projects/${Preview}`}
