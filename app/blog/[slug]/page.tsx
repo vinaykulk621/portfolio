@@ -17,18 +17,21 @@ async function getPost(slug: string) {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const post = await getPost(params.slug)
+
   return {
     title: `Blog | ${params.slug.replaceAll('-', ' ')}`,
+    keywords: post.body.raw,
     description: `Blog: ${params.slug.replaceAll(' ', '-')}`,
     alternates: {
       canonical: `/blog/${params.slug}`,
     },
-    openGraph: {
-      images: ['https://vinaykulka.vercel.app/og.jpg'],
-      type: 'article',
-      authors: 'Vinay Kulkarni',
-      title: `Blog | ${params.slug.replaceAll('-', ' ')}`,
-    },
+    // openGraph: {
+    //   images: ['https://vinaykulka.vercel.app/og.jpg'],
+    //   type: 'article',
+    //   authors: 'Vinay Kulkarni',
+    //   title: `Blog | ${params.slug.replaceAll('-', ' ')}`,
+    // },
   }
 }
 
@@ -47,7 +50,7 @@ export default async function PostPage({ params }: Props) {
   const post = await getPost(params.slug)
 
   return (
-    <div className="min-w-screen xs:text-sm flex min-h-screen flex-col items-center overflow-x-hidden bg-zinc-950 p-4 text-base text-white">
+    <div className="min-w-screen xs:text-sm md flex min-h-screen flex-col items-center overflow-x-hidden bg-zinc-950 p-4 text-base text-white">
       <div className="my-8 ml-0">
         <h1 className="xs:text-5xl mb-3 max-w-[650px] font-spotify text-5xl">
           {post?.title}
@@ -56,7 +59,7 @@ export default async function PostPage({ params }: Props) {
           <div className="rounded-md bg-zinc-800 px-2 py-1 text-sm tracking-tighter">
             {formatDate(post?.publishedAt)}
           </div>
-          <div className="mx-2 h-[0.2em] flex-1 bg-zinc-800" />
+          <div className="bg- mx-2 h-[0.2em] flex-1 bg-zinc-800" />
         </div>
       </div>
       <div className="w-screen px-10 text-justify font-spotify md:px-40 lg:px-80 xl:px-96">

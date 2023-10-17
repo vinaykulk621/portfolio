@@ -33,6 +33,11 @@ export const Blog = defineDocumentType(() => ({
       type: 'string',
       default: true,
     },
+    description: {
+      type: 'string',
+      default: '',
+      required: true,
+    },
     author: {
       type: 'string',
     },
