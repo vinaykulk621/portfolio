@@ -40,6 +40,11 @@ export const Blog = defineDocumentType(() => ({
     },
     author: {
       type: 'string',
+      required: true,
+    },
+    keyWords: {
+      type: 'string',
+      required: true,
     },
     blog_count: {
       type: 'string',

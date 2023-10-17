@@ -5,27 +5,23 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://vinaykulka.vercel.app'),
-  title: 'Vinay | Portfolio',
+  title: {
+    default: 'Vinay | Portfolio',
+    template: 'Vinay | %s',
+  },
   description:
     'Portfolio website built using Next.js 13, TailwindCSS and MDX on vercel.',
-  keywords: [
-    'Next.js',
-    'React',
-    'Tailwind CSS',
-    'Server Components',
-    'Radix UI',
-    'Portfolio website',
-  ],
+  keywords:
+    'Next.js, React, Tailwind CSS, Server Components, Portfolio website',
   creator: 'Vinay',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://vinaykulka.vercel.app',
+    url: 'https://vinaykulka.vercel.app/',
     title: 'Vinay | Portfolio',
     description:
       'Portfolio website built using Next.js 13, TailwindCSS and MDX on vercel.',
     siteName: 'Vinay | Portfolio',
-    images: ['https://vinaykulka.vercel.app/og.jpg'],
     countryName: 'India',
   },
   twitter: {
@@ -33,7 +29,6 @@ export const metadata: Metadata = {
     title: 'Vinay | Portfolio',
     description:
       'Portfolio website built using Next.js 13, TailwindCSS and MDX on vercel.',
-    images: ['https://vinaykulka.vercel.app/og.jpg'],
     creator: '@kuylycljhyvvy',
     creatorId: '@kuylycljhyvvy',
     site: 'https://vinaykulka.vercel.app',

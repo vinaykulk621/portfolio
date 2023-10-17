@@ -20,18 +20,28 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = await getPost(params.slug)
 
   return {
-    title: `Blog | ${params.slug.replaceAll('-', ' ')}`,
-    keywords: post.body.raw,
-    description: `Blog: ${params.slug.replaceAll(' ', '-')}`,
+    title: `Blog | ${post.title}`,
+    metadataBase: new URL(`https://vinaykulka.vercel.app/blog/${params.slug}`),
+    keywords: post.keyWords,
+    description: post.description,
     alternates: {
       canonical: `/blog/${params.slug}`,
     },
-    // openGraph: {
-    //   images: ['https://vinaykulka.vercel.app/og.jpg'],
-    //   type: 'article',
-    //   authors: 'Vinay Kulkarni',
-    //   title: `Blog | ${params.slug.replaceAll('-', ' ')}`,
-    // },
+    openGraph: {
+      type: 'article',
+      title: `Blog | ${params.slug.replaceAll('-', ' ')}`,
+      authors: 'Vinay Kulkarni',
+      description: post.description,
+      publishedTime: post.publishedAt,
+      url: `https://vinaykulka.vercel.app/blog/${params.slug}`,
+    },
+    twitter: {
+      site: `https://vinaykulka.vercel.app/blog/${params.slug}`,
+      card: 'summary_large_image',
+      title: `blog | ${params.slug} | Vinay`,
+      description: `${post.description}`,
+      creator: '@kuylycljhyvvy',
+    },
   }
 }
 

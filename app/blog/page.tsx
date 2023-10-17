@@ -3,36 +3,26 @@ import PostPreview from '@/components/blog/PostPreview'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Vinay | Blog',
-  description: 'Blog Bro',
-  metadataBase: new URL('https://vinaykulka.vercel.app'),
-  keywords: [
-    'Next.js',
-    'React',
-    'Tailwind CSS',
-    'Server Components',
-    'Radix UI',
-    'Blogs',
-    'Tech Blogs',
-    'Tech Talks',
-  ],
+  title: 'Blog',
+  description: 'Blogs that i have written over the years.',
+  metadataBase: new URL('https://vinaykulka.vercel.app/blog'),
+  keywords: 'Portfolio, Website, Blog, COmputer Science',
   creator: 'Vinay',
   openGraph: {
-    images: ['https://vinaykulka.vercel.app/og.jpg'],
     type: 'website',
     locale: 'en_US',
-    url: 'https://vinaykulka.vercel.app',
-    title: 'Vinay | Portfolio',
+    url: 'https://vinaykulka.vercel.app/blog',
+    title: 'Vinay | blog',
     description:
       'Portfolio website built using Next.js 13, TailwindCSS and MDX on vercel.',
-    siteName: 'Vinay | Portfolio',
+    siteName: 'Vinay | blog',
   },
   twitter: {
+    site: 'https://vinaykulka.vercel.app/blog',
     card: 'summary_large_image',
-    title: 'Vinay | Portfolio',
+    title: 'Vinay | blog',
     description:
       'Portfolio website built using Next.js 13, TailwindCSS and MDX on vercel.',
-    images: ['https://vinaykulka.vercel.app/og.jpg'],
     creator: '@kuylycljhyvvy',
   },
 }

@@ -2,35 +2,27 @@ import { ProjectPallet } from '@/components/Projects/ProjectPallet'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Vinay | Projects',
-  description: 'Projects',
-  metadataBase: new URL('https://vinaykulka.vercel.app'),
-  keywords: [
-    'Next.js',
-    'React',
-    'Tailwind CSS',
-    'Server Components',
-    'Radix UI',
-    'Projects',
-    'Next js Projects',
-  ],
+  title: 'Projects',
+  description: 'Projects that i have done over the course of years.',
+  metadataBase: new URL('https://vinaykulka.vercel.app/projects'),
+  keywords:
+    'Next.js, React, Tailwind CSS, Server Components, Radix UI, Projects, Next js Projects',
   creator: 'Vinay',
   openGraph: {
-    images: ['https://vinaykulka.vercel.app/og.jpg'],
     type: 'website',
     locale: 'en_US',
-    url: 'https://vinaykulka.vercel.app',
-    title: 'Vinay | Portfolio',
+    url: 'https://vinaykulka.vercel.app/projects',
+    title: 'Vinay | Projects',
     description:
       'Portfolio website built using Next.js 13, TailwindCSS and MDX on vercel.',
-    siteName: 'Vinay | Portfolio',
+    siteName: 'Vinay | Projects',
   },
   twitter: {
+    site: 'https://vinaykulka.vercel.app/projects',
     card: 'summary_large_image',
-    title: 'Vinay | Portfolio',
+    title: 'Vinay | Projects',
     description:
       'Portfolio website built using Next.js 13, TailwindCSS and MDX on vercel.',
-    images: ['https://vinaykulka.vercel.app/og.jpg'],
     creator: '@kuylycljhyvvy',
   },
 }

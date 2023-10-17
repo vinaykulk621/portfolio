@@ -3,36 +3,26 @@ import PainImage from './painImage'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Vinay | Clicks',
-  description: 'Clicks',
-  metadataBase: new URL('https://vinaykulka.vercel.app'),
-  keywords: [
-    'Next.js',
-    'React',
-    'Tailwind CSS',
-    'Server Components',
-    'Radix UI',
-    'Photography',
-    'nature',
-    'pictures',
-  ],
+  title: 'Clicks',
+  description: 'Clicks that i have taken over the years.',
+  metadataBase: new URL('https://vinaykulka.vercel.app/clicks'),
+  keywords: 'Next.js, React, Tailwind CSS, Photography, nature, pictures',
   creator: 'Vinay',
   openGraph: {
-    images: ['https://vinaykulka.vercel.app/og.jpg'],
     type: 'website',
     locale: 'en_US',
-    url: 'https://vinaykulka.vercel.app',
-    title: 'Vinay | Portfolio',
+    url: 'https://vinaykulka.vercel.app/clicks',
+    title: 'Vinay | Clicks',
     description:
       'Portfolio website built using Next.js 13, TailwindCSS and MDX on vercel.',
-    siteName: 'Vinay | Portfolio',
+    siteName: 'Vinay | Clicks',
   },
   twitter: {
+    site: 'https://vinaykulka.vercel.app/clicks',
     card: 'summary_large_image',
-    title: 'Vinay | Portfolio',
+    title: 'Vinay | Clicks',
     description:
       'Portfolio website built using Next.js 13, TailwindCSS and MDX on vercel.',
-    images: ['https://vinaykulka.vercel.app/og.jpg'],
     creator: '@kuylycljhyvvy',
   },
 }
