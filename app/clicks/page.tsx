@@ -11,14 +11,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://vinaykulka.vercel.app/',
+    url: 'https://vinaykulka.vercel.app/clicks',
+    images: ['https://vinaykulka.vercel.app/clicks-og.jpg'],
     title: 'Vinay | Clicks',
     description:
       'Portfolio website built using Next.js 13, TailwindCSS and MDX on vercel.',
     siteName: 'Vinay | Clicks',
   },
   twitter: {
-    site: 'https://vinaykulka.vercel.app/',
+    site: 'https://vinaykulka.vercel.app/clicks',
+    images: ['https://vinaykulka.vercel.app/clicks-og.jpg'],
     card: 'summary_large_image',
     title: 'Vinay | Clicks',
     description:
