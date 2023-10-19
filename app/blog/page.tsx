@@ -6,19 +6,20 @@ export const metadata: Metadata = {
   title: 'Blog',
   description: 'Blogs that i have written over the years.',
   metadataBase: new URL('https://vinaykulka.vercel.app/blog'),
-  keywords: 'Portfolio, Website, Blog, COmputer Science',
+  keywords: 'Portfolio, Website, Blog, Computer Science',
   creator: 'Vinay',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://vinaykulka.vercel.app/blog',
+    url: 'https://vinaykulka.vercel.app/',
     title: 'Vinay | blog',
     description:
       'Portfolio website built using Next.js 13, TailwindCSS and MDX on vercel.',
     siteName: 'Vinay | blog',
   },
   twitter: {
-    site: 'https://vinaykulka.vercel.app/blog',
+    site: 'https://vinaykulka.vercel.app/',
+
     card: 'summary_large_image',
     title: 'Vinay | blog',
     description:
