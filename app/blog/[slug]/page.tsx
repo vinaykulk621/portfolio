@@ -34,6 +34,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: post.description,
       publishedTime: post.publishedAt,
       url: `https://vinaykulka.vercel.app/blog/${params.slug}`,
+      images: [
+        `https://vinaykulka.vercel.app/blog/${params.slug}/opengraph-image`,
+      ],
     },
     twitter: {
       site: `https://vinaykulka.vercel.app/blog/${params.slug}`,
@@ -41,6 +44,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `blog | ${params.slug} | Vinay`,
       description: `${post.description}`,
       creator: '@kuylycljhyvvy',
+      images: [
+        `https://vinaykulka.vercel.app/blog/${params.slug}/opengraph-image`,
+      ],
     },
   }
 }
