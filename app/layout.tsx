@@ -2,7 +2,6 @@ import React from 'react'
 import '@/styles/globals.css'
 import { Analytics } from '@vercel/analytics/react'
 import type { Metadata } from 'next'
-import NextTopLoader from 'nextjs-toploader'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://vinaykulka.vercel.app'),
@@ -45,7 +44,6 @@ export default function RootLayout({
     <html lang="en">
       <body>
         {children}
-        <NextTopLoader showSpinner={false} color="grey" height={2} />
         <Analytics />
       </body>
     </html>
