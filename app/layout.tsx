@@ -1,6 +1,7 @@
 import React from 'react'
 import '@/styles/globals.css'
 import { Analytics } from '@vercel/analytics/react'
+import NextTopLoader from 'nextjs-toploader'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -43,6 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <NextTopLoader showSpinner={false} color="grey" height={2} />
         {children}
         <Analytics />
       </body>
