@@ -3,6 +3,7 @@ import { Mdx } from '@/components/mdx-components'
 import { allBlogs } from 'contentlayer/generated'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
+import ModeToggle from '@/components/mode-toggle'
 
 type Props = {
   params: { slug: string }
@@ -66,16 +67,16 @@ export default async function PostPage({ params }: Props) {
   const post = await getPost(params.slug)
 
   return (
-    <div className="min-w-screen xs:text-sm md flex min-h-screen flex-col items-center overflow-x-hidden bg-zinc-950 p-4 text-base text-white">
+    <div className="min-w-screen xs:text-sm md flex min-h-screen flex-col items-center overflow-x-hidden p-4 text-base dark:bg-zinc-950 dark:text-white">
       <div className="my-8 ml-0">
         <h1 className="xs:text-5xl mb-3 max-w-[650px] font-spotify text-5xl">
           {post?.title}
         </h1>
         <div className="flex flex-row items-center justify-center">
-          <div className="rounded-md bg-zinc-800 px-2 py-1 text-sm tracking-tighter">
+          <div className="rounded-md px-2 py-1 text-sm tracking-tighter dark:bg-zinc-800">
             {formatDate(post?.publishedAt)}
           </div>
-          <div className="bg- mx-2 h-[0.2em] flex-1 bg-zinc-800" />
+          <div className="bg- mx-2 h-[0.2em] flex-1 dark:bg-zinc-800" />
         </div>
       </div>
       <div className="w-screen px-10 text-justify font-spotify md:px-40 lg:px-80 xl:px-96">

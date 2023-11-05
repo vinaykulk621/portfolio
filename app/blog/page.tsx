@@ -1,6 +1,7 @@
 import { allBlogs } from 'contentlayer/generated'
 import PostPreview from '@/components/blog/PostPreview'
 import type { Metadata } from 'next'
+import ModeToggle from '@/components/mode-toggle'
 
 export const metadata: Metadata = {
   title: 'Blog',
@@ -37,7 +38,10 @@ export default function HomePage() {
     })
 
   return (
-    <div className="max-w-screen flex h-fit min-h-screen items-center justify-center bg-zinc-950">
+    <div className="max-w-screen flex h-fit min-h-screen items-center justify-center dark:bg-zinc-950">
+      <div className="fixed bottom-5 left-6">
+        <ModeToggle />
+      </div>
       <div className="flex flex-col items-start space-y-4 md:pr-80">
         {postPreviews}
       </div>

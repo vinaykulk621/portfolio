@@ -16,16 +16,16 @@ const Robo = Roboto({
 
 export function Intro({}) {
   return (
-    <div className="flex flex-col items-center justify-center space-y-3 pt-20 md:items-start md:justify-start">
+    <div className="pt-18 flex flex-col items-center justify-center space-y-3 md:items-start md:justify-start">
       <p
-        className={`px-14 text-4xl text-gray-300 duration-200  hover:text-gray-400 ${libre_barcode.className}`}
+        className={`tex-white px-14 text-4xl duration-200 dark:text-gray-300  dark:hover:text-gray-400 ${libre_barcode.className}`}
       >
         Vinay&apos;s web
       </p>
       <div className="flex flex-col items-center gap-10 px-10 md:flex-row">
         <Link href={'https://vinaykulka.vercel.app/'}>
           <Image
-            className="overflow-hidden rounded-full duration-75 md:grayscale md:hover:grayscale-0"
+            className="overflow-hidden rounded-full bg-zinc-950 duration-75 md:grayscale md:hover:grayscale-0"
             src="/me.svg"
             alt="Picture of the Creator"
             width={150}
@@ -33,25 +33,25 @@ export function Intro({}) {
             priority
           />
         </Link>
-        <div className="flex flex-col items-center space-y-5 text-xl text-white md:items-stretch">
+        <div className="flex flex-col items-center space-y-5 text-xl dark:text-white md:items-stretch">
           <div className="flex flex-row items-center space-x-3">
             <Link
               href={'/projects'}
-              className="flex flex-row items-center justify-center text-sm text-zinc-400/80 hover:text-zinc-400 sm:text-base md:text-lg"
+              className="flex flex-row items-center justify-center text-sm dark:text-zinc-400/80 dark:hover:text-zinc-400 sm:text-base md:text-lg"
             >
               <Pointer />
               Projects
             </Link>
             <Link
               href={'/blog'}
-              className="flex flex-row items-center justify-center text-sm text-zinc-400/80 hover:text-zinc-400 sm:text-base md:text-lg"
+              className="flex flex-row items-center justify-center text-sm dark:text-zinc-400/80 dark:hover:text-zinc-400 sm:text-base md:text-lg"
             >
               <Pointer />
               Blog
             </Link>
             <Link
               href={'/clicks'}
-              className="flex flex-row items-center justify-center text-sm text-zinc-400/80 hover:text-zinc-400 sm:text-base md:text-lg"
+              className="flex flex-row items-center justify-center text-sm dark:text-zinc-400/80 dark:hover:text-zinc-400 sm:text-base md:text-lg"
             >
               <Pointer />
               Clicks
@@ -66,10 +66,10 @@ export function Intro({}) {
         </div>
       </div>
       <div className={`mx-10 flex items-center text-justify ${Robo.className}`}>
-        <p className="max-w-xl px-16 text-sm text-[#a0a0a0] md:px-6">
+        <p className="max-w-xl px-16 text-sm dark:text-[#a0a0a0] md:px-6">
           Hi, i&apos;m Vinay Kulkarni, I own a laptop and I&apos;m enthusiastic
           about{' '}
-          <span className="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text font-extrabold text-transparent">
+          <span className="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text font-extrabold text-transparent dark:bg-gradient-to-r dark:from-purple-400 dark:to-pink-600 dark:bg-clip-text">
             technology
           </span>{' '}
           and open source projects. I like to unwind during my free time by

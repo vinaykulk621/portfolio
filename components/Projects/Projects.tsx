@@ -3,7 +3,7 @@ import { ShortLink } from '../SVG'
 export function Projects({}) {
   return (
     <div className="flex flex-col items-start space-y-5 px-28 pb-12 md:px-16">
-      <span className="text-white">Projects</span>
+      <span className="dark:text-white">Projects</span>
       <ShortLink
         key={'Noote'}
         href="https://noote.vercel.app"

@@ -10,10 +10,12 @@ type props = {
 export default function PostPreview(props: props) {
   return (
     <Link href={`/blog${props.slug}`} className="group">
-      <h2 className="text-lg text-gray-300 group-hover:underline md:text-xl">
+      <h2 className="text-lg group-hover:underline dark:text-gray-300 md:text-xl">
         {props.title}
       </h2>
-      <p className="text-xs text-slate-400">{formatDate(props.publishedAt)}</p>
+      <p className="text-xs dark:text-slate-400">
+        {formatDate(props.publishedAt)}
+      </p>
     </Link>
   )
 }

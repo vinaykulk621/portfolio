@@ -1,4 +1,5 @@
 import { ProjectPallet } from '@/components/Projects/ProjectPallet'
+import ModeToggle from '@/components/mode-toggle'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -145,8 +146,11 @@ export default function Home() {
     ],
   ]
   return (
-    <main className="h-fit bg-zinc-950 font-spotify">
-      <div className="grid grid-cols-1 justify-items-center gap-5 p-5 text-white md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+    <main className="h-fit font-spotify dark:bg-zinc-950">
+      <div className="fixed bottom-5 left-6">
+        <ModeToggle />
+      </div>
+      <div className="grid grid-cols-1 justify-items-center gap-5 p-5 dark:text-white md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
         {projects.map((e) => {
           return (
             <>
