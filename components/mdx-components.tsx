@@ -29,7 +29,7 @@ const components: MDXComponents = {
   h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h2
       className={cn(
-        'font-heading mt-12 scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight first:mt-0',
+        'font-heading mt-12 scroll-m-20 border-b-2 border-b-black pb-2 text-2xl font-semibold tracking-tight first:mt-0 dark:border-b-zinc-700',
         className
       )}
       {...props}
@@ -102,7 +102,7 @@ const components: MDXComponents = {
     />
   ),
   li: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
-    <li className={cn('mt-2', className)} {...props} />
+    <li className={cn('mt-2 dark:text-gray-200', className)} {...props} />
   ),
   blockquote: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <blockquote
@@ -117,7 +117,7 @@ const components: MDXComponents = {
   }: React.ImgHTMLAttributes<HTMLImageElement>) => (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      className={cn('rounded-md bg-zinc-500', className)}
+      className={cn('rounded-md bg-zinc-500/70 dark:bg-inherit', className)}
       alt={alt}
       {...props}
     />
@@ -136,7 +136,7 @@ const components: MDXComponents = {
   th: ({ className, ...props }: React.HTMLAttributes<HTMLTableCellElement>) => (
     <th
       className={cn(
-        'border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right',
+        'border border-black px-4 py-2 text-left font-bold dark:border-gray-500 [&[align=center]]:text-center [&[align=right]]:text-right',
         className
       )}
       {...props}
@@ -145,7 +145,7 @@ const components: MDXComponents = {
   td: ({ className, ...props }: React.HTMLAttributes<HTMLTableCellElement>) => (
     <td
       className={cn(
-        'border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right',
+        'border border-black px-4 py-2 text-left dark:border-gray-500 [&[align=center]]:text-center [&[align=right]]:text-right',
         className
       )}
       {...props}
