@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="bg-zinc-950">
+    <div className="dark:bg-zinc-950">
       <div className="fixed bottom-5 left-6">
         <ModeToggle />
       </div>

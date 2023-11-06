@@ -84,10 +84,22 @@ const components: MDXComponents = {
     />
   ),
   ul: ({ className, ...props }: React.HTMLAttributes<HTMLUListElement>) => (
-    <ul className={cn('my-6 ml-6 list-disc', className)} {...props} />
+    <ul
+      className={cn(
+        'my-6 ml-6 list-disc text-black dark:text-zinc-400',
+        className
+      )}
+      {...props}
+    />
   ),
   ol: ({ className, ...props }: React.HTMLAttributes<HTMLOListElement>) => (
-    <ol className={cn('my-6 ml-6 list-decimal', className)} {...props} />
+    <ol
+      className={cn(
+        'my-6 ml-6 list-decimal text-black dark:text-zinc-400',
+        className
+      )}
+      {...props}
+    />
   ),
   li: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <li className={cn('mt-2', className)} {...props} />
@@ -104,7 +116,11 @@ const components: MDXComponents = {
     ...props
   }: React.ImgHTMLAttributes<HTMLImageElement>) => (
     // eslint-disable-next-line @next/next/no-img-element
-    <img className={cn('rounded-md', className)} alt={alt} {...props} />
+    <img
+      className={cn('rounded-md bg-zinc-500', className)}
+      alt={alt}
+      {...props}
+    />
   ),
   hr: ({ ...props }: React.HTMLAttributes<HTMLHRElement>) => (
     <hr className="my-4 md:my-8" {...props} />
@@ -191,7 +207,7 @@ const components: MDXComponents = {
   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <code
       className={cn(
-        'relative w-fit rounded bg-zinc-900 p-4 px-[0.3rem] py-[0.2rem] font-mono text-sm',
+        'relative w-fit rounded bg-zinc-300 p-4 px-[0.3rem] py-[0.2rem] font-mono text-sm dark:bg-zinc-900',
         className
       )}
       {...props}

@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import {
   Tooltip,
@@ -5,32 +6,37 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip'
+import { useToast } from '@/components/ui/use-toast'
 import Link from 'next/link'
 
 export function EmailSVG() {
+  const { toast } = useToast()
+
   return (
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger>
-          <a
-            className="text-sm transition dark:text-gray-500 dark:hover:text-gray-600"
-            target="_blank"
-            rel="noopener noreferrer"
-            href="mailto:kulkarnivinay621@gmail.com"
+          <span className="sr-only">mail</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            className="h-6 w-6 fill-current  dark:text-gray-200 dark:hover:text-blue-500"
           >
-            <span className="sr-only">mail</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              className="h-6 w-6 fill-current  dark:text-gray-200 dark:hover:text-blue-500"
-            >
-              <path d="M2.003 5.884 10 9.882l7.997-3.998A2 2 0 0 0 16 4H4a2 2 0 0 0-1.997 1.884z"></path>
-              <path d="m18 8.118-8 4-8-4V14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.118z"></path>
-            </svg>
-          </a>
+            <path d="M2.003 5.884 10 9.882l7.997-3.998A2 2 0 0 0 16 4H4a2 2 0 0 0-1.997 1.884z"></path>
+            <path d="m18 8.118-8 4-8-4V14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.118z"></path>
+          </svg>
         </TooltipTrigger>
-        <TooltipContent className="border-none dark:bg-black dark:text-white">
-          <p>kulkarnivinay621@gmail.com</p>
+        <TooltipContent
+          onClick={() => {
+            toast({
+              title: 'Email ID',
+              description: 'Email id have been copied to your clipboard',
+            })
+            navigator.clipboard.writeText('kulkarnivinay621@gmail.com')
+          }}
+          className="cursor-copy border-none dark:bg-black dark:text-white"
+        >
+          kulkarnivinay621@gmail.com
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
