@@ -79,7 +79,7 @@ export default async function PostPage({ params }: Props) {
           <div className="rounded-md bg-zinc-300 px-2 py-1 text-sm tracking-tighter dark:bg-zinc-800">
             {formatDate(post?.publishedAt)}
           </div>
-          <div className="bg- mx-2 h-[0.2em] flex-1 bg-zinc-800 dark:bg-zinc-800" />
+          <div className="mx-2 h-[0.2em] flex-1 bg-zinc-800 dark:bg-zinc-800" />
         </div>
       </div>
       <div className="w-screen px-10 text-justify font-spotify md:px-40 lg:px-80 xl:px-96">

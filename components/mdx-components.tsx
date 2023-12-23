@@ -10,6 +10,8 @@ import { cn } from '@/lib/utils'
 import { Callout } from '@/components/callout'
 import { CopyButton } from '@/components/copy-button'
 import { MdxCard } from './mdx-card'
+import { ImageGallery } from '@/components/ImageGallery'
+import Checker from '@/components/Checker'
 
 interface MdxProps {
   code: string
@@ -17,6 +19,8 @@ interface MdxProps {
 
 const components: MDXComponents = {
   MdxCard,
+  Checker,
+  ImageGallery,
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1
       className={cn(
@@ -170,6 +174,19 @@ const components: MDXComponents = {
     <span className="m-0 rounded-3xl bg-zinc-800 px-[10px] py-[6px]" {...props}>
       {children}
     </span>
+  ),
+  Date: ({ children, ...props }) => (
+    <div className="flex flex-row items-center justify-center">
+      <div className="rounded-md bg-zinc-300 px-2 py-1 text-sm tracking-tighter dark:bg-zinc-800">
+        <span
+          className="m-0 rounded-3xl bg-zinc-800 px-[10px] py-[6px]"
+          {...props}
+        >
+          {children}
+        </span>
+      </div>
+      <div className="mx-2 h-[0.2em] flex-1 bg-zinc-800 dark:bg-zinc-800" />
+    </div>
   ),
   pre: ({
     className,
