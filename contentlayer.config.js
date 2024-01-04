@@ -12,11 +12,11 @@ import { defineDocumentType, makeSource } from 'contentlayer/source-files'
 const computedFields = {
   slug: {
     type: 'string',
-    resolve: (doc) => `/${doc._raw.flattenedPath}`,
+    resolve: (doc) => `/${doc._raw.flattenedPath.toLowerCase()}`,
   },
   slugAsParams: {
     type: 'string',
-    resolve: (doc) => doc._raw.flattenedPath.split('/')[0],
+    resolve: (doc) => doc._raw.flattenedPath.split('/')[0].toLowerCase(),
   },
 }
 
