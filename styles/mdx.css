@@ -13,7 +13,6 @@
 .dark [data-theme='dark'] {
   display: block;
 }
-
 code[data-line-numbers] {
   counter-reset: lineNumber;
 }

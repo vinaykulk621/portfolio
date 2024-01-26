@@ -1,7 +1,7 @@
+import { allBlogs } from 'contentlayer/generated'
 import PostPreview from '@/components/blog/PostPreview'
 import type { Metadata } from 'next'
 import ModeToggle from '@/components/mode-toggle'
-import { getBlogPosts } from '@/components/blog/blog'
 
 export const metadata: Metadata = {
   title: 'Blog',
@@ -31,20 +31,10 @@ export const metadata: Metadata = {
 }
 
 export default function HomePage() {
-  const allBlogs = getBlogPosts()
   const postPreviews = allBlogs
-    .sort(
-      (a, b) => Number(b.metadata.blog_count) - Number(a.metadata.blog_count)
-    )
+    .sort((a, b) => Number(b.blog_count) - Number(a.blog_count))
     .map((post) => {
-      return (
-        <PostPreview
-          key={post.metadata.title}
-          publishedAt={post.metadata.publishedAt}
-          slug={`/${post.slug}`}
-          title={post.metadata.title}
-        />
-      )
+      return <PostPreview key={post?._id} {...post} />
     })
 
   return (
