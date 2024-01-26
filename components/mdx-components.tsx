@@ -1,79 +1,84 @@
 'use client'
 
 import Link from 'next/link'
-import '@/styles/mdx.css'
-import { useMDXComponent } from 'next-contentlayer/hooks'
-import type { MDXComponents } from 'mdx/types'
-
-import { Event } from '@/lib/events'
+import { MDXRemote } from 'next-mdx-remote/rsc'
+import { highlight } from 'sugar-high'
 import { cn } from '@/lib/utils'
 import { Callout } from '@/components/callout'
 import { CopyButton } from '@/components/copy-button'
 import { MdxCard } from './mdx-card'
 import { ImageGallery } from '@/components/ImageGallery'
 import Checker from '@/components/Checker'
+import React from 'react'
 
-interface MdxProps {
-  code: string
+function Code({ children, ...props }: { children: string }) {
+  let codeHTML = highlight(children)
+  return (
+    <code
+      dangerouslySetInnerHTML={{ __html: codeHTML }}
+      {...props}
+      className="relative w-fit rounded bg-zinc-300 p-4 px-[0.3rem] py-[0.2rem] font-mono text-sm dark:bg-zinc-900"
+    />
+  )
 }
 
-const components: MDXComponents = {
+function slugify(str: string) {
+  return str
+    .toString()
+    .toLowerCase()
+    .trim() // Remove whitespace from both ends of a string
+    .replace(/\s+/g, '-') // Replace spaces with -
+    .replace(/&/g, '-and-') // Replace & with 'and'
+    .replace(/[^\w\-]+/g, '') // Remove all non-word characters except for -
+    .replace(/\-\-+/g, '-') // Replace multiple - with single -
+}
+
+function createHeading(level: Number, className: string) {
+  const HeadingComponent = ({ children }: { children: string }) => {
+    let slug = slugify(children)
+    return React.createElement(
+      `h${level}`,
+      { id: slug, className: className },
+      [
+        React.createElement('a', {
+          href: `#${slug}`,
+          key: `link-${slug}`,
+          className: 'anchor',
+        }),
+      ],
+      children
+    )
+  }
+
+  // Assigning display name to the functional component
+  HeadingComponent.displayName = `Heading${level}`
+
+  return HeadingComponent
+}
+
+let components = {
+  code: Code,
+  Callout,
   MdxCard,
   Checker,
   ImageGallery,
-  h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
-    <h1
-      className={cn(
-        'font-heading mt-2 scroll-m-20 text-4xl font-bold',
-        className
-      )}
-      {...props}
-    />
+  h1: createHeading(1, 'font-heading mt-2 scroll-m-20 text-4xl font-bold'),
+  h2: createHeading(
+    2,
+    'font-heading mt-12 scroll-m-20 border-b-2 border-b-black pb-2 text-2xl font-semibold tracking-tight first:mt-0 dark:border-b-zinc-700'
   ),
-  h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
-    <h2
-      className={cn(
-        'font-heading mt-12 scroll-m-20 border-b-2 border-b-black pb-2 text-2xl font-semibold tracking-tight first:mt-0 dark:border-b-zinc-700',
-        className
-      )}
-      {...props}
-    />
+  h3: createHeading(
+    3,
+    'font-heading mt-8 scroll-m-20 text-xl font-semibold tracking-tight'
   ),
-  h3: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
-    <h3
-      className={cn(
-        'font-heading mt-8 scroll-m-20 text-xl font-semibold tracking-tight',
-        className
-      )}
-      {...props}
-    />
+  h4: createHeading(
+    4,
+    'font-heading mt-8 scroll-m-20 text-lg font-semibold tracking-tight'
   ),
-  h4: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
-    <h4
-      className={cn(
-        'font-heading mt-8 scroll-m-20 text-lg font-semibold tracking-tight',
-        className
-      )}
-      {...props}
-    />
-  ),
-  h5: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
-    <h5
-      className={cn(
-        'mt-8 scroll-m-20 text-lg font-semibold tracking-tight',
-        className
-      )}
-      {...props}
-    />
-  ),
-  h6: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
-    <h6
-      className={cn(
-        'mt-8 scroll-m-20 text-base font-semibold tracking-tight',
-        className
-      )}
-      {...props}
-    />
+  h5: createHeading(5, 'mt-8 scroll-m-20 text-lg font-semibold tracking-tight'),
+  h6: createHeading(
+    5,
+    'mt-8 scroll-m-20 text-base font-semibold tracking-tight'
   ),
   a: ({ className, ...props }: React.HTMLAttributes<HTMLAnchorElement>) => (
     <a
@@ -170,12 +175,12 @@ const components: MDXComponents = {
       {...props}
     />
   ),
-  Ring: ({ children, ...props }) => (
+  Ring: ({ children, ...props }: { children: string }) => (
     <span className="m-0 rounded-3xl bg-zinc-800 px-[10px] py-[6px]" {...props}>
       {children}
     </span>
   ),
-  Date: ({ children, ...props }) => (
+  Date: ({ children, ...props }: { children: string }) => (
     <div className="flex flex-row items-center justify-center">
       <div className="rounded-md bg-zinc-300 px-2 py-1 text-sm tracking-tighter dark:bg-zinc-800">
         <span
@@ -191,15 +196,9 @@ const components: MDXComponents = {
   pre: ({
     className,
     __rawString__,
-    __withMeta__,
-    __src__,
-    __event__,
     ...props
   }: React.HTMLAttributes<HTMLPreElement> & {
     __rawString__?: string
-    __withMeta__?: boolean
-    __src__?: string
-    __event__?: Event['name']
   }) => {
     return (
       <div>
@@ -213,24 +212,12 @@ const components: MDXComponents = {
         {__rawString__ && (
           <CopyButton
             value={__rawString__}
-            src={__src__}
-            event={__event__}
             className={cn('absolute right-2 top-[2px]')}
           />
         )}
       </div>
     )
   },
-  code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
-    <code
-      className={cn(
-        'relative w-fit rounded bg-zinc-300 p-4 px-[0.3rem] py-[0.2rem] font-mono text-sm dark:bg-zinc-900',
-        className
-      )}
-      {...props}
-    />
-  ),
-  Callout,
   Link: ({ className, ...props }: React.ComponentProps<typeof Link>) => (
     <Link
       className={cn('font-medium underline underline-offset-4', className)}
@@ -239,12 +226,11 @@ const components: MDXComponents = {
   ),
 }
 
-export function Mdx({ code }: MdxProps) {
-  const Component = useMDXComponent(code)
-
+export function CustomMDX(props: any) {
   return (
-    <div className="mdx">
-      <Component components={components} />
-    </div>
+    <MDXRemote
+      {...props}
+      components={{ ...components, ...(props.components || {}) }}
+    />
   )
 }

@@ -1,16 +1,17 @@
-import '@/styles/mdx.css'
-import { Mdx } from '@/components/mdx-components'
-import { allBlogs } from 'contentlayer/generated'
+import ModeToggle from '@/components/mode-toggle'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
-import ModeToggle from '@/components/mode-toggle'
+import { getBlogPosts } from '@/components/blog/blog'
+import { CustomMDX } from '@/components/mdx-components'
 
 type Props = {
   params: { slug: string }
 }
 
 async function getPost(slug: string) {
-  const post = allBlogs.find((blog) => blog.slugAsParams === slug)
+  const allBlogs = getBlogPosts()
+  const post = allBlogs.find((blog) => blog.slug === slug)
+
   if (!post) {
     return notFound()
   }
@@ -21,10 +22,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = await getPost(params.slug)
 
   return {
-    title: `Blog | ${post.title}`,
+    title: `Blog | ${post.metadata.title}`,
     metadataBase: new URL(`https://vinaykulka.vercel.app/blog/${params.slug}`),
-    keywords: post.keyWords,
-    description: post.description,
+    keywords: post.metadata.keywords,
+    description: post.metadata.description,
     alternates: {
       canonical: `/blog/${params.slug}`,
     },
@@ -32,8 +33,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'article',
       title: `Blog | ${params.slug.replaceAll('-', ' ')}`,
       authors: 'Vinay Kulkarni',
-      description: post.description,
-      publishedTime: post.publishedAt,
+      description: post.metadata.description,
+      publishedTime: post.metadata.publishedAt,
       url: `https://vinaykulka.vercel.app/blog/${params.slug}`,
       images: [
         `https://vinaykulka.vercel.app/blog/${params.slug}/opengraph-image`,
@@ -43,7 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       site: `https://vinaykulka.vercel.app/blog/${params.slug}`,
       card: 'summary_large_image',
       title: `blog | ${params.slug} | Vinay`,
-      description: `${post.description}`,
+      description: `${post.metadata.description}`,
       creator: '@kuylycljhyvvy',
       images: [
         `https://vinaykulka.vercel.app/blog/${params.slug}/opengraph-image`,
@@ -73,18 +74,18 @@ export default async function PostPage({ params }: Props) {
       </div>
       <div className="my-8 ml-0">
         <h1 className="xs:text-5xl mb-3 max-w-[650px] font-spotify text-5xl">
-          {post?.title}
+          {post.metadata.title}
         </h1>
         <div className="flex flex-row items-center justify-center">
           <div className="rounded-md bg-zinc-300 px-2 py-1 text-sm tracking-tighter dark:bg-zinc-800">
-            {formatDate(post?.publishedAt)}
+            {formatDate(post.metadata.publishedAt)}
           </div>
           <div className="mx-2 h-[0.2em] flex-1 bg-zinc-800 dark:bg-zinc-800" />
         </div>
       </div>
-      <div className="w-screen px-10 text-justify font-spotify md:px-40 lg:px-80 xl:px-96">
-        <Mdx code={post.body.code} />
-      </div>
+      <article className="w-screen px-10 text-justify font-spotify md:px-40 lg:px-80 xl:px-96">
+        <CustomMDX source={post.content} />
+      </article>
     </div>
   )
 }

@@ -1,9 +1,10 @@
-import { allBlogs } from 'contentlayer/generated'
+import { getBlogPosts } from '@/components/blog/blog'
 
 export default async function sitemap() {
+  const allBlogs = getBlogPosts()
   const blogs = allBlogs.map((post) => ({
     url: `https://vinaykulka.vercel.app/blog${post.slug}`,
-    lastModified: post.publishedAt,
+    lastModified: post.metadata.publishedAt,
   }))
 
   const routes = ['/', '/blog', '/clicks', '/projects'].map((route) => ({

@@ -1,6 +1,6 @@
-import { allBlogs } from '@/.contentlayer/generated'
 import { ImageResponse } from 'next/server'
 import { notFound } from 'next/navigation'
+import { getBlogPosts } from '@/components/blog/blog'
 
 export const contentType = 'image/jpg'
 
@@ -10,7 +10,8 @@ export const size = {
 }
 
 async function getPost(slug: string) {
-  const post = allBlogs.find((blog) => blog.slugAsParams === slug)
+  const allBlogs = getBlogPosts()
+  const post = allBlogs.find((blog) => blog.slug === slug)
   if (!post) {
     return notFound()
   }
@@ -28,7 +29,7 @@ export default async function og({ params }: { params: { slug: string } }) {
         alt={params.slug.replaceAll('-', ' ')}
       >
         <div tw="w-full h-full pt-28 px-24 mx-10 text-4xl text-white flex items-center justify-center ">
-          {post.title}
+          {post.metadata.title}
         </div>
       </img>
     ),

@@ -5,7 +5,7 @@ import ModeToggle from '@/components/mode-toggle'
 
 export const metadata: Metadata = {
   title: 'Clicks',
-  description: 'Clicks that i have taken over the years.',
+  description: 'My clicks over the years.',
   metadataBase: new URL('https://vinaykulka.vercel.app/clicks'),
   keywords: 'Next.js, React, Tailwind CSS, Photography, nature, pictures',
   creator: 'Vinay',
@@ -45,66 +45,67 @@ export default function Home() {
         </Link>
         <div className="col-span-1 row-span-1 grid gap-y-6 ">
           <PainImage
-            src={'table-bottle.jpg'}
+            src={'table-bottle'}
             desc="Glass bottle, still and pure, Reflecting the world around."
           />
           <PainImage
-            src={'stadium-center-darker-sky.jpg'}
+            src={'stadium-center-darker-sky'}
             desc="Roar of the crowd, crack of the bat, Cricket's magic casts its spell."
           />
         </div>
         <div className="col-span-1 row-span-1 grid gap-y-6 ">
           <PainImage
-            src={'hike-clear-sky-1.jpg'}
+            src={'hike-clear-sky-1'}
             desc="Mountain majesty, kissing the clouds."
           />
           <PainImage
-            src={'sea.jpg'}
+            src={'sea'}
             desc="Waves crashing ashore, symphony of the sea."
           />
         </div>
         <PainImage
-          src={'fog.jpg'}
+          src={'fog'}
           desc="Silent forest, bathed in mist, Where secrets lie, and mysteries persist."
         />
         <PainImage
-          src={'trees.jpg'}
+          src={'trees'}
           desc="Palm fronds swaying high, a tropical ballet."
         />
         <PainImage
-          src={'nandi.jpg'}
+          src={'nandi'}
           desc="Stairway to the forest's heart, Where ancient secrets softly start."
         />
         <PainImage
-          src={'road_2.jpg'}
+          src={'road_2'}
           desc="Black mirror, smooth and sleek, Reflecting the world's mystique."
         />
         <PainImage
-          src={'jublie-bulding.jpg'}
+          src={'jublie-bulding'}
           desc="City skyline soars, reaching for the stars."
         />
         <PainImage
-          src={'plane-glider.jpg'}
+          src={'plane-glider'}
           desc="Silver blades in azure dance, Propelling dreams to distant lands."
         />
         <PainImage
-          src={'sea-beach-closeup.jpg'}
+          src={'sea-beach-closeup'}
           desc="Ocean's vast expanse, a mirror to the sky."
         />
         <PainImage
-          src={'forest.jpg'}
+          src={'forest'}
           desc="Serpentine path, entwined with roots, A journey through the forest's secret routes."
         />
+        <PainImage src={'chai'} desc="A chai." />
         <PainImage
-          src={'road.jpg'}
+          src={'road'}
           desc="Close-up of a street, a city's heartbeat."
         />
         <PainImage
-          src={'stadium-left-side.jpg'}
+          src={'stadium-left-side'}
           desc="Coliseum of dreams, where passions soar, A symphony of cheers, forevermore."
         />
         <PainImage
-          src={'hike-1.jpg'}
+          src={'hike-1'}
           desc="Autumn leaves ablaze, a fiery symphony."
         />
       </div>

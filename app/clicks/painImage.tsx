@@ -14,7 +14,7 @@ export default function PainImage({
         <Image
           alt={src.split('.')[0]}
           className="rounded-lg"
-          src={`/clicks/${src}`}
+          src={`/clicks/${src}.jpg`}
           width={600}
           height={600}
         />
@@ -23,7 +23,7 @@ export default function PainImage({
         <Image
           alt={src.split('.')[0]}
           className="rounded-lg"
-          src={`/clicks/${src}`}
+          src={`/clicks/${src}.jpg`}
           width={600}
           height={600}
         />
