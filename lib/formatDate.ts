@@ -1,8 +1,8 @@
 export default function formatDate(date: string) {
-  const currentDate = new Date()
-  const targetDate = new Date(date)
+  const currentDate = new Date().getTime()
+  const targetDate = new Date(date).getTime()
 
-  const timeDifference: number = Math.abs(currentDate - targetDate)
+  const timeDifference = Math.abs(currentDate - targetDate)
   const daysAgo = Math.floor(timeDifference / (1000 * 60 * 60 * 24))
 
   if (daysAgo < 1) {
