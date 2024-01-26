@@ -1,4 +1,4 @@
-import formatDate from '@/lib/formatDate'
+import formatDate, { getDateOnly } from '@/lib/formatDate'
 import Link from 'next/link'
 
 type props = {
@@ -14,7 +14,7 @@ export default function PostPreview(props: props) {
         {props.title}
       </h2>
       <p className="text-xs dark:text-slate-400">
-        {formatDate(props.publishedAt)}
+        {getDateOnly(props.publishedAt)}
       </p>
     </Link>
   )
