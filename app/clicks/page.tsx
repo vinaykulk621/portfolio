@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://vinaykulka.vercel.app/clicks',
-    images: ['https://vinaykulka.vercel.app/clicks-og.jpg'],
+    images: ['https://vinaykulka.vercel.app/og/clicks-og.jpg'],
     title: 'Vinay | Clicks',
     description:
       'Portfolio website built using Next.js 13, TailwindCSS and MDX on vercel.',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     site: 'https://vinaykulka.vercel.app/clicks',
-    images: ['https://vinaykulka.vercel.app/clicks-og.jpg'],
+    images: ['https://vinaykulka.vercel.app/og/clicks-og.jpg'],
     card: 'summary_large_image',
     title: 'Vinay | Clicks',
     description:

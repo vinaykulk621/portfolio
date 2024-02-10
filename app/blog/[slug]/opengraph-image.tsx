@@ -24,7 +24,7 @@ export default async function og({ params }: { params: { slug: string } }) {
     (
       // eslint-disable-next-line @next/next/no-img-element
       <img
-        src="https://vinaykulka.vercel.app/blog-og.jpg"
+        src="https://vinaykulka.vercel.app/og/blog-og.jpg"
         alt={params.slug.replaceAll('-', ' ')}
       >
         <div tw="w-full h-full pt-28 px-24 mx-10 text-4xl text-white flex items-center justify-center ">

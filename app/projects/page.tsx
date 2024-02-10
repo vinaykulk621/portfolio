@@ -1,6 +1,8 @@
-import { ProjectPallet } from '@/components/Projects/ProjectPallet'
+import Link from 'next/link'
+import Image from 'next/image'
 import ModeToggle from '@/components/mode-toggle'
 import type { Metadata } from 'next'
+import { GithubSVG } from '@/components/SVG'
 
 export const metadata: Metadata = {
   title: 'Projects',
@@ -13,14 +15,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://vinaykulka.vercel.app/projects',
-    images: ['https://vinaykulka.vercel.app/project-og.jpg'],
+    images: ['https://vinaykulka.vercel.app/og/project-og.jpg'],
     title: 'Vinay | Projects',
     description:
       'Portfolio website built using Next.js 13, TailwindCSS and MDX on vercel.',
     siteName: 'Vinay | Projects',
   },
   twitter: {
-    images: ['https://vinaykulka.vercel.app/project-og.jpg'],
+    images: ['https://vinaykulka.vercel.app/og/project-og.jpg'],
     site: 'https://vinaykulka.vercel.app/projects',
     card: 'summary_large_image',
     title: 'Vinay | Projects',
@@ -28,6 +30,52 @@ export const metadata: Metadata = {
       'Portfolio website built using Next.js 13, TailwindCSS and MDX on vercel.',
     creator: '@kuylycljhyvvy',
   },
+}
+
+function ProjectPallet({
+  projectName,
+  projectDescription,
+  github_repo_name,
+  DemoUrl,
+  Preview,
+  alt,
+  key_id,
+}: {
+  projectName: string
+  projectDescription: string
+  github_repo_name: string
+  DemoUrl: string
+  Preview: string
+  alt: string
+  key_id: string
+}) {
+  return (
+    <div
+      className="group mx-4 my-2 h-full max-w-sm overflow-hidden rounded-b-lg rounded-t-2xl bg-zinc-800 text-white dark:bg-zinc-900 md:mx-0 md:my-0"
+      key={key_id}
+    >
+      <Link href={DemoUrl} target="_blank">
+        <Image
+          src={`/projects/${Preview}`}
+          height={300}
+          width={300}
+          alt={alt}
+          className="w-full rounded-2xl rounded-b-lg p-2"
+        />
+      </Link>
+      <div className="flex h-fit flex-col justify-evenly space-y-3 px-1 py-2">
+        <div className="px-2 text-4xl underline-offset-4 group-hover:underline">
+          {projectName}
+        </div>
+        <div className="text-ellipsis break-words px-2 text-xl">
+          {projectDescription}
+        </div>
+        <div className="flex space-x-2 px-4">
+          <GithubSVG url={github_repo_name} />
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default function Home() {
@@ -145,6 +193,7 @@ export default function Home() {
       'soch Project at https://github.com/vinaykulk621/soch',
     ],
   ]
+
   return (
     <main className="h-fit font-spotify dark:bg-zinc-950">
       <div className="fixed bottom-5 left-6">

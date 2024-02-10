@@ -1,6 +1,7 @@
 import { allBlogs } from 'contentlayer/generated'
-import PostPreview from '@/components/blog/PostPreview'
 import type { Metadata } from 'next'
+import Link from 'next/link'
+import { getDateOnly } from '@/lib/formatDate'
 import ModeToggle from '@/components/mode-toggle'
 
 export const metadata: Metadata = {
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://vinaykulka.vercel.app/blog',
-    images: ['https://vinaykulka.vercel.app/blog-og.jpg'],
+    images: ['https://vinaykulka.vercel.app/og/blog-og.jpg'],
     title: 'Vinay | blog',
     description:
       'Portfolio website built using Next.js 13, TailwindCSS and MDX on vercel.',
@@ -21,13 +22,32 @@ export const metadata: Metadata = {
   },
   twitter: {
     site: 'https://vinaykulka.vercel.app/blog',
-    images: ['https://vinaykulka.vercel.app/blog-og.jpg'],
+    images: ['https://vinaykulka.vercel.app/og/blog-og.jpg'],
     card: 'summary_large_image',
     title: 'Vinay | blog',
     description:
       'Portfolio website built using Next.js 13, TailwindCSS and MDX on vercel.',
     creator: '@kuylycljhyvvy',
   },
+}
+
+type props = {
+  title: string
+  publishedAt: string
+  slug: string
+}
+
+function PostPreview(props: props) {
+  return (
+    <Link href={`/blog${props.slug}`} className="group">
+      <h2 className="text-lg group-hover:underline dark:text-gray-300 md:text-xl">
+        {props.title}
+      </h2>
+      <p className="text-xs dark:text-slate-400">
+        {getDateOnly(props.publishedAt)}
+      </p>
+    </Link>
+  )
 }
 
 export default function HomePage() {
