@@ -67,8 +67,10 @@ export default async function PostPage({ params }: Props) {
         </h1>
         <div className="flex flex-row items-center justify-center">
           <div className="rounded-md bg-zinc-300 px-2 py-1 text-sm tracking-tighter dark:bg-zinc-900">
-            {`${getDateOnly(post?.publishedAt)}
-            ${formatDate(post?.publishedAt)}`}
+            {getDateOnly(post?.publishedAt)}
+            <p className="block rounded-md text-xs tracking-tighter text-zinc-400 dark:bg-zinc-900/40">
+              {formatDate(post?.publishedAt)}
+            </p>
           </div>
           <div className="mx-2 h-[0.2em] flex-1 bg-zinc-800 dark:bg-zinc-800" />
         </div>
