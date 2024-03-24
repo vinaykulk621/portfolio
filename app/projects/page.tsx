@@ -1,8 +1,9 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import ModeToggle from '@/components/mode-toggle'
-import type { Metadata } from 'next'
 import { GithubSVG } from '@/components/SVG'
+import ModeToggle from '@/components/mode-toggle'
+import { getBreadCrumb } from '@/components/ui/breadcrumb'
+import type { Metadata } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Projects',
@@ -47,7 +48,7 @@ function ProjectPallet({
   DemoUrl: string
   Preview: string
   alt: string
-  key_id: string
+  key_id: number
 }) {
   return (
     <div
@@ -193,27 +194,26 @@ export default function Home() {
       'soch Project at https://github.com/vinaykulk621/soch',
     ],
   ]
-
+  const breadCrumb = getBreadCrumb('projects')
   return (
     <main className="h-fit font-spotify dark:bg-zinc-950">
+      {breadCrumb}
       <div className="fixed bottom-5 left-6">
         <ModeToggle />
       </div>
-      <div className="grid grid-cols-1 justify-items-center gap-5 p-5 dark:text-white md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
-        {projects.map((e) => {
+      <div className="grid grid-cols-1 justify-items-center gap-5 px-5 py-16 dark:text-white md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+        {projects.map((e, idx) => {
           return (
-            <>
-              <ProjectPallet
-                key={e[2]}
-                key_id={e[2]}
-                DemoUrl={e[0]}
-                github_repo_name={e[1]}
-                projectName={e[2]}
-                projectDescription={e[3]}
-                Preview={e[4]}
-                alt={e[5]}
-              />
-            </>
+            <ProjectPallet
+              key={e[2]}
+              key_id={idx}
+              DemoUrl={e[0]}
+              github_repo_name={e[1]}
+              projectName={e[2]}
+              projectDescription={e[3]}
+              Preview={e[4]}
+              alt={e[5]}
+            />
           )
         })}
       </div>

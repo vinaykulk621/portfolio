@@ -1,7 +1,8 @@
-import type { Metadata } from 'next'
-import PainImage from './painImage'
-import Link from 'next/link'
 import ModeToggle from '@/components/mode-toggle'
+import { getBreadCrumb } from '@/components/ui/breadcrumb'
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import PainImage from './painImage'
 
 export const metadata: Metadata = {
   title: 'Clicks',
@@ -31,12 +32,14 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
+  const breadCrumb = getBreadCrumb('clicks')
   return (
     <div className="dark:bg-zinc-950">
+      {breadCrumb}
       <div className="fixed bottom-5 left-6">
         <ModeToggle />
       </div>
-      <div className="xs:grid-cols-2 xs:gap-x-6 xs:py-8 grid grid-cols-1 gap-x-4 gap-y-6 px-14 py-5 md:grid-cols-3 lg:grid-cols-4">
+      <div className="xs:grid-cols-2 xs:gap-x-6 xs:py-8  grid grid-cols-1 gap-x-4 gap-y-6 px-16 py-10 md:grid-cols-3 lg:grid-cols-4">
         <Link
           href="/clicks"
           className="col-span-2 shrink items-center place-self-center text-center font-spotify text-7xl font-bold dark:text-zinc-200 md:text-9xl lg:col-span-2"

@@ -1,10 +1,11 @@
-import '@/styles/mdx.css'
 import { Mdx } from '@/components/mdx-components'
-import { allBlogs } from 'contentlayer/generated'
-import { notFound } from 'next/navigation'
-import type { Metadata } from 'next'
 import ModeToggle from '@/components/mode-toggle'
+import { getBlogBreadCrumb } from '@/components/ui/breadcrumb'
 import formatDate, { getDateOnly } from '@/lib/formatDate'
+import '@/styles/mdx.css'
+import { allBlogs } from 'contentlayer/generated'
+import type { Metadata } from 'next'
+import { notFound } from 'next/navigation'
 
 type Props = {
   params: { slug: string }
@@ -55,12 +56,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function PostPage({ params }: Props) {
   const post = await getPost(params.slug)
-
+  const breadCrumb = getBlogBreadCrumb(post.title)
   return (
     <div className="min-w-screen xs:text-sm md flex min-h-screen flex-col items-center overflow-x-hidden p-4 text-base dark:bg-zinc-950 dark:text-white">
       <div className="fixed bottom-5 left-6">
         <ModeToggle />
       </div>
+      {breadCrumb}
       <div className="my-8 ml-0">
         <h1 className="xs:text-5xl mb-3 max-w-[650px] font-spotify text-5xl">
           {post?.title}

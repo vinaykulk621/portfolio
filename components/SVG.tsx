@@ -1,5 +1,4 @@
 'use client'
-import React from 'react'
 import {
   Tooltip,
   TooltipContent,
@@ -8,6 +7,7 @@ import {
 } from '@/components/ui/tooltip'
 import { useToast } from '@/components/ui/use-toast'
 import Link from 'next/link'
+import React from 'react'
 
 export function EmailSVG() {
   const { toast } = useToast()
@@ -173,7 +173,7 @@ export function ShortLink({
 }) {
   return (
     <Link href={href} className="dark:text-white dark:hover:text-white/50">
-      <div className="flex flex-row gap-4">
+      <div className="flex flex-row items-center gap-4">
         <Pointer />
         <div className="flex flex-col">
           <div className="text-lg">{name}</div>
