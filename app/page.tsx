@@ -7,7 +7,6 @@ import {
   VoltFM,
 } from '@/components/SVG'
 import ModeToggle from '@/components/mode-toggle'
-import { getRootBreadCrumb } from '@/components/ui/breadcrumb'
 import { Libre_Barcode_128_Text, Roboto } from 'next/font/google'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -23,10 +22,8 @@ const Robo = Roboto({
 })
 
 export default function Home() {
-  const breadCrumb = getRootBreadCrumb()
   return (
     <div className="flex h-fit min-h-screen flex-col items-center bg-zinc-200	 dark:bg-zinc-950">
-      {breadCrumb}
       <div className="flex flex-col justify-around space-y-16">
         <div className="fixed bottom-5 left-6">
           <ModeToggle />

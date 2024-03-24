@@ -1,10 +1,12 @@
-import React from 'react'
-import '@/styles/globals.css'
-import { Analytics } from '@vercel/analytics/react'
-import NextTopLoader from 'nextjs-toploader'
+import { NavBar } from '@/components/NavBar'
+import ModeToggle from '@/components/mode-toggle'
 import ThemeProvider from '@/components/theme-provider'
 import { Toaster } from '@/components/ui/toaster'
+import '@/styles/globals.css'
+import { Analytics } from '@vercel/analytics/react'
 import type { Metadata } from 'next'
+import NextTopLoader from 'nextjs-toploader'
+import React from 'react'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://vinaykulka.vercel.app'),
@@ -55,8 +57,12 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
+        <NavBar />
         <Toaster />
         <Analytics />
+        <div className="fixed bottom-5 left-6">
+          <ModeToggle />
+        </div>
       </body>
     </html>
   )

@@ -1,5 +1,3 @@
-import ModeToggle from '@/components/mode-toggle'
-import { getBreadCrumb } from '@/components/ui/breadcrumb'
 import { getDateOnly } from '@/lib/formatDate'
 import { allBlogs } from 'contentlayer/generated'
 import type { Metadata } from 'next'
@@ -58,13 +56,8 @@ export default function HomePage() {
       return <PostPreview key={post?._id} {...post} />
     })
 
-  const breadCrumb = getBreadCrumb('blog')
   return (
     <div className="max-w-screen flex h-fit min-h-screen items-center justify-center dark:bg-zinc-950">
-      {breadCrumb}
-      <div className="fixed bottom-5 left-6">
-        <ModeToggle />
-      </div>
       <div className="flex flex-col items-start space-y-4 md:pr-80">
         {postPreviews}
       </div>
