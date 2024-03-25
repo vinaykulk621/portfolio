@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = await getPost(params.slug)
 
   return {
-    title: `Blog | ${post.title}`,
+    title: `Blog // ${post.title}`,
     metadataBase: new URL(`https://vinaykulka.vercel.app/blog/${params.slug}`),
     keywords: post.keyWords,
     description: post.description,
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     openGraph: {
       type: 'article',
-      title: `Blog | ${params.slug.replaceAll('-', ' ')}`,
+      title: `Blog // ${params.slug.replaceAll('-', ' ')}`,
       authors: 'Vinay Kulkarni',
       description: post.description,
       publishedTime: post.publishedAt,
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     twitter: {
       site: `https://vinaykulka.vercel.app/blog/${params.slug}`,
       card: 'summary_large_image',
-      title: `blog | ${params.slug} | Vinay`,
+      title: `blog // ${params.slug} | Vinay`,
       description: `${post.description}`,
       creator: '@kuylycljhyvvy',
       images: [
@@ -55,7 +55,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function PostPage({ params }: Props) {
   const post = await getPost(params.slug)
   return (
-    <div className="min-w-screen xs:text-sm md flex min-h-screen flex-col items-center overflow-x-hidden p-4 text-base dark:bg-zinc-950 dark:text-white">
+    <div className="min-w-screen xs:text-sm flex min-h-screen flex-col items-center overflow-x-hidden p-4 text-base dark:bg-zinc-950 dark:text-white">
       <div className="my-8 ml-0">
         <h1 className="xs:text-5xl mb-3 max-w-[650px] font-spotify text-5xl">
           {post?.title}

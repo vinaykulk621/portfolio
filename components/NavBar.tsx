@@ -14,7 +14,7 @@ export function NavBar() {
   const pathSegments = path.split('/').filter((segment) => segment !== '') // Split path and filter out empty segments
 
   return (
-    <div className="absolute left-10 top-6">
+    <div className="absolute left-10 top-4">
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>

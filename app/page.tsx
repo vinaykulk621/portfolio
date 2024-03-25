@@ -6,7 +6,6 @@ import {
   ShortLink,
   VoltFM,
 } from '@/components/SVG'
-import ModeToggle from '@/components/mode-toggle'
 import { Libre_Barcode_128_Text, Roboto } from 'next/font/google'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -25,9 +24,7 @@ export default function Home() {
   return (
     <div className="flex h-fit min-h-screen flex-col items-center bg-zinc-200	 dark:bg-zinc-950">
       <div className="flex flex-col justify-around space-y-16">
-        <div className="fixed bottom-5 left-6">
-          <ModeToggle />
-        </div>
+        <div className="fixed bottom-5 left-6" />
         <div className="pt-18 flex flex-col items-center justify-center space-y-3 md:items-start md:justify-start">
           <p
             className={`tex-white px-14 text-4xl duration-200 dark:text-gray-300  dark:hover:text-gray-400 ${libre_barcode.className}`}
@@ -81,11 +78,8 @@ export default function Home() {
             className={`mx-10 flex items-center text-justify ${Robo.className}`}
           >
             <p className="max-w-xl px-16 text-sm dark:text-[#a0a0a0] md:px-6">
-              Hi, i&apos;m Vinay, I own a laptop and I&apos;m enthusiastic about{' '}
-              <span className="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text font-extrabold text-transparent dark:bg-gradient-to-r dark:from-purple-400 dark:to-pink-600 dark:bg-clip-text">
-                technology
-              </span>
-              . I like to unwind during my free time by watching{' '}
+              Hi, i&apos;m Vinay, I own a laptop and i like to unwind during my
+              free time by watching{' '}
               <span className="font-bold text-green-400">ads</span> and{' '}
               <span className="font-bold text-purple-400">anime</span>.
             </p>

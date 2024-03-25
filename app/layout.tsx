@@ -11,8 +11,8 @@ import React from 'react'
 export const metadata: Metadata = {
   metadataBase: new URL('https://vinaykulka.vercel.app'),
   title: {
-    default: 'Vinay | Portfolio',
-    template: 'Vinay | %s',
+    default: 'Vinay // Portfolio',
+    template: 'Vinay // %s',
   },
   description:
     'Portfolio website built using Next.js 13, TailwindCSS and MDX on vercel.',
@@ -23,15 +23,15 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://vinaykulka.vercel.app/',
-    title: 'Vinay | Portfolio',
+    title: 'Vinay // Portfolio',
     description:
       'Portfolio website built using Next.js 13, TailwindCSS and MDX on vercel.',
-    siteName: 'Vinay | Portfolio',
+    siteName: 'Vinay // Portfolio',
     countryName: 'India',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Vinay | Portfolio',
+    title: 'Vinay // Portfolio',
     description:
       'Portfolio website built using Next.js 13, TailwindCSS and MDX on vercel.',
     creator: '@kuylycljhyvvy',
@@ -60,7 +60,7 @@ export default function RootLayout({
         <NavBar />
         <Toaster />
         <Analytics />
-        <div className="fixed bottom-5 left-6">
+        <div className="absolute right-10 top-4">
           <ModeToggle />
         </div>
       </body>
