@@ -43,7 +43,7 @@ export default function Home() {
               />
             </Link>
             <div className="flex flex-col items-center space-y-5 text-xl dark:text-white md:items-stretch">
-              <div className="flex flex-row items-center space-x-3">
+              <div className="flex flex-row items-center justify-around space-x-3">
                 <Link
                   href={'/projects'}
                   className="flex flex-row items-center justify-center text-sm dark:text-zinc-400/80 dark:hover:text-zinc-400 sm:text-base md:text-lg"
@@ -66,7 +66,7 @@ export default function Home() {
                   Clicks
                 </Link>
               </div>
-              <div className="mt-2 flex items-center space-x-6">
+              <div className="mt-2 flex items-center justify-around space-x-6">
                 <EmailSVG />
                 <LinkedinSVG />
                 <GithubSVG url={'vinaykulk621'} />
