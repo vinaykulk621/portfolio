@@ -1,5 +1,4 @@
 import { NavBar } from '@/components/NavBar'
-import ModeToggle from '@/components/mode-toggle'
 import ThemeProvider from '@/components/theme-provider'
 import { Toaster } from '@/components/ui/toaster'
 import '@/styles/globals.css'
@@ -60,9 +59,6 @@ export default function RootLayout({
         <NavBar />
         <Toaster />
         <Analytics />
-        <div className="absolute right-10 top-4">
-          <ModeToggle />
-        </div>
       </body>
     </html>
   )
