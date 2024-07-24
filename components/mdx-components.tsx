@@ -173,7 +173,7 @@ function Date({ children, ...props }: { children: string }) {
     <div className="flex flex-row items-center justify-center">
       <div className="rounded-md bg-zinc-300 px-2 py-1 text-sm tracking-tighter dark:bg-zinc-800">
         <span
-          className="m-0 rounded-3xl bg-zinc-300 px-[10px] py-[6px] dark:bg-zinc-800"
+          className="m-0 rounded-3xl bg-zinc-800 px-[10px] py-[6px]"
           {...props}
         >
           {children}

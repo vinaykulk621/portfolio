@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import PainImage from './painImage'
-import ModeToggle from '@/components/mode-toggle'
 
 export const metadata: Metadata = {
   title: 'Clicks',
@@ -33,10 +32,6 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="dark:bg-zinc-950">
-      <div className="fixed bottom-5 left-6" />
-      <div className="absolute right-10 top-4">
-        <ModeToggle />
-      </div>
       <div className="xs:grid-cols-2 xs:gap-x-6 xs:py-8  grid grid-cols-1 gap-x-4 gap-y-6 px-16 py-10 md:grid-cols-3 lg:grid-cols-4">
         <Link
           href="/clicks"

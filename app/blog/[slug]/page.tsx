@@ -1,5 +1,4 @@
 import { Mdx } from '@/components/mdx-components'
-import ModeToggle from '@/components/mode-toggle'
 import formatDate, { getDateOnly } from '@/lib/formatDate'
 import '@/styles/mdx.css'
 import { allBlogs } from 'contentlayer/generated'
@@ -58,10 +57,6 @@ export default async function PostPage({ params }: Props) {
   return (
     <div className="min-w-screen xs:text-sm flex min-h-screen flex-col items-center overflow-x-hidden p-4 text-base dark:bg-zinc-950 dark:text-white">
       <div className="my-8 ml-0">
-        <div className="fixed bottom-5 left-6" />
-        <div className="absolute right-10 top-4">
-          <ModeToggle />
-        </div>
         <h1 className="xs:text-5xl mb-3 max-w-[650px] font-spotify text-5xl">
           {post?.title}
         </h1>

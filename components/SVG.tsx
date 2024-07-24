@@ -13,18 +13,9 @@ export function EmailSVG() {
   const { toast } = useToast()
 
   return (
-    <TooltipProvider delayDuration={200}>
+    <TooltipProvider>
       <Tooltip>
-        <TooltipTrigger
-          onClick={() => {
-            toast({
-              title: 'Email ID',
-              description: 'Email id have been copied to your clipboard',
-            })
-            navigator.clipboard.writeText('kulkarnivinay621@gmail.com')
-          }}
-          className="cursor-copy"
-        >
+        <TooltipTrigger>
           <span className="sr-only">mail</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -181,11 +172,7 @@ export function ShortLink({
   desc: string
 }) {
   return (
-    <Link
-      href={href}
-      target="_blank"
-      className="dark:text-white dark:hover:text-white/80"
-    >
+    <Link href={href} className="dark:text-white dark:hover:text-white/50">
       <div className="flex flex-row items-center gap-4">
         <Pointer />
         <div className="flex flex-col">
