@@ -53,16 +53,16 @@ export default function RootLayout({
           attribute="class"
           defaultTheme="system"
           enableSystem
-          disableTransitionOnChange
+          // disableTransitionOnChange
         >
           {children}
         </ThemeProvider>
         <NavBar />
         <Toaster />
         <Analytics />
-        <div className="absolute right-10 top-4">
+        {/* <div className="absolute right-10 top-4">
           <ModeToggle />
-        </div>
+        </div> */}
       </body>
     </html>
   )

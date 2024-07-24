@@ -1,3 +1,4 @@
+import ModeToggle from '@/components/mode-toggle'
 import { GithubSVG } from '@/components/SVG'
 import type { Metadata } from 'next'
 import Image from 'next/image'
@@ -53,6 +54,10 @@ function ProjectPallet({
       className="group mx-4 my-2 h-full max-w-sm overflow-hidden rounded-b-lg rounded-t-2xl bg-zinc-800 text-white dark:bg-zinc-900 md:mx-0 md:my-0"
       key={key_id}
     >
+      <div className="fixed bottom-5 left-6" />
+      <div className="absolute right-10 top-4">
+        <ModeToggle />
+      </div>
       <Link href={DemoUrl} target="_blank">
         <Image
           src={`/projects/${Preview}`}
