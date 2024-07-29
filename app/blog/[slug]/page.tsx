@@ -75,7 +75,7 @@ export default async function PostPage({ params }: Props) {
           <div className="mx-2 h-[0.2em] flex-1 bg-zinc-800 dark:bg-zinc-800" />
         </div>
       </div>
-      <div className="w-screen px-10 text-justify font-spotify md:px-40 lg:px-80 xl:px-96">
+      <div className="max-w-screen-2xl px-10 text-justify font-spotify md:px-40 lg:px-80 xl:px-96">
         <Mdx code={post.body.code} />
       </div>
     </div>

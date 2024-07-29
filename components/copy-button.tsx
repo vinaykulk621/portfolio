@@ -6,6 +6,7 @@ import { Event, trackEvent } from '@/lib/events'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import { CheckIcon, CopyIcon } from 'lucide-react'
+import { useToast } from './ui/use-toast'
 
 interface CopyButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   value: string
@@ -27,6 +28,7 @@ export function CopyButton({
   event,
   ...props
 }: CopyButtonProps) {
+  const { toast } = useToast()
   const [hasCopied, setHasCopied] = React.useState(false)
 
   React.useEffect(() => {
@@ -40,7 +42,7 @@ export function CopyButton({
       size="icon"
       variant="ghost"
       className={cn(
-        'relative z-10 h-8 w-8 dark:text-zinc-50 dark:hover:bg-zinc-700 dark:hover:text-zinc-50',
+        'relative z-10 h-8 w-8 text-zinc-50 hover:bg-zinc-50/50 dark:hover:bg-zinc-700 dark:hover:text-zinc-50',
         className
       )}
       onClick={() => {
@@ -55,6 +57,10 @@ export function CopyButton({
               }
             : undefined
         )
+        toast({
+          title: 'code copied to clipboard',
+        })
+
         setHasCopied(true)
       }}
       {...props}

@@ -32,11 +32,11 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="dark:bg-zinc-950">
-      <div className="absolute right-10 top-0">
+    <div className="flex justify-center dark:bg-zinc-950">
+      <div className="absolute right-10 top-4">
         <ModeToggle />
       </div>
-      <div className="xs:grid-cols-2 xs:gap-x-6 xs:py-8  grid grid-cols-1 gap-x-4 gap-y-6 px-16 py-10 md:grid-cols-3 lg:grid-cols-4">
+      <div className="xs:grid-cols-2 xs:gap-x-6 xs:py-8 grid max-w-screen-2xl grid-cols-1 gap-x-4 gap-y-6 px-16 py-10 md:grid-cols-3 lg:grid-cols-4">
         <Link
           href="/clicks"
           className="col-span-2 shrink items-center place-self-center text-center font-spotify text-7xl font-bold dark:text-zinc-200 md:text-9xl lg:col-span-2"
@@ -46,67 +46,28 @@ export default function Home() {
         <div className="col-span-1 row-span-1 grid gap-y-6 ">
           <PainImage
             src={'table-bottle.jpg'}
-            desc="Glass bottle, still and pure, Reflecting the world around."
+            desc="Sippin' on a bottle of water"
           />
-          <PainImage
-            src={'stadium-center-darker-sky.jpg'}
-            desc="Roar of the crowd, crack of the bat, Cricket's magic casts its spell."
-          />
+          <PainImage src={'stadium-center-darker-sky.jpg'} desc="Cheerleader" />
         </div>
         <div className="col-span-1 row-span-1 grid gap-y-6 ">
-          <PainImage
-            src={'hike-clear-sky-1.jpg'}
-            desc="Mountain majesty, kissing the clouds."
-          />
-          <PainImage
-            src={'sea.jpg'}
-            desc="Waves crashing ashore, symphony of the sea."
-          />
+          <PainImage src={'hike-clear-sky-1.jpg'} desc="Mountain Goat" />
+          <PainImage src={'sea.jpg'} desc="Sea is WET" />
         </div>
-        <PainImage
-          src={'fog.jpg'}
-          desc="Silent forest, bathed in mist, Where secrets lie, and mysteries persist."
-        />
-        <PainImage
-          src={'trees.jpg'}
-          desc="Palm fronds swaying high, a tropical ballet."
-        />
-        <PainImage
-          src={'nandi.jpg'}
-          desc="Stairway to the forest's heart, Where ancient secrets softly start."
-        />
-        <PainImage
-          src={'road_2.jpg'}
-          desc="Black mirror, smooth and sleek, Reflecting the world's mystique."
-        />
-        <PainImage
-          src={'jublie-bulding.jpg'}
-          desc="City skyline soars, reaching for the stars."
-        />
-        <PainImage
-          src={'plane-glider.jpg'}
-          desc="Silver blades in azure dance, Propelling dreams to distant lands."
-        />
-        <PainImage
-          src={'sea-beach-closeup.jpg'}
-          desc="Ocean's vast expanse, a mirror to the sky."
-        />
-        <PainImage
-          src={'forest.jpg'}
-          desc="Serpentine path, entwined with roots, A journey through the forest's secret routes."
-        />
-        <PainImage
-          src={'road.jpg'}
-          desc="Close-up of a street, a city's heartbeat."
-        />
+        <PainImage src={'fog.jpg'} desc="Mysterious path" />
+        <PainImage src={'trees.jpg'} desc="uh... Palm trees" />
+        <PainImage src={'nandi.jpg'} desc="Staircase to my heart" />
+        <PainImage src={'road_2.jpg'} desc="Classic black road" />
+        <PainImage src={'jublie-bulding.jpg'} desc="Summer college vibes" />
+        <PainImage src={'plane-glider.jpg'} desc="Flying into your heart" />
+        <PainImage src={'sea-beach-closeup.jpg'} desc="Sea is WET 2" />
+        <PainImage src={'forest.jpg'} desc="Forest veins" />
+        <PainImage src={'road.jpg'} desc="Golden hour flowers" />
         <PainImage
           src={'stadium-left-side.jpg'}
-          desc="Coliseum of dreams, where passions soar, A symphony of cheers, forevermore."
+          desc="Can i be your cheerleader"
         />
-        <PainImage
-          src={'hike-1.jpg'}
-          desc="Autumn leaves ablaze, a fiery symphony."
-        />
+        <PainImage src={'hike-1.jpg'} desc="uh... big rock" />
       </div>
     </div>
   )

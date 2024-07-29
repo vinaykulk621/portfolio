@@ -19,7 +19,7 @@ export default function PainImage({
           height={600}
         />
       </DialogTrigger>
-      <DialogContent className="mb-5 rounded-lg">
+      <DialogContent className="rounded-lg">
         <Image
           alt={src.split('.')[0]}
           className="rounded-lg"
@@ -27,7 +27,7 @@ export default function PainImage({
           width={600}
           height={600}
         />
-        <p className="px-2 py-1 text-center font-spotify">{desc}</p>
+        <p className="px-2 text-center font-spotify">{desc}</p>
       </DialogContent>
     </Dialog>
   )

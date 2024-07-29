@@ -51,32 +51,28 @@ function ProjectPallet({
 }) {
   return (
     <div
-      className="group mx-4 my-2 h-full max-w-sm overflow-hidden rounded-b-lg rounded-t-2xl bg-zinc-800 text-white dark:bg-zinc-900 md:mx-0 md:my-0"
+      className="group flex h-full max-w-sm flex-col justify-between rounded-b-lg rounded-t-2xl bg-zinc-200/60 text-black dark:bg-zinc-800/50 dark:text-white"
       key={key_id}
     >
-      <div className="fixed bottom-5 left-6" />
-      <div className="absolute right-10 top-4">
-        <ModeToggle />
-      </div>
-      <Link href={DemoUrl} target="_blank">
-        <Image
-          src={`/projects/${Preview}`}
-          height={300}
-          width={300}
-          alt={alt}
-          className="w-full rounded-2xl rounded-b-lg p-2"
-        />
-      </Link>
-      <div className="flex h-fit flex-col justify-evenly space-y-3 px-1 py-2">
-        <div className="px-2 text-4xl underline-offset-4 group-hover:underline">
-          {projectName}
-        </div>
-        <div className="text-ellipsis break-words px-2 text-xl">
+      <div>
+        <Link href={DemoUrl} target="_blank">
+          <Image
+            src={`/projects/${Preview}`}
+            height={300}
+            width={300}
+            alt={alt}
+            className="w-full rounded-2xl rounded-b-lg p-2"
+          />
+          <p className="px-2 pt-1 text-4xl underline-offset-4 group-hover:underline">
+            {projectName}
+          </p>
+        </Link>
+        <p className="text-ellipsis break-words p-2 text-xl">
           {projectDescription}
-        </div>
-        <div className="flex space-x-2 px-4">
-          <GithubSVG url={github_repo_name} />
-        </div>
+        </p>
+      </div>
+      <div className="px-3 py-2">
+        <GithubSVG url={github_repo_name} />
       </div>
     </div>
   )
@@ -198,8 +194,12 @@ export default function Home() {
     ],
   ]
   return (
-    <main className="h-fit font-spotify dark:bg-zinc-950">
-      <div className="grid grid-cols-1 justify-items-center gap-5 px-5 py-16 dark:text-white md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+    <main className="flex justify-center font-spotify dark:bg-zinc-950">
+      <div className="fixed bottom-5 left-6" />
+      <div className="absolute right-10 top-4">
+        <ModeToggle />
+      </div>
+      <div className="grid max-w-screen-2xl grid-cols-1 gap-5 px-5 py-16 dark:text-white md:grid-cols-2 lg:grid-cols-4 lg:gap-8 lg:px-5 lg:py-16">
         {projects.map((e, idx) => {
           return (
             <ProjectPallet

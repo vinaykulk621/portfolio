@@ -22,12 +22,14 @@ export function NavBar() {
               ~
             </BreadcrumbLink>
           </BreadcrumbItem>
-          {pathSegments.map((segment) => (
+          {pathSegments.map((segment, i) => (
             <>
-              <BreadcrumbSeparator>
-                <SlashIcon />
-              </BreadcrumbSeparator>
-              <BreadcrumbItem>
+              <span key={i + 100}>
+                <BreadcrumbSeparator>
+                  <SlashIcon />
+                </BreadcrumbSeparator>
+              </span>
+              <BreadcrumbItem key={i}>
                 <BreadcrumbLink href={`/${segment}`}>{segment}</BreadcrumbLink>
               </BreadcrumbItem>
             </>

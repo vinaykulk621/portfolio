@@ -117,7 +117,7 @@ function MdxCard({ href, className, children, disabled, ...props }: CardProps) {
   return (
     <div
       className={cn(
-        'group relative rounded-lg border p-6 shadow-md transition-shadow hover:shadow-lg dark:text-zinc-400',
+        'group relative rounded-lg border p-6 text-zinc-800 shadow-md transition-shadow hover:shadow-lg dark:text-zinc-400',
         disabled && 'cursor-not-allowed opacity-60',
         className
       )}
@@ -188,7 +188,7 @@ function Callout({ children, className }: CalloutProps) {
   return (
     <div
       className={cn(
-        'my-6 flex items-start rounded-md border border-l-4 p-4 py-2 dark:border-zinc-600 dark:border-l-zinc-400 dark:text-zinc-400',
+        'my-6 flex items-start rounded-md border border-l-4 border-zinc-700 p-4 py-2 dark:border-zinc-600 dark:border-l-zinc-400 dark:text-zinc-400',
         className
       )}
     >
@@ -292,7 +292,10 @@ const components: MDXComponents = {
   ),
   blockquote: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <blockquote
-      className={cn('mt-6 border-l-2 pl-6 italic', className)}
+      className={cn(
+        'mt-6 border-l-8 border-l-zinc-600 bg-zinc-300 px-6 italic dark:bg-zinc-900',
+        className
+      )}
       {...props}
     />
   ),
@@ -303,7 +306,7 @@ const components: MDXComponents = {
   }: React.ImgHTMLAttributes<HTMLImageElement>) => (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      className={cn('rounded-md bg-zinc-500/70 dark:bg-inherit', className)}
+      className={cn('rounded-md bg-zinc-800 dark:bg-inherit', className)}
       alt={alt}
       {...props}
     />
@@ -386,14 +389,17 @@ const components: MDXComponents = {
     />
   ),
   Ring: ({ children, ...props }) => (
-    <span className="m-0 rounded-3xl bg-zinc-800 px-[10px] py-[6px]" {...props}>
+    <span
+      className="m-0 rounded-3xl bg-zinc-400/50 px-[10px] py-[6px] dark:bg-zinc-800"
+      {...props}
+    >
       {children}
     </span>
   ),
   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <code
       className={cn(
-        'relative w-fit rounded bg-zinc-300 p-4 px-[0.3rem] py-[0.2rem] font-mono text-sm dark:bg-zinc-900',
+        'relative w-fit rounded bg-zinc-900 p-4 px-[0.3rem] py-[0.2rem] font-mono text-sm text-white dark:bg-zinc-800',
         className
       )}
       {...props}
