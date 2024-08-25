@@ -7,11 +7,11 @@ import {
   ShortLink,
   VoltFM,
 } from '@/components/SVG'
-import { Libre_Barcode_128_Text, Roboto } from 'next/font/google'
+import { Gochi_Hand, Roboto } from 'next/font/google'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const libre_barcode = Libre_Barcode_128_Text({
+const source_code_pro = Gochi_Hand({
   subsets: ['latin'],
   weight: '400',
 })
@@ -31,9 +31,9 @@ export default function Home() {
         </div>
         <div className="pt-18 flex flex-col items-center justify-center space-y-3 md:items-start md:justify-start">
           <p
-            className={`tex-white px-14 text-4xl duration-200 dark:text-gray-300  dark:hover:text-gray-400 ${libre_barcode.className}`}
+            className={`tex-white px-14 text-xl duration-200 dark:text-gray-300 ${source_code_pro.className}`}
           >
-            Vinay&apos;s web
+            Vinay Kulkarni
           </p>
           <div className="flex flex-col items-center gap-10 px-10 md:flex-row">
             <Link href={'https://vinaykulka.vercel.app/'}>
@@ -73,7 +73,7 @@ export default function Home() {
               <div className="mt-2 flex items-center justify-around space-x-6">
                 <EmailSVG />
                 <LinkedinSVG />
-                <GithubSVG url={'vinaykulk621'} />
+                <GithubSVG url="vinaykulk621" />
                 <VoltFM />
               </div>
             </div>
@@ -81,37 +81,60 @@ export default function Home() {
           <div
             className={`mx-10 flex items-center text-justify ${Robo.className}`}
           >
-            <p className="max-w-xl px-16 text-sm dark:text-[#a0a0a0] md:px-6">
-              Hi, i&apos;m Vinay, I have a laptop and i code sometime.
+            <p className="max-w-xl px-14 text-sm dark:text-[#a0a0a0] md:px-6">
+              Hi, i&apos;m Vinay Kulkarni.
             </p>
           </div>
         </div>
-        <div className="flex flex-col items-start space-y-5 px-28 pb-12 md:px-16">
-          <span className="font-bold dark:text-white">Projects</span>
-          <ShortLink
-            key={'Noote'}
-            href="https://noote.vercel.app"
-            name="Noote"
-            desc="An online note sharing application."
-          />
-          <ShortLink
-            href="https://flukx.me"
-            key={'Flukx'}
-            name="Flukx"
-            desc="A link shortner which uses unique words to short links."
-          />
-          <ShortLink
-            href="https://words-livid.vercel.app"
-            key={'Infinite Scroll'}
-            name="Infinite Scroll"
-            desc="A simple implementation of Infinite scroll."
-          />
-          <ShortLink
-            href="https://vinaykulk621.github.io/typewriter/"
-            key={'Typewriter'}
-            name="Typewriter"
-            desc="A JS application designed for typing practice on a pool of 3000 words."
-          />
+        <div className="space-y-10">
+          <div className="flex flex-col items-start space-y-5 px-10 md:px-16">
+            <span className="font-bold dark:text-white">Projects</span>
+            <ShortLink
+              key={'Noote'}
+              href="https://noote.vercel.app"
+              name="Noote"
+              desc="An online note sharing application"
+            />
+            <ShortLink
+              key={'Flukx'}
+              href="https://flukx.me"
+              name="Flukx"
+              desc="A link shortner which uses unique words to short links"
+            />
+            <ShortLink
+              key={'Infinite Scroll'}
+              href="https://words-livid.vercel.app"
+              name="Infinite Scroll"
+              desc="A simple implementation of Infinite scroll"
+            />
+            <ShortLink
+              key={'Typewriter'}
+              href="https://vinaykulk621.github.io/typewriter/"
+              name="Typewriter"
+              desc="A JS application designed for typing practice"
+            />
+          </div>
+          <div className="flex flex-col items-start space-y-5 px-10 pb-20 md:px-16">
+            <span className="font-bold dark:text-white">Blog</span>
+            <ShortLink
+              key={'2023'}
+              href="/blog/2023"
+              name="2023"
+              desc="An overview of my 2023"
+            />
+            <ShortLink
+              key={'computer-networks'}
+              href="/blog/computers-and-their- networks"
+              name="computers and their networks"
+              desc="A bunch of stuff about computer networks"
+            />
+            <ShortLink
+              key={'startup ideas'}
+              href="/blog/startups"
+              name="startup ideas"
+              desc="Few business ideas of mine"
+            />
+          </div>
         </div>
       </div>
     </div>
