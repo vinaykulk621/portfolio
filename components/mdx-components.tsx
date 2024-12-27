@@ -15,6 +15,7 @@ import { Event } from '@/lib/events'
 import { cn } from '@/lib/utils'
 import { CopyButton } from '@/components/copy-button'
 import { Checkbox } from '@/components/ui/checkbox'
+import VideoPlayer from '@/components/videoPlayer'
 
 interface MdxProps {
   code: string
@@ -31,6 +32,7 @@ interface CalloutProps {
 }
 
 export function ImageGallery({
+  year,
   img_1,
   img_2,
   img_3,
@@ -38,12 +40,13 @@ export function ImageGallery({
   video_2,
   video_3,
 }: {
-  img_1: string
-  img_2: string
-  img_3: string
-  video_1?: string
-  video_2?: string
-  video_3?: string
+  year: string
+  img_1: string | null
+  img_2: string | null
+  img_3: string | null
+  video_1?: string | null
+  video_2?: string | null
+  video_3?: string | null
 }) {
   return (
     <div className="flex items-center justify-center">
@@ -53,15 +56,11 @@ export function ImageGallery({
       >
         <ResizablePanel defaultSize={55}>
           <div className="flex h-[300px] items-center justify-center p-2">
-            {(video_1 && (
-              <video autoPlay muted loop>
-                <source src={`/2023/${video_1}.mp4`} type="video/mp4" />
-              </video>
-            )) ||
+            {(video_1 && <VideoPlayer src={`/${year}/${video_1}.mp4`} />) ||
               (img_1 && (
                 <img
                   loading="lazy"
-                  src={`/2023/${img_1}.jpg`}
+                  src={`/${year}/${img_1}.jpg`}
                   alt={img_1.split('/')[1].replace('.jpg', '')}
                   className="flex-1"
                 />
@@ -73,15 +72,11 @@ export function ImageGallery({
           <ResizablePanelGroup direction="vertical">
             <ResizablePanel defaultSize={50}>
               <div className="flex h-full items-center justify-center p-2">
-                {(video_2 && (
-                  <video autoPlay muted loop>
-                    <source src={`/2023/${video_2}.mp4`} type="video/mp4" />
-                  </video>
-                )) ||
+                {(video_2 && <VideoPlayer src={`/${year}/${video_2}.mp4`} />) ||
                   (img_2 && (
                     <img
                       loading="lazy"
-                      src={`/2023/${img_2}.jpg`}
+                      src={`/${year}/${img_2}.jpg`}
                       alt={img_2.split('/')[1].replace('.jpg', '')}
                       className="flex-1"
                     />
@@ -91,15 +86,11 @@ export function ImageGallery({
             <ResizableHandle withHandle />
             <ResizablePanel defaultSize={50}>
               <div className="flex h-full items-center justify-center p-2">
-                {(video_3 && (
-                  <video autoPlay muted loop>
-                    <source src={`/2023/${video_3}.mp4`} type="video/mp4" />
-                  </video>
-                )) ||
+                {(video_3 && <VideoPlayer src={`/${year}/${video_3}.mp4`} />) ||
                   (img_3 && (
                     <img
                       loading="lazy"
-                      src={`/2023/${img_3}.jpg`}
+                      src={`/${year}/${img_3}.jpg`}
                       alt={img_3.split('/')[1].replace('.jpg', '')}
                       className="flex-1"
                     />
@@ -140,11 +131,17 @@ function MdxCard({ href, className, children, disabled, ...props }: CardProps) {
 function Checker({
   content,
   disabled,
+  lineThrough = false,
+  dimm = false,
   checked,
+  prevYear,
   classname,
 }: {
   content: string
+  lineThrough: boolean
   disabled: boolean
+  dimm: boolean
+  prevYear: boolean
   checked: boolean
   classname: React.HTMLAttributes<HTMLAnchorElement>
 }) {
@@ -158,7 +155,9 @@ function Checker({
       <label
         htmlFor={content}
         className={cn(
-          'text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70',
+          `text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 ${
+            prevYear ? 'text-zinc-200' : ''
+          } ${lineThrough ? 'line-through' : ''}${dimm ? 'opacity-70' : ''}`,
           classname
         )}
       >

@@ -53,21 +53,21 @@ export default function Home() {
                   className="flex flex-row items-center justify-center text-sm dark:text-zinc-400/80 dark:hover:text-zinc-400 sm:text-base md:text-lg"
                 >
                   <Pointer />
-                  Projects
+                  projects
                 </Link>
                 <Link
                   href={'/blog'}
                   className="flex flex-row items-center justify-center text-sm dark:text-zinc-400/80 dark:hover:text-zinc-400 sm:text-base md:text-lg"
                 >
                   <Pointer />
-                  Blog
+                  blog
                 </Link>
                 <Link
                   href={'/clicks'}
                   className="flex flex-row items-center justify-center text-sm dark:text-zinc-400/80 dark:hover:text-zinc-400 sm:text-base md:text-lg"
                 >
                   <Pointer />
-                  Clicks
+                  clicks
                 </Link>
               </div>
               <div className="mt-2 flex items-center justify-around space-x-6">
@@ -82,7 +82,15 @@ export default function Home() {
             className={`mx-10 flex items-center text-justify ${Robo.className}`}
           >
             <p className="max-w-xl px-14 text-sm dark:text-[#a0a0a0] md:px-6">
-              Hi, i&apos;m Vinay Kulkarni.
+              Hi, i&apos;m Vinay Kulkarni. currently working as Associate
+              Engineer at{' '}
+              <Link
+                href={'https://qualcomm.com'}
+                className="border-b-2 border-dotted border-b-zinc-600 text-zinc-500"
+              >
+                Qualcomm
+              </Link>{' '}
+              .
             </p>
           </div>
         </div>
