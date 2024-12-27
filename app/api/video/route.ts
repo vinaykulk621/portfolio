@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import fs from 'fs'
 import path from 'path'
 
-const CHUNK_SIZE = 1024 * 1024 // 1MB chunks
+const CHUNK_SIZE = 1024 * 1024 * 2 // 2MB chunks
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams
