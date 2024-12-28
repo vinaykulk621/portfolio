@@ -1,5 +1,4 @@
 'use client'
-/* eslint-disable @next/next/no-img-element */
 
 import Link from 'next/link'
 import '@/styles/mdx.css'
@@ -16,6 +15,7 @@ import { cn } from '@/lib/utils'
 import { CopyButton } from '@/components/copy-button'
 import { Checkbox } from '@/components/ui/checkbox'
 import VideoPlayer from '@/components/videoPlayer'
+import ImageStream from '@/components/ImageStream'
 
 interface MdxProps {
   code: string
@@ -52,19 +52,12 @@ export function ImageGallery({
     <div className="flex items-center justify-center">
       <ResizablePanelGroup
         direction="horizontal"
-        className="max-w-xl rounded-lg border"
+        className="max-w-xl rounded-sm border-2 border-zinc-200 dark:border-2 dark:border-zinc-800"
       >
         <ResizablePanel defaultSize={55}>
           <div className="flex h-[300px] items-center justify-center p-2">
             {(video_1 && <VideoPlayer src={`/${year}/${video_1}.mp4`} />) ||
-              (img_1 && (
-                <img
-                  loading="lazy"
-                  src={`/${year}/${img_1}.jpg`}
-                  alt={img_1.split('/')[1].replace('.jpg', '')}
-                  className="flex-1"
-                />
-              ))}
+              (img_1 && <ImageStream src={`/${year}/${img_1}.jpg`} />)}
           </div>
         </ResizablePanel>
         <ResizableHandle withHandle />
@@ -73,28 +66,14 @@ export function ImageGallery({
             <ResizablePanel defaultSize={50}>
               <div className="flex h-full items-center justify-center p-2">
                 {(video_2 && <VideoPlayer src={`/${year}/${video_2}.mp4`} />) ||
-                  (img_2 && (
-                    <img
-                      loading="lazy"
-                      src={`/${year}/${img_2}.jpg`}
-                      alt={img_2.split('/')[1].replace('.jpg', '')}
-                      className="flex-1"
-                    />
-                  ))}
+                  (img_2 && <ImageStream src={`/${year}/${img_2}.jpg`} />)}
               </div>
             </ResizablePanel>
             <ResizableHandle withHandle />
             <ResizablePanel defaultSize={50}>
               <div className="flex h-full items-center justify-center p-2">
                 {(video_3 && <VideoPlayer src={`/${year}/${video_3}.mp4`} />) ||
-                  (img_3 && (
-                    <img
-                      loading="lazy"
-                      src={`/${year}/${img_3}.jpg`}
-                      alt={img_3.split('/')[1].replace('.jpg', '')}
-                      className="flex-1"
-                    />
-                  ))}
+                  (img_3 && <ImageStream src={`/${year}/${img_3}.jpg`} />)}
               </div>
             </ResizablePanel>
           </ResizablePanelGroup>
@@ -156,7 +135,7 @@ function Checker({
         htmlFor={content}
         className={cn(
           `text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 ${
-            prevYear ? 'text-zinc-200' : ''
+            prevYear ? 'text-zinc-500 dark:text-zinc-200' : ''
           } ${lineThrough ? 'line-through' : ''}${dimm ? 'opacity-70' : ''}`,
           classname
         )}
@@ -170,7 +149,7 @@ function Checker({
 function Date({ children, ...props }: { children: string }) {
   return (
     <div className="flex flex-row items-center justify-center">
-      <div className="rounded-md bg-zinc-300 px-2 py-1 text-sm tracking-tighter dark:bg-zinc-800">
+      <div className="rounded-md bg-zinc-300 px-2 py-1 text-sm tracking-wider dark:bg-zinc-800">
         <span
           className="m-0 rounded-3xl bg-zinc-300 px-[10px] py-[6px] dark:bg-zinc-800"
           {...props}
