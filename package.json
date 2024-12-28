@@ -16,7 +16,7 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
-    "format": "prettier --write \"**/*.{js,ts,tsx,mdx,json}\" --cache && git add .",
+    "format": "prettier --write \"**/*.{js,ts,tsx,mdx,json}\" --cache",
     "restart": "rm -rf node_modules/ .next/ .contentlayer/  && npm i -f && npm run dev"
   },
   "dependencies": {
