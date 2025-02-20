@@ -132,7 +132,7 @@ export default function Home() {
             />
             <ShortLink
               key={'computer-networks'}
-              href="/blog/computers-and-their- networks"
+              href="/blog/computers-and-their-networks"
               name="computers and their networks"
               desc="A bunch of stuff about computer networks"
             />
