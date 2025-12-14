@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      Hello
-    </div>
+    <main className="flex justify-center items-center m-auto">
+      I am Vinay Kulakrni
+    </main>
   );
 }

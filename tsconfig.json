@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "utils/theme-provider.js"  ],
   "exclude": ["node_modules"]
 }
