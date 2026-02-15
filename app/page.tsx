@@ -10,6 +10,7 @@ import {
 import { Gochi_Hand, Roboto } from 'next/font/google'
 import Image from 'next/image'
 import Link from 'next/link'
+import { redirect } from 'next/navigation'
 
 const source_code_pro = Gochi_Hand({
   subsets: ['latin'],
@@ -22,6 +23,9 @@ const Robo = Roboto({
 })
 
 export default function Home() {
+  // redirect to new site
+  redirect('https://vinaykulk621.github.io')
+
   return (
     <div className="flex h-fit min-h-screen flex-col items-center bg-zinc-200	 dark:bg-zinc-950">
       <div className="flex flex-col justify-around space-y-16">
